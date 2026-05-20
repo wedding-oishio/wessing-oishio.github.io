@@ -12,6 +12,7 @@
     .seki-table { background: #faf3f0; border-radius: 50%; width: 160px; height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 8px 20px 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
     .table-title { font-weight: bold; color: #b96c47; margin-bottom: 12px; font-size: 1.1rem; }
     ul { list-style: none; padding: 0; margin: 0; }
+    .highlight { background: #ffe794; color: #c22; font-weight: bold; border-radius: 8px; padding: 2px 8px; }
     .footer { text-align: center; margin-top: 40px; color: #999; font-size: 0.95em; }
   </style>
 </head>
@@ -22,28 +23,28 @@
       <div class="seki-table">
         <div class="table-title">A卓</div>
         <ul>
-          <li>山田 太郎</li>
-          <li>山田 花子</li>
-          <li>佐藤 健</li>
-          <li>鈴木 真理</li>
+          <li class="guest-name">山田 太郎</li>
+          <li class="guest-name">山田 花子</li>
+          <li class="guest-name">佐藤 健</li>
+          <li class="guest-name">鈴木 真理</li>
         </ul>
       </div>
       <div class="seki-table">
         <div class="table-title">B卓</div>
         <ul>
-          <li>伊藤 翼</li>
-          <li>高橋 涼子</li>
-          <li>加藤 学</li>
-          <li>中村 春菜</li>
+          <li class="guest-name">伊藤 翼</li>
+          <li class="guest-name">高橋 涼子</li>
+          <li class="guest-name">加藤 学</li>
+          <li class="guest-name">中村 春菜</li>
         </ul>
       </div>
       <div class="seki-table">
         <div class="table-title">C卓</div>
         <ul>
-          <li>小林 宏</li>
-          <li>渡辺 優</li>
-          <li>松本 和也</li>
-          <li>斎藤 恵</li>
+          <li class="guest-name">小林 宏</li>
+          <li class="guest-name">渡辺 優</li>
+          <li class="guest-name">松本 和也</li>
+          <li class="guest-name">斎藤 恵</li>
         </ul>
       </div>
     </div>
@@ -52,5 +53,17 @@
       <small>※ご不明点はスタッフにお声がけください</small>
     </div>
   </div>
+  <script>
+    // URLパラメータ"name"取得
+    const url = new URL(window.location.href);
+    const user = url.searchParams.get('name');
+    if (user) {
+      document.querySelectorAll('.guest-name').forEach(li => {
+        if (li.textContent.replace(/\s/g, '') === user.replace(/\s/g, '')) {
+          li.classList.add('highlight');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
