@@ -11,15 +11,16 @@ body {
   font-family: 'Noto Sans JP', 'Noto Serif JP', serif;
   background: #faf8f5;
   color: #533f2e;
+  padding: 0 12px; /* ← スマホで左右に余白を確保 */
 }
 
-/* 見出しデザイン */
+/* 見出しデザイン（スマホ基準） */
 .section-title {
   font-family: 'Noto Serif JP', serif;
-  font-size: 1.6rem; /* ← 上品に調整 */
+  font-size: 1.4rem; /* ← スマホで大きすぎない */
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: 28px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   letter-spacing: 0.04em;
   position: relative;
   color: #72522c;
@@ -28,156 +29,127 @@ body {
 .section-title::after {
   content: '';
   display: block;
-  margin: 16px auto 0;
-  width: 80px;
+  margin: 12px auto 0;
+  width: 60px;
   border-bottom: 2px solid #e3c87d;
   opacity: 0.8;
   border-radius: 4px;
 }
 
-/* プロフィールセクション */
+/* プロフィールセクション（スマホ前提） */
 .profile-container {
   display: flex;
-  gap: 36px;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 56px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: transparent;
 }
 .profile-img-wrapper {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 3px solid #e3c87d; /* ← 繊細に調整 */
-  box-shadow: 0 4px 14px 0 rgba(155,123,71,.12);
+  border: 3px solid #e3c87d;
+  box-shadow: 0 4px 12px rgba(155,123,71,.12);
   overflow: hidden;
   background: #fff;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 .profile-name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Noto Serif JP', serif;
   font-weight: 700;
-  margin: 0 0 8px 0;
+  margin-bottom: 6px;
   color: #72522c;
-  letter-spacing: 0.05em;
 }
 .profile-desc {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #533f2e;
   text-align: center;
-  background: rgba(255,255,255,0.7); /* ← 上品に調整 */
-  padding: 8px 14px 10px;
+  background: rgba(255,255,255,0.7);
+  padding: 8px 14px;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(227,200,125,0.07);
-  max-width: 280px;
+  max-width: 260px;
+  line-height: 1.5;
 }
 
-/* 席次表セクション */
+/* 席次表（スマホで3×4を維持） */
 #seating {
-  margin-bottom: 64px;
+  margin-bottom: 40px;
 }
+
 .table-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* PC・スマホ共通で3列 */
-  grid-gap: 32px;
-  max-width: 1000px; /* ← バランス良く調整 */
+  grid-template-columns: repeat(3, 1fr); /* ← スマホでも3列固定 */
+  gap: 12px; /* ← スマホ向けに詰める */
+  max-width: 100%;
   margin: 0 auto;
 }
+
 .table-card {
   background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px 0 rgba(83,63,46,0.10);
-  padding: 28px 16px 22px;
+  border-radius: 14px; /* ← スマホ向けに少し小さく */
+  box-shadow: 0 4px 14px rgba(83,63,46,0.10);
+  padding: 16px 8px 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 150px; /* ← スマホ3列でも潰れない */
+  min-width: 100px; /* ← スマホ3列でも潰れない最小幅 */
 }
+
 .table-title {
   font-family: 'Noto Serif JP', serif;
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   color: #856326;
-  letter-spacing: 0.04em;
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   text-align: center;
 }
+
+/* ゲスト名（スマホ向けに最適化） */
 .guest-list {
-  columns: 2; /* ← 安定化 */
-  column-gap: 18px;
+  columns: 1; /* ← スマホでは1列の方が読みやすい */
   width: 100%;
-  max-width: 210px;
-  font-size: 0.97rem;
+  font-size: 0.85rem;
   color: #533f2e;
+  text-align: center;
 }
 .guest-list div {
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   break-inside: avoid;
 }
 
-/* モバイル対応 */
-@media (max-width: 900px) {
+/* 超小型スマホ向け微調整 */
+@media (max-width: 360px) {
   .table-grid {
-    grid-template-columns: repeat(3, 1fr); /* ← 900pxでも3列維持 */
-    grid-gap: 22px;
-  }
-  .profile-container {
-    gap: 26px;
-  }
-}
-@media (max-width: 650px) {
-  .table-grid {
-    grid-template-columns: repeat(3, 1fr); /* ← スマホでも3列固定 */
-    grid-gap: 16px;
-  }
-  #profile {
-    padding: 0 10px;
-  }
-  .profile-container {
-    flex-direction: column;
-    gap: 36px;
-  }
-  .profile-card {
-    width: 100%;
-  }
-  .guest-list {
-    columns: 2; /* ← スマホでも2列維持 */
-    max-width: 100%;
-    text-align: left;
-    padding-left: 12px;
-  }
-}
-
-/* 観賞用の細部調整 */
-@media (max-width: 400px) {
-  .section-title {
-    font-size: 1.3rem;
+    gap: 8px;
   }
   .table-card {
-    padding: 16px 4px 12px;
+    padding: 12px 4px;
+  }
+  .table-title {
+    font-size: 0.85rem;
+  }
+  .guest-list {
+    font-size: 0.8rem;
   }
 }
 
-/* 背景柔らかいグラデーション&全体色味調整 */
+/* 背景グラデーション（スマホ向けに軽量化） */
 body::before {
   content: '';
-  display: block;
   position: fixed;
   z-index: -1;
-  top:0; left:0;right:0;bottom:0;
-  background: radial-gradient(ellipse at 45% 30%, #f8ecd7 20%, #f5efe4 70%, #faf8f5 100%);
-  opacity: 0.72;
+  top:0; left:0; right:0; bottom:0;
+  background: radial-gradient(ellipse at 50% 20%, #f8ecd7 10%, #faf8f5 90%);
+  opacity: 0.6;
 }
