@@ -2,238 +2,204 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Seating Chart</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Cormorant+Garamond:wght@600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    html,body {
-      background: radial-gradient(circle at 10% 20%, #fff5e9 0%, #e7d0bb 100%);
-      min-height: 100vh;
-    }
-    body {
-      font-family: 'Noto Serif JP', 'Cormorant Garamond', serif;
-      color: #3f3232;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 960px;
-      margin: 48px auto;
-      background: rgba(255,255,255,0.6);
-      border-radius: 30px;
-      box-shadow: 0 8px 48px 0 rgba(184, 150, 71, 0.06), 0 1.5px 0 rgba(212,175,111,.13);
-      overflow: hidden;
-      padding: 38px 12vw 28px 12vw;
-      position: relative;
-    }
-
-    .hero {
-      text-align: center;
-      margin-bottom: 34px;
-      background: linear-gradient(90deg, #fff0b7 25%, transparent 100%);
-      padding: 36px 0 18px 0;
-    }
-    .hero__main {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      font-size: 2.8rem;
-      letter-spacing: 0.35em;
-      text-shadow: 0 5px 25px rgba(212,175,111,.15), 0 0.5px 0px #fff;
-      color: #b49557;
-      margin-bottom: 5px;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-    .hero__sub {
-      font-size: 1.05rem;
-      letter-spacing: 0.22em;
-      color: #947444;
-      font-family: 'Montserrat', 'Noto Serif JP', serif;
-      font-weight: 600;
-      margin-top: 4px;
-    }
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      text-align: center;
-      color: #b49557;
-      font-size: 1.6rem;
-      letter-spacing: .18em;
-      margin: 42px 0 0 0;
-      position: relative;
-    }
-    .section-title:after {
-      content: '';
-      display: block;
-      margin: 14px auto 0 auto;
-      width: 68px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent 0%, #b49557 60%, transparent 100%);
-      opacity:.4;
-      border-radius:4px;
-    }
-    .table-area {
-      display: grid;
-      gap: 32px 36px;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      margin:48px 0 48px 0;
-      justify-items: center;
-    }
-    .seki-table {
-      background: rgba(255,255,255,0.89);
-      border-radius: 22px;
-      box-shadow: 0 5px 30px rgba(212,175,111,0.13), 0 1.5px 0 rgba(212,175,111,0.10);
-      border: 2px solid #ecd6b1;
-      width:98%;
-      max-width: 320px;
-      position: relative;
-      transition: box-shadow 0.34s cubic-bezier(.26,.99,.69,1);
-      padding:28px 26px;
-      min-height:216px;
-      overflow: visible;
-    }
-    .seki-table:before {
-      content:'';
-      display:block;
-      position:absolute;
-      left:50%; top:-27px; transform:translateX(-50%);
-      width:56px; height:56px;
-      border-radius:50%;
-      background:linear-gradient(135deg, #ffe8bb 0%, #fff 88%);
-      box-shadow: 0 2.5px 10px rgba(212,175,111,0.13);
-      border: 1.5px solid #e8c471;
-      z-index:2;
-    }
-    .table-title {
-      font-family:'Cormorant Garamond',serif;
-      color: #d4af6f;
-      font-size:1.33rem;
-      font-weight:700;
-      letter-spacing: 0.16em;
-      margin-bottom:26px;
-      z-index:3;
-      position:relative;
-    }
-    ul.guest-list {
-      margin:0; padding:0;
-      list-style:none;
-      display:grid;
-      gap:13px 0;
-    }
-    .guest-name {
-      font-size:1.03rem;
-      color: #554228;
-      background:rgba(240,225,180, 0.10);
-      border-radius:9px;
-      padding:9.5px 12px;
-      position: relative;
-      transition: all .25s;
-      text-align:center;
-      letter-spacing:.02em;
-      box-shadow:0 .3px 0 rgba(180,150,71,.04);
-    }
-    .guest-name.highlight {
-      background: linear-gradient(90deg, #fff2a4 10%, #f7e1ac 100%);
-      color: #a37b20;
-      font-weight:700;
-      font-size:1.13rem;
-      box-shadow:0 7px 16px rgba(255,215,0,0.12), 0 0px 3px #edd175 inset;
-      animation: pulse 0.70s;
-      border:2px solid #e1c263;
-      outline: 3px solid #ffe59e88;
-      outline-offset:2px;
-    }
-    @keyframes pulse {
-      0% { filter: brightness(1.02); transform: scale(.98);}
-      30% { filter: brightness(1.11); transform: scale(1.03);}
-      85% { filter: brightness(1.27); transform: scale(1.12);}
-      100% { filter: brightness(1); transform: scale(1.08);}
-    }
-    .footer {
-      text-align: center;
-      background: linear-gradient(90deg, #fffbe4 10%, #eee3cb 100%);
-      padding:38px 10px 23px 10px;
-      border-top: 2px solid #fadfc6;
-      margin-top:54px;
-      border-bottom-left-radius:14px;
-      border-bottom-right-radius:14px;
-    }
-    .footer p {
-      color: #a39169;
-      font-size:1.11rem;
-      letter-spacing:.09em;
-      margin-bottom:10px;
-    }
-    .footer small {
-      display:block;
-      color:#b7ad9c;
-      margin-top:10px;
-      letter-spacing:.02em;
-      font-size:.99rem;
-    }
-    @media (max-width: 650px) {
-      .container { padding:16px 2vw 10px 2vw;}
-      .table-area { gap:18px 0;}
-      .section-title {font-size:1.24rem;}
-      .hero__main {font-size:2rem;}
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>結婚式プロフィール</title>
+  <!-- Google Fonts Noto Serif JP（日本語セリフ体）・Noto Sans JP（補助的に） -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <section class="hero">
-      <div class="hero__main">Seating Chart</div>
-      <div class="hero__sub">結婚式 席次表</div>
-    </section>
-    <section>
-      <div class="section-title">ご着席のご案内</div>
-      <div class="table-area">
-        <div class="seki-table">
-          <div class="table-title">A卓</div>
-          <ul class="guest-list">
-            <li class="guest-name">山田 太郎</li>
-            <li class="guest-name">山田 花子</li>
-            <li class="guest-name">佐藤 健</li>
-            <li class="guest-name">鈴木 真理</li>
-          </ul>
+  <header>
+    <h1 class="section-title">私たちのプロフィール</h1>
+  </header>
+
+  <section id="profile">
+    <div class="profile-container">
+      <div class="profile-card">
+        <div class="profile-img-wrapper">
+          <img src="profile-bride.jpg" alt="新婦プロフィール写真" class="profile-img">
         </div>
-        <div class="seki-table">
-          <div class="table-title">B卓</div>
-          <ul class="guest-list">
-            <li class="guest-name">伊藤 翼</li>
-            <li class="guest-name">高橋 涼子</li>
-            <li class="guest-name">加藤 学</li>
-            <li class="guest-name">中村 春菜</li>
-          </ul>
-        </div>
-        <div class="seki-table">
-          <div class="table-title">C卓</div>
-          <ul class="guest-list">
-            <li class="guest-name">小林 宏</li>
-            <li class="guest-name">渡辺 優</li>
-            <li class="guest-name">松本 和也</li>
-            <li class="guest-name">斎藤 恵</li>
-          </ul>
+        <div class="profile-name">新婦 名前</div>
+        <div class="profile-desc">
+          明るく前向きな性格。趣味は旅行とカフェ巡り。<br>
+          笑顔を大切に、日々を楽しんでいます。
         </div>
       </div>
-    </section>
-    <footer class="footer">
-      <p>本日はご出席いただき、ありがとうございます。</p>
-      <p>ごゆっくりお過ごしください。</p>
-      <small>ご不明な点はスタッフにお声がけください</small>
-    </footer>
-  </div>
-  <script>
-    // URLパラメータからゲスト名取得＆ハイライト
-    const url = new URL(window.location.href);
-    const user = url.searchParams.get('name');
-    if (user) {
-      document.querySelectorAll('.guest-name').forEach(li => {
-        if (li.textContent.replace(/\s/g, '') === user.replace(/\s/g, '')) {
-          li.classList.add('highlight');
-          setTimeout(() => { li.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 450);
-        }
-      });
-    }
-  </script>
+      <div class="profile-card">
+        <div class="profile-img-wrapper">
+          <img src="profile-groom.jpg" alt="新郎プロフィール写真" class="profile-img">
+        </div>
+        <div class="profile-name">新郎 名前</div>
+        <div class="profile-desc">
+          穏やかで落ち着いた性格。趣味はキャンプと映画鑑賞。<br>
+          お互いを支え合い、温かい家庭を築きたいです。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="seating">
+    <h2 class="section-title">席次表</h2>
+    <div class="table-grid">
+      <!-- 席次表サンプル：適宜内容をご編集ください -->
+      <div class="table-card">
+        <div class="table-title">1卓</div>
+        <div class="guest-list">
+          <div>山田 太郎</div>
+          <div>山田 花子</div>
+          <div>田中 一郎</div>
+          <div>田中 美智子</div>
+          <div>佐藤 次郎</div>
+          <div>佐藤 さやか</div>
+          <div>高橋 健</div>
+          <div>高橋 由美</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">2卓</div>
+        <div class="guest-list">
+          <div>伊藤 昇</div>
+          <div>伊藤 亜美</div>
+          <div>鈴木 健太</div>
+          <div>鈴木 智美</div>
+          <div>加藤 京子</div>
+          <div>加藤 正</div>
+          <div>中村 修</div>
+          <div>中村 美穂</div>
+        </div>
+      </div>
+      <!-- ...3卓～12卓 も同様に追加... -->
+      <div class="table-card">
+        <div class="table-title">3卓</div>
+        <div class="guest-list">
+          <div>小林 勇</div>
+          <div>小林 梨花</div>
+          <div>佐々木 和</div>
+          <div>佐々木 恵</div>
+          <div>松本 進</div>
+          <div>松本 紫織</div>
+          <div>木村 哲</div>
+          <div>木村 真理</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">4卓</div>
+        <div class="guest-list">
+          <div>渡辺 剛</div>
+          <div>渡辺 真由</div>
+          <div>山本 渉</div>
+          <div>山本 彩</div>
+          <div>石川 洋</div>
+          <div>石川 直子</div>
+          <div>斎藤 学</div>
+          <div>斎藤 志保</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">5卓</div>
+        <div class="guest-list">
+          <div>池田 正</div>
+          <div>池田 恵</div>
+          <div>橋本 大輔</div>
+          <div>橋本 明日香</div>
+          <div>山崎 哲</div>
+          <div>山崎 えり</div>
+          <div>森田 聡</div>
+          <div>森田 美咲</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">6卓</div>
+        <div class="guest-list">
+          <div>阿部 広</div>
+          <div>阿部 玲子</div>
+          <div>清水 洋介</div>
+          <div>清水 直美</div>
+          <div>山口 健</div>
+          <div>山口 由紀</div>
+          <div>竹内 真</div>
+          <div>竹内 綾香</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">7卓</div>
+        <div class="guest-list">
+          <div>松田 京</div>
+          <div>松田 恵</div>
+          <div>五十嵐 誠</div>
+          <div>五十嵐 歩</div>
+          <div>岡田 裕</div>
+          <div>岡田 涼子</div>
+          <div>中川 健</div>
+          <div>中川 由美</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">8卓</div>
+        <div class="guest-list">
+          <div>原田 稔</div>
+          <div>原田 直美</div>
+          <div>上田 純</div>
+          <div>上田 春奈</div>
+          <div>森山 和</div>
+          <div>森山 彩</div>
+          <div>石田 隆</div>
+          <div>石田 唯</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">9卓</div>
+        <div class="guest-list">
+          <div>藤田 昇</div>
+          <div>藤田 杏奈</div>
+          <div>宮本 悠</div>
+          <div>宮本 佳子</div>
+          <div>高田 聡</div>
+          <div>高田 彩</div>
+          <div>柴田 学</div>
+          <div>柴田 絵里</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">10卓</div>
+        <div class="guest-list">
+          <div>大野 修</div>
+          <div>大野 由里</div>
+          <div>谷口 亨</div>
+          <div>谷口 若葉</div>
+          <div>工藤 誠</div>
+          <div>工藤 佳奈</div>
+          <div>横山 勇</div>
+          <div>横山 美穂</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">11卓</div>
+        <div class="guest-list">
+          <div>永井 正</div>
+          <div>永井 ひとみ</div>
+          <div>福田 剛</div>
+          <div>福田 真理</div>
+          <div>西村 健</div>
+          <div>西村 由紀</div>
+          <div>松井 謙</div>
+          <div>松井 香織</div>
+        </div>
+      </div>
+      <div class="table-card">
+        <div class="table-title">12卓</div>
+        <div class="guest-list">
+          <div>星野 亮</div>
+          <div>星野 奈緒</div>
+          <div>内田 真</div>
+          <div>内田 綾</div>
+          <div>今井 誠</div>
+          <div>今井 恵</div>
+          <div>島田 修</div>
+          <div>島田 美和</div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
