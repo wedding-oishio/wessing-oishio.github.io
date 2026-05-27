@@ -85,7 +85,7 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* 席次表（円卓デザイン） */
+/* 席次表 */
 #seating {
   margin-bottom: 40px;
 }
@@ -99,58 +99,48 @@ body {
   margin: 0 auto;
 }
 
-/* 円卓カード */
+/* 円卓カード（名前は横向き） */
 .table-card {
   background: #fff;
-  border-radius: 50%;
-  width: 110px;
-  height: 110px;
-  position: relative;
+  border-radius: 12px;
+  padding: 12px 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+/* 円卓の丸部分 */
+.table-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: visible;
+  margin-bottom: 8px;
+  background: #fff;
 }
 
-/* 卓番号（中央） */
 .table-title {
-  position: absolute;
   font-family: 'Noto Serif JP', serif;
   font-size: 0.9rem;
   color: var(--brown);
   font-weight: 700;
-  text-align: center;
 }
 
-/* ゲストを円周に配置 */
+/* ゲスト名（横向き） */
 .guest-list {
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.guest-list div {
-  position: absolute;
-  font-size: 0.7rem;
-  color: #533f2e;
-  width: 60px;
+  width: 100%;
   text-align: center;
-  transform-origin: 50% 80px;
+  font-size: 0.82rem;
+  color: #533f2e;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
 }
-
-/* 8名を均等配置 */
-.guest-list div:nth-child(1) { transform: rotate(0deg) translateY(-80px); }
-.guest-list div:nth-child(2) { transform: rotate(45deg) translateY(-80px); }
-.guest-list div:nth-child(3) { transform: rotate(90deg) translateY(-80px); }
-.guest-list div:nth-child(4) { transform: rotate(135deg) translateY(-80px); }
-.guest-list div:nth-child(5) { transform: rotate(180deg) translateY(-80px); }
-.guest-list div:nth-child(6) { transform: rotate(225deg) translateY(-80px); }
-.guest-list div:nth-child(7) { transform: rotate(270deg) translateY(-80px); }
-.guest-list div:nth-child(8) { transform: rotate(315deg) translateY(-80px); }
 
 /* 背景 */
 body::before {
