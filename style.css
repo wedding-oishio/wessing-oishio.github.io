@@ -16,7 +16,7 @@ body {
 /* 見出しデザイン */
 .section-title {
   font-family: 'Noto Serif JP', serif;
-  font-size: 2rem;
+  font-size: 1.6rem; /* ← 上品に調整 */
   text-align: center;
   margin-top: 60px;
   margin-bottom: 28px;
@@ -54,7 +54,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 4px solid #e3c87d; /* 淡いゴールド */
+  border: 3px solid #e3c87d; /* ← 繊細に調整 */
   box-shadow: 0 4px 14px 0 rgba(155,123,71,.12);
   overflow: hidden;
   background: #fff;
@@ -78,7 +78,7 @@ body {
   font-size: 0.95rem;
   color: #533f2e;
   text-align: center;
-  background: rgba(255,255,247,0.8);
+  background: rgba(255,255,255,0.7); /* ← 上品に調整 */
   padding: 8px 14px 10px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(227,200,125,0.07);
@@ -91,9 +91,9 @@ body {
 }
 .table-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* PC・スマホ共通で3列 */
   grid-gap: 32px;
-  max-width: 1100px;
+  max-width: 1000px; /* ← バランス良く調整 */
   margin: 0 auto;
 }
 .table-card {
@@ -104,7 +104,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 0;
+  min-width: 150px; /* ← スマホ3列でも潰れない */
 }
 .table-title {
   font-family: 'Noto Serif JP', serif;
@@ -116,7 +116,7 @@ body {
   text-align: center;
 }
 .guest-list {
-  columns: 2 90px;
+  columns: 2; /* ← 安定化 */
   column-gap: 18px;
   width: 100%;
   max-width: 210px;
@@ -131,7 +131,7 @@ body {
 /* モバイル対応 */
 @media (max-width: 900px) {
   .table-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* ← 900pxでも3列維持 */
     grid-gap: 22px;
   }
   .profile-container {
@@ -140,7 +140,7 @@ body {
 }
 @media (max-width: 650px) {
   .table-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr); /* ← スマホでも3列固定 */
     grid-gap: 16px;
   }
   #profile {
@@ -154,12 +154,13 @@ body {
     width: 100%;
   }
   .guest-list {
-    columns: 1;
+    columns: 2; /* ← スマホでも2列維持 */
     max-width: 100%;
     text-align: left;
     padding-left: 12px;
   }
 }
+
 /* 観賞用の細部調整 */
 @media (max-width: 400px) {
   .section-title {
