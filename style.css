@@ -11,7 +11,7 @@ body {
   font-family: 'Noto Sans JP', 'Noto Serif JP', serif;
   background: #faf8f5;
   color: #533f2e;
-  padding: 0 6px; /* ← スマホ3列のはみ出し防止 */
+  padding: 0 6px;
 }
 
 /* 色味統一 */
@@ -20,16 +20,15 @@ body {
   --brown: #6b4e2e;
 }
 
-/* 見出しデザイン（スマホ基準） */
+/* 見出し */
 .section-title {
   font-family: 'Noto Serif JP', serif;
   font-size: 1.4rem;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 20px;
-  letter-spacing: 0.04em;
-  position: relative;
   color: var(--brown);
+  position: relative;
 }
 .section-title::after {
   content: '';
@@ -38,10 +37,9 @@ body {
   width: 60px;
   border-bottom: 2px solid var(--gold);
   opacity: 0.8;
-  border-radius: 4px;
 }
 
-/* プロフィール（スマホ最適化） */
+/* プロフィール */
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -78,7 +76,6 @@ body {
 }
 .profile-desc {
   font-size: 0.9rem;
-  color: #533f2e;
   text-align: center;
   background: rgba(255,255,255,0.7);
   padding: 8px 14px;
@@ -88,72 +85,74 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* 席次表（スマホ3列固定） */
+/* 席次表（円卓デザイン） */
 #seating {
   margin-bottom: 40px;
 }
 
 .table-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ← スマホでも3列固定 */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0;
-  gap: 8px; /* ← はみ出し防止＆整列感UP */
 }
 
+/* 円卓カード */
 .table-card {
   background: #fff;
-  border-radius: 12px; /* ← プロフィールと統一 */
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 14px 6px 12px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-width: 100px; /* ← スマホ3列のはみ出し防止 */
-  min-height: 180px; /* ← 高さを揃えて整列感UP */
+  overflow: visible;
 }
 
+/* 卓番号（中央） */
 .table-title {
+  position: absolute;
   font-family: 'Noto Serif JP', serif;
   font-size: 0.9rem;
   color: var(--brown);
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-weight: 700;
   text-align: center;
 }
 
-/* ゲスト名（スマホ最適化） */
+/* ゲストを円周に配置 */
 .guest-list {
-  columns: 1; /* ← スマホは1列の方が読みやすい */
-  width: 100%;
-  font-size: 0.82rem;
-  color: #533f2e;
-  text-align: center; /* ← 視線移動を減らす */
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .guest-list div {
-  margin-bottom: 6px;
-  break-inside: avoid;
+  position: absolute;
+  font-size: 0.7rem;
+  color: #533f2e;
+  width: 60px;
+  text-align: center;
+  transform-origin: 50% 80px;
 }
 
-/* 超小型スマホ向け微調整 */
-@media (max-width: 360px) {
-  .table-grid {
-    gap: 6px;
-  }
-  .table-card {
-    padding: 10px 4px;
-  }
-  .table-title {
-    font-size: 0.8rem;
-  }
-  .guest-list {
-    font-size: 0.75rem;
-  }
-}
+/* 8名を均等配置 */
+.guest-list div:nth-child(1) { transform: rotate(0deg) translateY(-80px); }
+.guest-list div:nth-child(2) { transform: rotate(45deg) translateY(-80px); }
+.guest-list div:nth-child(3) { transform: rotate(90deg) translateY(-80px); }
+.guest-list div:nth-child(4) { transform: rotate(135deg) translateY(-80px); }
+.guest-list div:nth-child(5) { transform: rotate(180deg) translateY(-80px); }
+.guest-list div:nth-child(6) { transform: rotate(225deg) translateY(-80px); }
+.guest-list div:nth-child(7) { transform: rotate(270deg) translateY(-80px); }
+.guest-list div:nth-child(8) { transform: rotate(315deg) translateY(-80px); }
 
-/* 背景グラデーション（軽量化） */
+/* 背景 */
 body::before {
   content: '';
   position: fixed;
