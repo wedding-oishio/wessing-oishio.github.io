@@ -118,16 +118,14 @@
             display: none;
             opacity: 0;
         }
-        /* 席次表の円形レイアウト用スタイル（完全に中央基準で配置） */
+        
         .guest-item {
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
             width: 100px;
             text-align: center;
             z-index: 20;
-            will-change: transform;
         }
         @media (min-width: 768px) {
             .guest-item {
@@ -235,17 +233,16 @@
                 <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Dinner Arrangement</span>
                 <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide mb-4">ご披露宴 席次表</h2>
                 <p class="font-body-md text-on-surface-variant max-w-xl mx-auto">
-                    受付でお渡ししたお名前、または下記よりご自身のお席をご確認ください。<br>カードをタップするとテーブルごとの詳細をご覧いただけます。
+                    タップするとテーブルごとの詳細な配置をご覧いただけます。
                 </p>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-                <div class="table-card bg-white p-5 md:p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="1">
+                <div class="table-card bg-white p-4 md:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="1">
                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
                         <span class="font-display-lg text-primary text-base">A</span>
                     </div>
-                    <h3 class="font-body-md font-semibold text-on-surface mb-2 border-b border-primary/10 pb-2 w-full text-sm md:text-base">Table A</h3>
-                    <p class="text-xs text-outline tracking-wider">タップして表示</p>
-                    <ul class="hidden">
+                    <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table A</h3>
+                    <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
                         <li>織田 信長 様</li>
                         <li>豊臣 秀吉 様</li>
                         <li>徳川 家康 様</li>
@@ -253,14 +250,14 @@
                         <li>真田 幸村 様</li>
                         <li>伊達 政宗 様</li>
                     </ul>
+                    <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
-                <div class="table-card bg-white p-5 md:p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="2">
+                <div class="table-card bg-white p-4 md:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="2">
                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
                         <span class="font-display-lg text-primary text-base">B</span>
                     </div>
-                    <h3 class="font-body-md font-semibold text-on-surface mb-2 border-b border-primary/10 pb-2 w-full text-sm md:text-base">Table B</h3>
-                    <p class="text-xs text-outline tracking-wider">タップして表示</p>
-                    <ul class="hidden">
+                    <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table B</h3>
+                    <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
                         <li>紫式部 様</li>
                         <li>清少納言 様</li>
                         <li>小野小町 様</li>
@@ -268,14 +265,14 @@
                         <li>額田王 様</li>
                         <li>北条 政子 様</li>
                     </ul>
+                    <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
-                <div class="table-card bg-white p-5 md:p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="3">
+                <div class="table-card bg-white p-4 md:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="3">
                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
                         <span class="font-display-lg text-primary text-base">C</span>
                     </div>
-                    <h3 class="font-body-md font-semibold text-on-surface mb-2 border-b border-primary/10 pb-2 w-full text-sm md:text-base">Table C</h3>
-                    <p class="text-xs text-outline tracking-wider">タップして表示</p>
-                    <ul class="hidden">
+                    <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table C</h3>
+                    <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
                         <li>夏目 漱石 様</li>
                         <li>太宰 治 様</li>
                         <li>芥川 龍之介 様</li>
@@ -283,14 +280,14 @@
                         <li>三島 由紀夫 様</li>
                         <li>宮沢 賢治 様</li>
                     </ul>
+                    <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
-                <div class="table-card bg-white p-5 md:p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="4">
+                <div class="table-card bg-white p-4 md:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="4">
                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
                         <span class="font-display-lg text-primary text-base">D</span>
                     </div>
-                    <h3 class="font-body-md font-semibold text-on-surface mb-2 border-b border-primary/10 pb-2 w-full text-sm md:text-base">Table D</h3>
-                    <p class="text-xs text-outline tracking-wider">タップして表示</p>
-                    <ul class="hidden">
+                    <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table D</h3>
+                    <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
                         <li>坂本 龍馬 様</li>
                         <li>西郷 隆盛 様</li>
                         <li>桂 小五郎 様</li>
@@ -298,6 +295,7 @@
                         <li>勝 海舟 様</li>
                         <li>土方 歳三 様</li>
                     </ul>
+                    <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
             </div>
         </div>
@@ -309,35 +307,30 @@
             <button class="absolute top-4 right-4 p-2 rounded-full hover:bg-surface-container-high transition-colors group z-50 bg-white/80 backdrop-blur-sm shadow-sm" id="close-modal">
                 <span class="material-symbols-outlined text-outline group-hover:text-on-surface">close</span>
             </button>
-            
-            <div class="flex-1 flex items-center justify-center p-4 relative bg-surface-container-lowest min-h-[50%] md:min-h-full">
+            <div class="flex-1 flex items-center justify-center p-4 relative bg-surface-container-lowest min-h-[55%] md:min-h-full">
                 <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
                     <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <defs><pattern height="30" id="grid" patternunits="userSpaceOnUse" width="30"><path d="M 30 0 L 0 0 0 30" fill="none" stroke="currentColor" stroke-width="0.5"></path></pattern></defs>
                         <rect fill="url(#grid)" height="100%" width="100%"></rect>
                     </svg>
                 </div>
-                
-                <div class="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px]" id="table-wrapper">
+                <div class="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[440px] md:h-[440px]" id="table-wrapper">
                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 md:w-44 md:h-44 rounded-full border border-primary/20 bg-white shadow-md flex items-center justify-center z-10">
                         <div class="text-center">
                             <span class="font-label-caps text-[9px] md:text-[11px] text-primary tracking-widest block mb-0.5">TABLE</span>
                             <span class="font-display-lg text-2xl md:text-4xl text-on-surface" id="modal-table-number">A</span>
                         </div>
                     </div>
-                    <div class="absolute inset-0" id="guest-circle-container">
-                        </div>
+                    <div class="absolute inset-0" id="guest-circle-container"></div>
                 </div>
             </div>
-            
-            <div class="w-full md:w-72 bg-surface-container-low p-6 md:p-8 border-t md:border-t-0 md:border-l border-outline-variant/30 flex flex-col h-[50%] md:h-full justify-between shrink-0">
+            <div class="w-full md:w-72 bg-surface-container-low p-6 md:p-8 border-t md:border-t-0 md:border-l border-outline-variant/30 flex flex-col h-[45%] md:h-full justify-between shrink-0">
                 <div class="overflow-y-auto pr-1 flex-1">
                     <h4 class="font-body-md font-semibold text-lg text-primary mb-4">ゲスト一覧</h4>
-                    <ul class="space-y-2.5 text-sm font-body-md text-on-surface-variant" id="modal-guest-list">
-                        </ul>
+                    <ul class="space-y-2.5 text-sm font-body-md text-on-surface-variant" id="modal-guest-list"></ul>
                 </div>
                 <div class="pt-4 border-t border-outline-variant/20 shrink-0">
-                    <p class="font-label-caps text-[10px] text-outline uppercase tracking-widest">開宴時間：18:30</p>
+                    <p class="font-label-caps text-[10px] text-outline uppercase tracking-widest">開宴時間：17:30</p>
                 </div>
             </div>
         </div>
@@ -345,57 +338,116 @@
 
     <section class="py-20 md:py-[120px] bg-surface-container" id="timeline">
         <div class="max-w-container-max mx-auto px-gutter">
-            <div class="text-center mb-16">
+            <div class="text-center mb-20">
                 <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Day's Flow</span>
                 <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide">当日のスケジュール</h2>
+                <div class="w-12 h-px bg-secondary/50 mx-auto mt-4"></div>
             </div>
-            <div class="relative max-w-xl mx-auto">
-                <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-outline-variant"></div>
+            
+            <div class="relative max-w-3xl mx-auto">
+                <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-outline-variant/40"></div>
                 
-                <div class="relative mb-12 md:mb-16 group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 -top-1 w-8 h-8 bg-background rounded-full border border-primary flex items-center justify-center z-10">
-                        <span class="material-symbols-outlined text-primary text-xs">celebration</span>
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">door_open</span>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-16 pl-12 md:pl-0">
-                        <div class="text-left md:text-right hidden md:block pt-0.5">
-                            <span class="font-label-caps text-primary text-sm">15:00 / 受付開始</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:text-right pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">15:00</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">受付開始</h3>
                         </div>
-                        <div class="pt-0.5">
-                            <span class="md:hidden font-label-caps text-primary text-xs mb-1 block">15:00 / 受付開始</span>
-                            <h3 class="font-body-md font-semibold text-on-surface mb-1 text-base">挙式（セレモニー）</h3>
-                            <p class="text-sm text-on-surface-variant">セントメアリー礼拝堂。開式15分前までにお越しください。</p>
+                        <div class="pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">ロビーにてお待ちしております。ウェルカムドリンクをご用意しておりますので、挙式までごゆっくりお過ごしください。</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="relative mb-12 md:mb-16 group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 -top-1 w-8 h-8 bg-background rounded-full border border-primary flex items-center justify-center z-10">
-                        <span class="material-symbols-outlined text-primary text-xs">local_bar</span>
+
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">celebration</span>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-16 pl-12 md:pl-0">
-                        <div class="text-left md:text-right pt-0.5 md:order-1 order-2">
-                            <span class="md:hidden font-label-caps text-primary text-xs mb-1 block">16:00</span>
-                            <h3 class="font-body-md font-semibold text-on-surface mb-1 text-base">ウェルカムパーティ</h3>
-                            <p class="text-sm text-on-surface-variant">テラスガーデンにて。生演奏と共に、カクテルや軽食をお楽しみください。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:order-2 pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">15:30</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">挙式（セレモニー）</h3>
                         </div>
-                        <div class="text-left hidden md:block md:order-2 pt-0.5">
-                            <span class="font-label-caps text-primary text-sm">16:00</span>
+                        <div class="md:text-right pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">セントメアリー礼拝堂にて。おふたりの新しい門出を見守っていただければ幸いです。</p>
                         </div>
                     </div>
                 </div>
-                
+
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">photo_camera</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:text-right pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">16:15</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">アフターセレモニー</h3>
+                        </div>
+                        <div class="pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">大階段にて。皆様と一緒に集合写真の撮影や、祝福のひとときを過ごします。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">local_bar</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:order-2 pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">16:45</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">ウェルカムパーティ</h3>
+                        </div>
+                        <div class="md:text-right pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">ガーデンテラスにて。生演奏と共に、アペリティフをお楽しみください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-primary rounded-full border border-primary flex items-center justify-center z-10 shadow-md">
+                        <span class="material-symbols-outlined text-on-primary text-lg">restaurant</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:text-right pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">17:30</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">ご披露宴開宴</h3>
+                        </div>
+                        <div class="pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">メインホールにて。皆様をお迎えしての祝宴が始まります。シェフ特製の料理をお楽しみください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">styler</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:order-2 pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">18:45</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">お色直し入場</h3>
+                        </div>
+                        <div class="md:text-right pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">新たな装いでの再入場です。皆様との語らいの時間を楽しみにしています。</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="relative group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 -top-1 w-8 h-8 bg-primary rounded-full border border-primary flex items-center justify-center z-10">
-                        <span class="material-symbols-outlined text-on-primary text-xs">restaurant</span>
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">volunteer_activism</span>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-16 pl-12 md:pl-0">
-                        <div class="text-left md:text-right hidden md:block pt-0.5">
-                            <span class="font-label-caps text-primary text-sm">16:30</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:text-right pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">20:00</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">閉宴 / お見送り</h3>
                         </div>
-                        <div class="pt-0.5">
-                            <span class="md:hidden font-label-caps text-primary text-xs mb-1 block">16:30</span>
-                            <h3 class="font-body-md font-semibold text-on-surface mb-1 text-base">ご披露宴</h3>
-                            <p class="text-sm text-on-surface-variant">グランドボールルームにて。ささやかな宴をご用意しております。</p>
+                        <div class="pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">お見送りの際、ささやかなギフトをご用意しております。気をつけてお帰りください。</p>
                         </div>
                     </div>
                 </div>
@@ -431,7 +483,7 @@
 </footer>
 
 <script>
-    // シンプルなスクロール時のヘッダー制御
+    // ヘッダー制御
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
         if (header) {
@@ -445,7 +497,7 @@
         }
     });
 
-    // 席次表のモーダルロジック
+    // 席次表ロジック
     const modal = document.getElementById('seating-modal');
     const modalTableNumber = document.getElementById('modal-table-number');
     const guestCircleContainer = document.getElementById('guest-circle-container');
@@ -461,46 +513,37 @@
         const tableNum = tableCard.getAttribute('data-table');
         const guests = Array.from(tableCard.querySelectorAll('ul li')).map(li => li.innerText);
         
-        // テーブル番号を設定（A, B, C... など）
         modalTableNumber.innerText = isNaN(tableNum) ? tableNum : tableNum.padStart(2, '0');
-        
-        // 既存の要素をクリア
         guestCircleContainer.innerHTML = '';
         modalGuestList.innerHTML = '';
         
-        // ラッパーの実際の描画サイズを基準に半径を算出（はみ出しを完全に防止）
+        modal.classList.remove('hidden');
+        document.body.classList.add('modal-open');
+        
         const wrapperWidth = tableWrapper.offsetWidth;
-        const radius = wrapperWidth * 0.38; // 外枠に対して程よい余白を持たせる係数
+        const radius = wrapperWidth * 0.38; 
         
         guests.forEach((guest, index) => {
-            // 円周上の角度を計算
             const angle = (index / guests.length) * 2 * Math.PI - Math.PI / 2;
-            
-            // 中央（50%, 50%）からの移動距離（px）を計算
             const x = radius * Math.cos(angle);
             const y = radius * Math.sin(angle);
-            
-            // ビジュアル用（円形配置）
             const guestEl = document.createElement('div');
-            guestEl.className = 'guest-item fade-in';
-            // CSSの left:50%; top:50%; transform:translate(-50%, -50%) と組み合わせることで、完全にズレを防止
+            guestEl.className = 'guest-item'; 
             guestEl.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
-            guestEl.style.animationDelay = `${index * 0.05}s`;
             
             guestEl.innerHTML = `
-                <div class="flex flex-col items-center">
-                    <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-primary/30 bg-white flex items-center justify-center mb-0.5 shadow-sm">
+                <div class="flex flex-col items-center justify-center w-full fade-in" style="animation-delay: ${index * 0.04}s;">
+                    <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-primary/30 bg-white flex items-center justify-center mb-1 shadow-sm">
                         <span class="material-symbols-outlined text-[10px] sm:text-xs text-primary">person</span>
                     </div>
-                    <p class="font-body-md text-[9px] sm:text-[11px] md:text-[12px] text-on-surface whitespace-nowrap px-1.5 py-0.5 bg-white/95 border border-outline-variant/30 rounded-full shadow-sm max-w-[95px] sm:max-w-none overflow-hidden text-ellipsis">${guest}</p>
+                    <p class="font-body-md text-[9px] sm:text-[11px] md:text-[12px] text-on-surface whitespace-nowrap px-2 py-0.5 bg-white/95 border border-outline-variant/30 rounded-full shadow-sm max-w-[90px] sm:max-w-none truncate">${guest}</p>
                 </div>
             `;
             guestCircleContainer.appendChild(guestEl);
 
-            // サイドバー（リスト表示）用
             const li = document.createElement('li');
             li.className = 'flex items-center gap-2.5 py-1.5 border-b border-outline-variant/10 fade-in';
-            li.style.animationDelay = `${index * 0.03}s`;
+            li.style.animationDelay = `${index * 0.02}s`;
             li.innerHTML = `
                 <span class="w-1 h-1 rounded-full bg-primary/60 shrink-0"></span>
                 <span class="truncate">${guest}</span>
@@ -508,9 +551,6 @@
             modalGuestList.appendChild(li);
         });
 
-        // モーダルを表示
-        modal.classList.remove('hidden');
-        document.body.classList.add('modal-open');
         setTimeout(() => modal.style.opacity = '1', 10);
     }
 
@@ -533,7 +573,6 @@
         if (e.key === 'Escape') closeModal();
     });
 
-    // リサイズ時に円形配置の座標を再計算（スマホの画面回転やPCのウィンドウ伸縮に対応）
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
