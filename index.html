@@ -1,123 +1,112 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Evelyn &amp; Julian - Wedding Welcome</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Manrope:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="scroll-smooth" lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Evelyn & Julian - Wedding Welcome</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Serif+JP:wght@300;400;500;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             "colors": {
-                    "tertiary-fixed": "#e4e3d7",
-                    "secondary-fixed-dim": "#e4bdbd",
-                    "tertiary-container": "#b9b9ae",
-                    "surface-tint": "#735a31",
-                    "on-secondary": "#ffffff",
-                    "on-secondary-fixed": "#2b1516",
-                    "error": "#ba1a1a",
-                    "inverse-on-surface": "#f3f0f0",
-                    "on-tertiary-container": "#494a41",
-                    "outline": "#7f7669",
-                    "on-primary-container": "#5c451e",
-                    "surface-container-low": "#f6f3f2",
-                    "on-error": "#ffffff",
-                    "on-background": "#1b1c1c",
-                    "error-container": "#ffdad6",
-                    "tertiary": "#5e5f56",
-                    "on-secondary-fixed-variant": "#5b4040",
-                    "on-primary-fixed": "#281900",
-                    "surface-container": "#f0eded",
-                    "on-primary-fixed-variant": "#59431c",
-                    "surface-container-lowest": "#ffffff",
-                    "on-secondary-container": "#795b5b",
-                    "tertiary-fixed-dim": "#c7c7bc",
-                    "surface": "#fcf9f8",
-                    "primary-fixed": "#ffdeac",
-                    "primary-fixed-dim": "#e3c290",
-                    "surface-variant": "#e4e2e1",
-                    "on-surface-variant": "#4d463b",
-                    "on-tertiary": "#ffffff",
-                    "secondary-container": "#ffd6d6",
-                    "surface-dim": "#dcd9d9",
-                    "primary-container": "#d4b483",
-                    "outline-variant": "#d1c5b7",
-                    "surface-container-highest": "#e4e2e1",
-                    "on-surface": "#1b1c1c",
-                    "inverse-primary": "#e3c290",
-                    "surface-container-high": "#eae7e7",
-                    "surface-bright": "#fcf9f8",
-                    "on-tertiary-fixed-variant": "#46473f",
-                    "primary": "#735a31",
-                    "secondary": "#755757",
-                    "on-primary": "#ffffff",
-                    "on-tertiary-fixed": "#1b1c15",
-                    "background": "#fcf9f8",
-                    "inverse-surface": "#303030",
-                    "on-error-container": "#93000a",
-                    "secondary-fixed": "#ffdad9"
+                "tertiary-fixed": "#e4e3d7",
+                "secondary-fixed-dim": "#e4bdbd",
+                "tertiary-container": "#b9b9ae",
+                "surface-tint": "#735a31",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed": "#2b1516",
+                "error": "#ba1a1a",
+                "inverse-on-surface": "#f3f0f0",
+                "on-tertiary-container": "#494a41",
+                "outline": "#7f7669",
+                "on-primary-container": "#5c451e",
+                "surface-container-low": "#fbf9f7",
+                "on-error": "#ffffff",
+                "on-background": "#2c2620",
+                "error-container": "#ffdad6",
+                "tertiary": "#5e5f56",
+                "on-secondary-fixed-variant": "#5b4040",
+                "on-primary-fixed": "#281900",
+                "surface-container": "#f7f3f0",
+                "on-primary-fixed-variant": "#59431c",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-container": "#795b5b",
+                "tertiary-fixed-dim": "#c7c7bc",
+                "surface": "#fdfbfa",
+                "primary-fixed": "#ffdeac",
+                "primary-fixed-dim": "#e3c290",
+                "surface-variant": "#edf0ee",
+                "on-surface-variant": "#5a5248",
+                "on-tertiary": "#ffffff",
+                "secondary-container": "#ffd6d6",
+                "surface-dim": "#dcd9d9",
+                "primary-container": "#e8d3b8",
+                "outline-variant": "#decbb7",
+                "surface-container-highest": "#e4e2e1",
+                "on-surface": "#2c2620",
+                "inverse-primary": "#e3c290",
+                "surface-container-high": "#f2ebe6",
+                "surface-bright": "#fdfbfa",
+                "on-tertiary-fixed-variant": "#46473f",
+                "primary": "#8c6c3f",
+                "secondary": "#996c6c",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed": "#1b1c15",
+                "background": "#fdfbfa",
+                "inverse-surface": "#303030",
+                "on-error-container": "#93000a",
+                "secondary-fixed": "#ffdad9"
             },
             "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "9999px"
             },
             "spacing": {
-                    "section-padding-mobile": "64px",
-                    "gutter": "24px",
-                    "section-padding-desktop": "1200px",
-                    "container-max": "1140px",
-                    "unit": "8px"
+                "section-padding-mobile": "64px",
+                "gutter": "24px",
+                "section-padding-desktop": "1200px",
+                "container-max": "1140px",
+                "unit": "8px"
             },
             "fontFamily": {
-                    "display-lg-mobile": ["Playfair Display"],
-                    "body-md": ["Manrope"],
-                    "headline-sm": ["Playfair Display"],
-                    "body-lg": ["Manrope"],
-                    "display-lg": ["Playfair Display"],
-                    "headline-md": ["Playfair Display"],
-                    "label-caps": ["Manrope"]
+                "display-lg-mobile": ["Cinzel", "Noto Serif JP", "serif"],
+                "body-md": ["Noto Serif JP", "Manrope", "sans-serif"],
+                "headline-sm": ["Noto Serif JP", "serif"],
+                "body-lg": ["Noto Serif JP", "serif"],
+                "display-lg": ["Cinzel", "Noto Serif JP", "serif"],
+                "headline-md": ["Noto Serif JP", "serif"],
+                "label-caps": ["Manrope", "Noto Serif JP", "sans-serif"]
             },
             "fontSize": {
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                    "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}]
+                "display-lg-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                "body-md": ["15px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                "headline-sm": ["22px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                "body-lg": ["16px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                "display-lg": ["56px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                "headline-md": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "label-caps": ["11px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600"}]
             }
           },
         },
       }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
-        .hero-mask {
-            mask-image: radial-gradient(circle, black 60%, transparent 100%);
-        }
         .fade-in {
-            animation: fadeIn 1.5s ease-out forwards;
+            animation: fadeIn 1.2s ease-out forwards;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-        .stagger-1 { animation-delay: 0.2s; }
-        .stagger-2 { animation-delay: 0.4s; }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
         }
         .modal-open {
             overflow: hidden;
@@ -129,522 +118,431 @@
             display: none;
             opacity: 0;
         }
+        /* 席次表の円形レイアウト用スタイル（完全に中央基準で配置） */
         .guest-item {
             position: absolute;
+            left: 50%;
+            top: 50%;
             transform: translate(-50%, -50%);
-            width: 140px;
+            width: 100px;
             text-align: center;
+            z-index: 20;
+            will-change: transform;
+        }
+        @media (min-width: 768px) {
+            .guest-item {
+                width: 130px;
+            }
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-<!-- TopNavBar -->
-<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-24 py-6 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500">
-<div class="font-display-lg text-2xl md:text-3xl text-primary tracking-tighter">Evelyn &amp; Julian</div>
-<nav class="hidden md:flex gap-8">
-<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">Our Story</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#gallery">Gallery</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#timeline">Event Info</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Message</a>
-</nav>
-<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-2 rounded-full hover:opacity-80 transition-opacity active:scale-95 duration-200">
-            RSVP
-        </button>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed antialiased">
+
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-24 py-5 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 transition-all duration-500">
+    <div class="font-display-lg text-xl md:text-2xl text-primary tracking-wider">Evelyn & Julian</div>
+    <nav class="hidden md:flex gap-8">
+        <a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">Our Story</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#gallery">Gallery</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#seating-chart">Seating Chart</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#timeline">Timeline</a>
+    </nav>
+    <button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity active:scale-95 duration-200 shadow-sm">
+        RSVP
+    </button>
 </header>
+
 <main class="overflow-x-hidden">
-<!-- 1. Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover filter brightness-[0.9] transition-transform duration-[10s] hover:scale-105" data-alt="A cinematic, high-end wedding portrait of a couple standing in a sun-drenched architectural space with high ceilings and minimalist stone walls. The lighting is ethereal and soft, casting long, gentle shadows. The aesthetic is clean and luxurious, featuring a soft color palette of ivory, cream, and muted rose. The atmosphere is one of timeless romance and quiet celebration, perfectly aligning with a sophisticated light-mode UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsBH-IymE4KFbTV5Kz5MaJtYz-0T_R1nSNPkdNlgDrUmWpKMnQZr7NBAp7EaEotphpmi40K5QKRKhmPOLIfUTMOydUBzB0A-qcrfzIQcdYri0-vrSR6lhz7hpdpKJSBKdeyWX19Xb3SG7p0j62bi7tQriHw3lrIjoS60LVORHJRjms0bSQuaHduuUu0qFMWukXhQMCK0ksUi6M4wo-9wsmB0UarpzpY-mGQm7KypweJtGy1btveyc3ISvylPshHYhfm9HV57PiZelm"/>
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background"></div>
-</div>
-<div class="relative z-10 text-center px-gutter fade-in">
-<span class="font-label-caps text-label-caps tracking-[0.3em] text-primary mb-6 block uppercase">We Are Getting Married</span>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Evelyn &amp; Julian</h1>
-<p class="font-headline-sm text-headline-sm text-primary italic mb-12">September 24th, 2024</p>
-<div class="w-px h-24 bg-primary/30 mx-auto"></div>
-</div>
-</section>
-<!-- 2. Welcome Message -->
-<section class="py-[120px] px-gutter max-w-container-max mx-auto text-center">
-<div class="max-w-3xl mx-auto space-y-8">
-<span class="material-symbols-outlined text-primary scale-150" data-icon="favorite" data-weight="fill">favorite</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">To our dearest friends and family,</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                    It is with immense joy that we welcome you to our wedding weekend. Each of you has played a special role in our journey, and having you here as we begin our life together means the world to us. We hope this weekend is filled with as much laughter, love, and light as you have brought into our lives.
+    <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover filter brightness-[0.85] transition-transform duration-[10s] hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsBH-IymE4KFbTV5Kz5MaJtYz-0T_R1nSNPkdNlgDrUmWpKMnQZr7NBAp7EaEotphpmi40K5QKRKhmPOLIfUTMOydUBzB0A-qcrfzIQcdYri0-vrSR6lhz7hpdpKJSBKdeyWX19Xb3SG7p0j62bi7tQriHw3lrIjoS60LVORHJRjms0bSQuaHduuUu0qFMWukXhQMCK0ksUi6M4wo-9wsmB0UarpzpY-mGQm7KypweJtGy1btveyc3ISvylPshHYhfm9HV57PiZelm" alt="Wedding Portrait"/>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background"></div>
+        </div>
+        <div class="relative z-10 text-center px-gutter fade-in">
+            <span class="font-label-caps text-label-caps tracking-[0.3em] text-primary mb-6 block uppercase">We Are Getting Married</span>
+            <h1 class="font-display-lg text-4xl md:text-display-lg text-on-surface mb-3 tracking-wide">Evelyn & Julian</h1>
+            <p class="font-headline-sm text-lg md:text-headline-sm text-primary italic mb-12">2026.09.24</p>
+            <div class="w-px h-24 bg-primary/30 mx-auto"></div>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-[120px] px-gutter max-w-container-max mx-auto text-center">
+        <div class="max-w-2xl mx-auto space-y-8">
+            <span class="material-symbols-outlined text-secondary opacity-80" style="font-size: 2rem;">favorite</span>
+            <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide leading-relaxed">親愛なる皆様へ</h2>
+            <p class="font-body-md text-body-lg text-on-surface-variant leading-loose">
+                私たちは本日、結婚式を迎えることができました。<br>
+                今日という日を迎えられたのは、いつも温かく支えてくださる皆様のおかげです。<br>
+                ささやかではございますが、日頃の感謝を込めて席をご用意いたしました。<br>
+                笑顔と優しさに満ちた心地よいひとときを、共にお過ごしいただければ幸いです。
+            </p>
+            <p class="font-display-lg text-xl text-primary italic tracking-widest pt-4">With Love, E & J</p>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-[120px] bg-surface-container-low">
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div class="relative p-3 bg-white shadow-[20px_20px_50px_-10px_rgba(140,108,63,0.1)] rounded-lg">
+                <img class="w-full aspect-[4/5] object-cover rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnIihI-pbaPPeqIqwW2k2YmRPsWEmyL5KbO1f3m3osUVy0oIa9uv3m5zVe9mFLJugCCQ394VWUPKJEXlDPQ27ikVeFaewBi_qAFBIRVkLuQwZDwtP37NYKKxGL4stBvXQdNAxU4dk6hAd31-siLb39IYAeG5dPfSORkH6cRm1QN55FChNscZPq3xqlfa72MNXjUB8nt5VmsyKv7KvJcXoXdkLGMSZJmdd06-rLh2c04FZ0RAHjUrHM4LIiggfnqBR_7HsJSdLxACAi" alt="Our Story"/>
+                <div class="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-32 h-32 md:w-48 md:h-48 bg-primary-fixed opacity-20 -z-10 rounded-full"></div>
+            </div>
+            <div class="space-y-6">
+                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">The Journey</span>
+                <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide">ふたりの歩み</h2>
+                <p class="font-body-md text-on-surface-variant leading-loose">
+                    ロンドンの静かな本屋での偶然の出会いから、私たちの物語は始まりました。異なる環境で育ったふたりですが、ジュリアンの穏やかな強さと、エヴリンのひたむきな明るさは、いつしかお互いにとってかけがえのない安らぎとなっていきました。
                 </p>
-<p class="font-display-lg text-2xl text-primary italic">With Love, E &amp; J</p>
-</div>
-</section>
-<!-- 3. Our Story -->
-<section class="py-[120px] bg-surface-container-low">
-<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="relative p-4 bg-white shadow-[30px_30px_60px_-15px_rgba(117,87,87,0.08)] rounded-lg">
-<img class="w-full aspect-[4/5] object-cover rounded" data-alt="A refined candid photograph of a couple laughing together in a lush, green garden setting during the golden hour. The lighting is warm and amber-toned, emphasizing a feeling of joy and connection. The composition is artistic and editorial, with soft-focus foliage in the foreground. The overall style is elegant and modern, reflecting a sense of sophisticated romance and timeless celebration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnIihI-pbaPPeqIqwW2k2YmRPsWEmyL5KbO1f3m3osUVy0oIa9uv3m5zVe9mFLJugCCQ394VWUPKJEXlDPQ27ikVeFaewBi_qAFBIRVkLuQwZDwtP37NYKKxGL4stBvXQdNAxU4dk6hAd31-siLb39IYAeG5dPfSORkH6cRm1QN55FChNscZPq3xqlfa72MNXjUB8nt5VmsyKv7KvJcXoXdkLGMSZJmdd06-rLh2c04FZ0RAHjUrHM4LIiggfnqBR_7HsJSdLxACAi"/>
-<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-primary-fixed opacity-20 -z-10 rounded-full"></div>
-</div>
-<div class="space-y-6">
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">The Journey</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Our Story</h2>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                        What started as a chance meeting in a quiet bookstore in London evolved into a journey across three continents and countless memories. Julian’s quiet strength and Evelyn’s vibrant spirit found a perfect harmony that neither knew they were searching for.
-                    </p>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                        From rainy strolls along the Seine to starry nights in the Tuscan countryside, our love has grown in the quiet moments of everyday life. Today, we stand ready to write our next chapter, surrounded by the people who mean the most.
-                    </p>
-<div class="pt-6 border-t border-outline-variant/30 flex items-center gap-4">
-<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
-<p class="font-label-caps text-label-caps text-primary italic">Est. 2018</p>
-</div>
-</div>
-</div>
-</section>
-<!-- 4. Photo Gallery (Bento Style) -->
-<section class="py-[120px] px-gutter" id="gallery">
-<div class="max-w-container-max mx-auto text-center mb-16">
-<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Captured Moments</h2>
-<div class="w-12 h-px bg-secondary mx-auto"></div>
-</div>
-<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
-<!-- Large Focal -->
-<div class="md:col-span-8 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A breathtaking landscape photograph of a wedding venue at dusk, featuring elegant outdoor tables set with glowing candles and white floral arrangements. The sky is a deep twilight blue, and strings of warm bistro lights are crisscrossing above. The atmosphere is sophisticated and magical, captured in a clean, editorial style that emphasizes luxury and a welcoming, romantic ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV8EWjss9KFXKkqb-uK-9vHOLUnd9NaBOHG5DGIQNlhogVK9yxVRG9O4JEJOflo5tCc97_LWsIC9bp5W509Y8mAj2RwFNewQ_wgeevlJBy1GNoIDtmZm_hI_6WcQgZjtvVYcdGf6aW-YPXPw_5ZntIKKOiKf_OJ3jw7rGIiiKgO7mNNu38CjZz88EJl3V42hDEfCrKadNRReeeSTJLDxyA9fiN-VvRe-u30KVa3yW7nfuHtTniEM482o7kW2rXP9SmI_hyB5ZDmrll"/>
-</div>
-<!-- Small Side 1 -->
-<div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl border-8 border-surface-container">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist close-up of two elegant wedding rings resting on a piece of textured ivory handmade paper. A small sprig of dried lavender lies beside them. The lighting is soft and directional, highlighting the metallic sheen and the paper's texture. The color palette is composed of soft golds, whites, and muted purples, reflecting a quiet, luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3PaqOGgcDsPVKIo3XMxMOqGRgQS4-swyLbthbu27Eoxb3I0kM1WHIZKXuDpiwcPuHAYalqgBdLm4NyY8oUVWEyv9Ao3CYBrxKsnFQWFhwv8gKEEU0K-9USoRgbh9AwlgpGwwP-nV1gw9gZ_q1kI1-lqa40suNRh_V5SymOe6Syj7gYwDPCUR724OcyOXCf1kCS19wA_bG-0kdxDOA-LwBQFWqn21YF8bS2I1jb8QQNJUprQckJVLWnlZeElpJeHTv8CpClbvEtlm"/>
-</div>
-<!-- Small Side 2 -->
-<div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl shadow-sm">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An artistic shot of a bride's bouquet featuring white peonies, eucalyptus, and delicate champagne roses. The bouquet is held against a background of soft, flowing silk fabric. The lighting is bright and airy, creating a high-key, modern romantic feel. The visual style is polished and editorial, suitable for a premium wedding program design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkycw7OZvpF3N5IjgiI1mAxkz0-pVInVQV0MJcQJlGIMcDeL5eDREo_mJc-gpCrjcCqBxXVVe5zF3OzzHbzOyyTmOLWF3LD9JcR7-UDP0tg24thnqX82SOogTXgszEQdO9RABfwgtcFG051R6Pucn6dpjvzf8eFLMQefve5O3J8W_d0yTFjsxa3mXgnkYA9LxSgbJD9UTW06T8MXatJSdYJcLLVUqD1DySFrdLkABh042EFR0lYxF_aigsaSaeqKQx3kNGDzeHvZJm"/>
-</div>
-<!-- Middle Grid -->
-<div class="md:col-span-4 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A black and white editorial-style photograph of a couple dancing in a grand ballroom with a vaulted ceiling. The image captures motion and emotion, with a soft blur on the edges. The lighting is dramatic yet elegant, focusing on the couple's silhouette. The overall mood is sophisticated, timeless, and deeply romantic, fitting for a high-end wedding celebration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVG9oQ9RTvZvEUjk2LocdUQxiGyf-XP8VhPqjs9s5k7Yc_7WD7igSIStaPRMvfbHPxFMYCYU8Wp20daRJpklk-GWfSh29yRwv1EB6iuu4GBpDNv6A-LamwtvH9ZeZGSbxsjFfsK2AoepNty4m3_szde67PY5_Q7T8RXjGWbEUoC-HfQGr8_gExc6BR0o9caIj1Dr5EEFj7zCukgz6cUfJW6rSjl0hKNxiIcU9CaS9HP0S6ysSSX-jHI9qmVEcLoIFMWWkoktOUkg_f"/>
-</div>
-<div class="md:col-span-4 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up photograph of an elegantly set wedding dinner table. It features fine bone china, polished silver cutlery, and a crystal wine glass reflecting the soft candlelight. A small, handwritten place card with calligraphy sits atop a linen napkin. The setting is luxurious and intimate, with a warm, cream-toned color palette and a very shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADgMtjvBcU_GgN1bemcbJNNbnBCLk9eFeax2GF8Vqa1EsXmRHgi7kTL_akTtfZm8TQ8iYiZo4i84oSuAPA1CtAFBPCR78Jf0wp4xP-nqri63pHjz1Hfw34xaIPzwf0evx18o0uj4eKfvNEoCZbgYVz9MPcd91czwIASoqP_uCc8wWiUOsosUHOvffql7H7HXdaHw7XSJpzoptamltnrjcJgil5LM2TXF0YepY5COrm2Y3rWXHy5bNRIhBAdiVM9yROV1z2L3tOvKdc"/>
-</div>
-<div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl border-8 border-surface-container">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An atmospheric wide shot of an outdoor wedding ceremony setup at sunset. The wooden chairs are arranged in perfect rows facing a floral arch. The background shows a calm lake reflecting the colors of the sky. The lighting is soft and golden, creating a serene and celebratory atmosphere. The style is modern, minimalist, and deeply evocative of a quiet, luxury event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlWlcwkokydOrTOCcOCkCvNUzVPB7OuFhJ7uG0C9ivbej4OcKZF6Yuux8JP2qDxtdYUTkZ-ZI06JtKvHDZMxpNZ-TGPyx8skWUpT4Ot67ilYEmhwIMnv0q4oz_l4tbMLowrya19c8piv41zT2_JLF9o5QV3qpGfKoILvls2UvzWJMst-AOhBhwBsplMmARe_CsOB21WUQwR5rFl7z-oJWU-E4Pj1WJbImDhMI4mmyM9OXPP-8qj12V32o2PtDCWflarKK7-6f8bLae"/>
-</div>
-</div>
-</section>
-<!-- 5. Event Seating Chart -->
-<section class="py-[120px] bg-background" id="seating-chart">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-16">
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Dinner Arrangement</span>
-<h2 class="font-display-lg text-headline-md md:text-display-lg text-on-surface mb-6">Seating Chart</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Find your seat and join us for the celebration. We've arranged our favorite people to share this special evening together.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- Table 01 -->
-<div class="table-card bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-table="1">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
-<span class="font-headline-sm text-primary text-lg">01</span>
-</div>
-<h3 class="font-headline-sm text-on-surface mb-4 border-b border-primary/20 pb-2 w-full">Table 01</h3>
-<ul class="space-y-2 font-body-md text-on-surface-variant guest-list-hidden">
-<li>Arthur Morgan</li>
-<li>Sadie Adler</li>
-<li>John Marston</li>
-<li>Abigail Roberts</li>
-<li>Charles Smith</li>
-<li>Mary Linton</li>
-</ul>
-</div>
-<!-- Table 02 -->
-<div class="table-card bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-table="2">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
-<span class="font-headline-sm text-primary text-lg">02</span>
-</div>
-<h3 class="font-headline-sm text-on-surface mb-4 border-b border-primary/20 pb-2 w-full">Table 02</h3>
-<ul class="space-y-2 font-body-md text-on-surface-variant guest-list-hidden">
-<li>Elizabeth Bennett</li>
-<li>Fitzwilliam Darcy</li>
-<li>Jane Bennett</li>
-<li>Charles Bingley</li>
-<li>Lydia Bennett</li>
-<li>George Wickham</li>
-</ul>
-</div>
-<!-- Table 03 -->
-<div class="table-card bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-table="3">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
-<span class="font-headline-sm text-primary text-lg">03</span>
-</div>
-<h3 class="font-headline-sm text-on-surface mb-4 border-b border-primary/20 pb-2 w-full">Table 03</h3>
-<ul class="space-y-2 font-body-md text-on-surface-variant guest-list-hidden">
-<li>Jay Gatsby</li>
-<li>Daisy Buchanan</li>
-<li>Nick Carraway</li>
-<li>Jordan Baker</li>
-<li>Tom Buchanan</li>
-<li>Myrtle Wilson</li>
-</ul>
-</div>
-<!-- Table 04 -->
-<div class="table-card bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-table="4">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
-<span class="font-headline-sm text-primary text-lg">04</span>
-</div>
-<h3 class="font-headline-sm text-on-surface mb-4 border-b border-primary/20 pb-2 w-full">Table 04</h3>
-<ul class="space-y-2 font-body-md text-on-surface-variant guest-list-hidden">
-<li>Jo March</li>
-<li>Laurie Laurence</li>
-<li>Meg March</li>
-<li>John Brooke</li>
-<li>Beth March</li>
-<li>Amy March</li>
-</ul>
-</div>
-<!-- Table 05 -->
-<div class="table-card bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-table="5">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
-<span class="font-headline-sm text-primary text-lg">05</span>
-</div>
-<h3 class="font-headline-sm text-on-surface mb-4 border-b border-primary/20 pb-2 w-full">Table 05</h3>
-<ul class="space-y-2 font-body-md text-on-surface-variant guest-list-hidden">
-<li>Oliver Twist</li>
-<li>Nancy Sykes</li>
-<li>Rose Maylie</li>
-<li>Charles Bates</li>
-<li>Harry Maylie</li>
-<li>Edward Leeford</li>
-</ul>
-</div>
-<!-- Table 06 -->
-<div class="table-card bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-table="6">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
-<span class="font-headline-sm text-primary text-lg">06</span>
-</div>
-<h3 class="font-headline-sm text-on-surface mb-4 border-b border-primary/20 pb-2 w-full">Table 06</h3>
-<ul class="space-y-2 font-body-md text-on-surface-variant guest-list-hidden">
-<li>Elinor Dashwood</li>
-<li>Edward Ferrars</li>
-<li>Marianne Dashwood</li>
-<li>Colonel Brandon</li>
-<li>John Willoughby</li>
-<li>Lucy Steele</li>
-</ul>
-</div>
-<!-- Table 07 -->
-<div class="table-card bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-table="7">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
-<span class="font-headline-sm text-primary text-lg">07</span>
-</div>
-<h3 class="font-headline-sm text-on-surface mb-4 border-b border-primary/20 pb-2 w-full">Table 07</h3>
-<ul class="space-y-2 font-body-md text-on-surface-variant guest-list-hidden">
-<li>Emma Woodhouse</li>
-<li>George Knightley</li>
-<li>Harriet Smith</li>
-<li>Frank Churchill</li>
-<li>Jane Fairfax</li>
-<li>Philip Elton</li>
-</ul>
-</div>
-<!-- Table 08 -->
-<div class="table-card bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-table="8">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
-<span class="font-headline-sm text-primary text-lg">08</span>
-</div>
-<h3 class="font-headline-sm text-on-surface mb-4 border-b border-primary/20 pb-2 w-full">Table 08</h3>
-<ul class="space-y-2 font-body-md text-on-surface-variant guest-list-hidden">
-<li>Sherlock Holmes</li>
-<li>John Watson</li>
-<li>Irene Adler</li>
-<li>Mary Morstan</li>
-<li>Mycroft Holmes</li>
-<li>Lestrade</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- Seating Modal -->
-<div class="fixed inset-0 z-[100] flex items-center justify-center px-4 hidden" id="seating-modal">
-<!-- Backdrop -->
-<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm" id="modal-backdrop"></div>
-<!-- Modal Content -->
-<div class="relative bg-background w-full max-w-4xl min-h-[600px] rounded-2xl shadow-2xl overflow-hidden flex flex-col">
-<!-- Close Button -->
-<button class="absolute top-6 right-6 p-2 rounded-full hover:bg-surface-container-high transition-colors group z-10" id="close-modal">
-<span class="material-symbols-outlined text-outline group-hover:text-on-surface">close</span>
-</button>
-<div class="flex-1 flex flex-col md:flex-row">
-<!-- Table Visualization Side -->
-<div class="flex-1 flex items-center justify-center p-12 relative overflow-hidden bg-surface-container-lowest">
-<div class="absolute inset-0 opacity-5">
-<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-<defs><pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"></path></pattern></defs>
-<rect fill="url(#grid)" height="100%" width="100%"></rect>
-</svg>
-</div>
-<div class="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px]">
-<!-- The Round Table -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 rounded-full border-2 border-primary/20 bg-white shadow-lg flex items-center justify-center z-10">
-<div class="text-center">
-<span class="font-label-caps text-primary tracking-widest block mb-1">TABLE</span>
-<span class="font-display-lg text-4xl md:text-5xl text-on-surface" id="modal-table-number">01</span>
-</div>
-</div>
-<!-- Guest Placement Container -->
-<div class="absolute inset-0" id="guest-circle-container">
-<!-- Guests will be injected here via JS -->
-</div>
-</div>
-</div>
-<!-- List Side (Mobile Responsive) -->
-<div class="w-full md:w-80 bg-surface-container-low p-8 border-t md:border-t-0 md:border-l border-outline-variant/30 flex flex-col">
-<h4 class="font-display-lg text-2xl text-primary mb-6">Guest List</h4>
-<ul class="space-y-4 font-body-md text-on-surface-variant overflow-y-auto" id="modal-guest-list">
-<!-- Text list version for quick reading -->
-</ul>
-<div class="mt-auto pt-8">
-<p class="font-label-caps text-[10px] text-outline uppercase tracking-widest">Dinner starts at 6:30 PM</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section class="py-[120px] bg-surface-container-high relative" id="timeline">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-20">
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Day's Flow</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Schedule of Events</h2>
-</div>
-<div class="relative max-w-2xl mx-auto">
-<!-- Vertical Line -->
-<div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-outline-variant/50"></div>
-<!-- Event 1 -->
-<div class="relative mb-24 group">
-<div class="absolute left-1/2 -translate-x-1/2 -top-4 w-10 h-10 bg-background rounded-full border border-primary flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined text-primary text-sm" data-icon="celebration">celebration</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
-<div class="text-right hidden md:block pt-2">
-<span class="font-label-caps text-label-caps text-primary">03:30 PM</span>
-</div>
-<div class="md:pt-2">
-<span class="md:hidden font-label-caps text-label-caps text-primary mb-2 block">03:30 PM</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">The Ceremony</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Saint Mary's Chapel. We kindly ask guests to arrive 15 minutes early.</p>
-</div>
-</div>
-</div>
-<!-- Event 2 -->
-<div class="relative mb-24 group">
-<div class="absolute left-1/2 -translate-x-1/2 -top-4 w-10 h-10 bg-background rounded-full border border-primary flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined text-primary text-sm" data-icon="local_bar">local_bar</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
-<div class="md:text-right pt-2 md:order-1 order-2">
-<span class="md:hidden font-label-caps text-label-caps text-primary mb-2 block">05:00 PM</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Cocktail Hour</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">The Terrace Gardens. Enjoy drinks, hors d'oeuvres, and live jazz.</p>
-</div>
-<div class="text-left hidden md:block md:order-2 pt-2">
-<span class="font-label-caps text-label-caps text-primary">05:00 PM</span>
-</div>
-</div>
-</div>
-<!-- Event 3 -->
-<div class="relative mb-24 group">
-<div class="absolute left-1/2 -translate-x-1/2 -top-4 w-10 h-10 bg-background rounded-full border border-primary flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined text-primary text-sm" data-icon="restaurant">restaurant</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
-<div class="text-right hidden md:block pt-2">
-<span class="font-label-caps text-label-caps text-primary">06:30 PM</span>
-</div>
-<div class="md:pt-2">
-<span class="md:hidden font-label-caps text-label-caps text-primary mb-2 block">06:30 PM</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Dinner &amp; Dancing</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">The Grand Ballroom. A night of celebration, speeches, and plenty of dancing.</p>
-</div>
-</div>
-</div>
-<!-- Event 4 -->
-<div class="relative group">
-<div class="absolute left-1/2 -translate-x-1/2 -top-4 w-10 h-10 bg-primary rounded-full border border-primary flex items-center justify-center z-10">
-<span class="material-symbols-outlined text-on-primary text-sm" data-icon="sparkles">colors_spark</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
-<div class="md:text-right pt-2 md:order-1 order-2">
-<span class="md:hidden font-label-caps text-label-caps text-primary mb-2 block">11:00 PM</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Sparkler Send-off</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">The Main Entrance. Help us wrap up our magical night with a glow!</p>
-</div>
-<div class="text-left hidden md:block md:order-2 pt-2">
-<span class="font-label-caps text-label-caps text-primary">11:00 PM</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 6. Guest Message -->
-<section class="py-[120px] relative overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover filter saturate-[0.8] opacity-20" data-alt="A soft-focus, atmospheric photograph of a couple walking away on a misty beach at dawn. The colors are muted and ethereal, with soft greys, creams, and pale blues. The lighting is very diffused and gentle. The image evokes a sense of peace, new beginnings, and everlasting love, perfectly concluding a romantic wedding landing page with a high-end, calm visual tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJxmphNI0Q94EyZCIgm4rngLSf5F84YOVGeUe_Raij_Sg_Lw6V9Hu9wVNFm98Jw2ByvAHmITfuRTth_JWeZZJ7q7eCHAl_lYEwjLgRGC0bJUQh3KOswYR73u0QAXZmKuSoSnmuF_qjyom3YtqzEM7Qa1abHT-SCzYwG9RH2KlwWuoODAafx7YSSxqoz1pJXEU1aC6GtIbJEM1mA4FJOQwdf8wkcJgbNUg8_4wXAFPqS7wy9Pj_t_Mz-dWLVrv3lc_U08tSo4W-XG0t"/>
-</div>
-<div class="relative z-10 max-w-container-max mx-auto px-gutter text-center">
-<div class="max-w-2xl mx-auto space-y-6">
-<h2 class="font-display-lg text-headline-md md:text-headline-md text-primary italic">A Heartfelt Thank You</h2>
-<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
-                        Your presence is the greatest gift we could receive. Thank you for traveling near and far to share in our celebration. We can't wait to see you on the dance floor!
-                    </p>
-<div class="pt-8">
-<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all shadow-lg active:scale-95">
-                            VIEW FULL REGISTRY
-                        </button>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-[120px] px-gutter flex flex-col md:flex-row justify-between items-center gap-8 max-w-container-max mx-auto text-center md:text-left border-t border-outline-variant/20">
-<div class="space-y-4">
-<div class="font-headline-sm text-headline-sm text-primary">Evelyn &amp; Julian</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© 2024 Evelyn &amp; Julian. Handcrafted with love.</p>
-</div>
-<div class="flex flex-col md:flex-row gap-6 md:gap-12">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Privacy Policy</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Registry</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Contact</a>
-</div>
-</footer>
-<script>
-        // Simple scroll behavior for header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (header) {
-                if (window.scrollY > 50) {
-                    header.classList.add('py-4', 'shadow-sm');
-                    header.classList.remove('py-6');
-                } else {
-                    header.classList.remove('py-4', 'shadow-sm');
-                    header.classList.add('py-6');
-                }
-            }
-        });
+                <p class="font-body-md text-on-surface-variant leading-loose">
+                    雨のセーヌ川沿いを歩いた日々、トスカーナの星空の下で語り明かした夜。何気ない日常の積み重ねの中で、愛と信頼を育んできました。今日、大切な皆様に見守られながら、新しい章の一歩を踏み出します。
+                </p>
+                <div class="pt-6 border-t border-outline-variant/30 flex items-center gap-4">
+                    <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                    <p class="font-label-caps text-label-caps text-primary italic">Est. 2018</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Basic intersection observer for fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, { threshold: 0.1 });
+    <section class="py-20 md:py-[120px] px-gutter" id="gallery">
+        <div class="max-w-container-max mx-auto text-center mb-12 md:mb-16">
+            <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide mb-3">心に刻まれた記憶</h2>
+            <div class="w-12 h-px bg-secondary/50 mx-auto"></div>
+        </div>
+        <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
+            <div class="md:col-span-8 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV8EWjss9KFXKkqb-uK-9vHOLUnd9NaBOHG5DGIQNlhogVK9yxVRG9O4JEJOflo5tCc97_LWsIC9bp5W509Y8mAj2RwFNewQ_wgeevlJBy1GNoIDtmZm_hI_6WcQgZjtvVYcdGf6aW-YPXPw_5ZntIKKOiKf_OJ3jw7rGIiiKgO7mNNu38CjZz88EJl3V42hDEfCrKadNRReeeSTJLDxyA9fiN-VvRe-u30KVa3yW7nfuHtTniEM482o7kW2rXP9SmI_hyB5ZDmrll" alt="Gallery 1"/>
+            </div>
+            <div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl border-4 md:border-8 border-surface-container">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3PaqOGgcDsPVKIo3XMxMOqGRgQS4-swyLbthbu27Eoxb3I0kM1WHIZKXuDpiwcPuHAYalqgBdLm4NyY8oUVWEyv9Ao3CYBrxKsnFQWFhwv8gKEEU0K-9USoRgbh9AwlgpGwwP-nV1gw9gZ_q1kI1-lqa40suNRh_V5SymOe6Syj7gYwDPCUR724OcyOXCf1kCS19wA_bG-0kdxDOA-LwBQFWqn21YF8bS2I1jb8QQNJUprQckJVLWnlZeElpJeHTv8CpClbvEtlm" alt="Gallery 2"/>
+            </div>
+            <div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl shadow-sm">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkycw7OZvpF3N5IjgiI1mAxkz0-pVInVQV0MJcQJlGIMcDeL5eDREo_mJc-gpCrjcCqBxXVVe5zF3OzzHbzOyyTmOLWF3LD9JcR7-UDP0tg24thnqX82SOogTXgszEQdO9RABfwgtcFG051R6Pucn6dpjvzf8eFLMQefve5O3J8W_d0yTFjsxa3mXgnkYA9LxSgbJD9UTW06T8MXatJSdYJcLLVUqD1DySFrdLkABh042EFR0lYxF_aigsaSaeqKQx3kNGDzeHvZJm" alt="Gallery 3"/>
+            </div>
+            <div class="md:col-span-4 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVG9oQ9RTvZvEUjk2LocdUQxiGyf-XP8VhPqjs9s5k7Yc_7WD7igSIStaPRMvfbHPxFMYCYU8Wp20daRJpklk-GWfSh29yRwv1EB6iuu4GBpDNv6A-LamwtvH9ZeZGSbxsjFfsK2AoepNty4m3_szde67PY5_Q7T8RXjGWbEUoC-HfQGr8_gExc6BR0o9caIj1Dr5EEFj7zCukgz6cUfJW6rSjl0hKNxiIcU9CaS9HP0S6ysSSX-jHI9qmVEcLoIFMWWkoktOUkg_f" alt="Gallery 4"/>
+            </div>
+            <div class="md:col-span-4 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADgMtjvBcU_GgN1bemcbJNNbnBCLk9eFeax2GF8Vqa1EsXmRHgi7kTL_akTtfZm8TQ8iYiZo4i84oSuAPA1CtAFBPCR78Jf0wp4xP-nqri63pHjz1Hfw34xaIPzwf0evx18o0uj4eKfvNEoCZbgYVz9MPcd91czwIASoqP_uCc8wWiUOsosUHOvffql7H7HXdaHw7XSJpzoptamltnrjcJgil5LM2TXF0YepY5COrm2Y3rWXHy5bNRIhBAdiVM9yROV1z2L3tOvKdc" alt="Gallery 5"/>
+            </div>
+            <div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl border-4 md:border-8 border-surface-container">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlWlcwkokydOrTOCcOCkCvNUzVPB7OuFhJ7uG0C9ivbej4OcKZF6Yuux8JP2qDxtdYUTkZ-ZI06JtKvHDZMxpNZ-TGPyx8skWUpT4Ot67ilYEmhwIMnv0q4oz_l4tbMLowrya19c8piv41zT2_JLF9o5QV3qpGfKoILvls2UvzWJMst-AOhBhwBsplMmARe_CsOB21WUQwR5rFl7z-oJWU-E4Pj1WJbImDhMI4mmyM9OXPP-8qj12V32o2PtDCWflarKK7-6f8bLae" alt="Gallery 6"/>
+            </div>
+        </div>
+    </section>
 
-        document.querySelectorAll('section > div').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
-        });
-
-        // Seating Chart Modal Logic
-        const modal = document.getElementById('seating-modal');
-        const modalTableNumber = document.getElementById('modal-table-number');
-        const guestCircleContainer = document.getElementById('guest-circle-container');
-        const modalGuestList = document.getElementById('modal-guest-list');
-        const closeModalBtn = document.getElementById('close-modal');
-        const modalBackdrop = document.getElementById('modal-backdrop');
-
-        function openModal(tableCard) {
-            const tableNum = tableCard.getAttribute('data-table');
-            const guests = Array.from(tableCard.querySelectorAll('ul li')).map(li => li.innerText);
-            
-            // Set Table Number
-            modalTableNumber.innerText = tableNum.padStart(2, '0');
-            
-            // Clear existing
-            guestCircleContainer.innerHTML = '';
-            modalGuestList.innerHTML = '';
-            
-            // Arrange Guests in a circle
-            // Adjusted radius to ensure labels sit outside the 48/64px table without overlapping
-            // Mobile: Table is ~192px (96 radius). Desktop: Table is ~256px (128 radius).
-            const isMobile = window.innerWidth < 768;
-            const radius = isMobile ? 120 : 160; 
-            
-            const containerWidth = guestCircleContainer.offsetWidth;
-            const containerHeight = guestCircleContainer.offsetHeight;
-            const centerX = containerWidth / 2;
-            const centerY = containerHeight / 2;
-            
-            guests.forEach((guest, index) => {
-                const angle = (index / guests.length) * 2 * Math.PI - Math.PI / 2;
-                const x = centerX + radius * Math.cos(angle);
-                const y = centerY + radius * Math.sin(angle);
-                
-                // Visual Circle Representation
-                const guestEl = document.createElement('div');
-                guestEl.className = 'guest-item fade-in';
-                guestEl.style.left = `${x}px`;
-                guestEl.style.top = `${y}px`;
-                guestEl.style.animationDelay = `${index * 0.1}s`;
-                
-                guestEl.innerHTML = `
-                    <div class="flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full border border-primary/40 bg-background flex items-center justify-center mb-1 shadow-sm">
-                            <span class="material-symbols-outlined text-xs text-primary">person</span>
-                        </div>
-                        <p class="font-body-md text-[12px] md:text-[13px] text-on-surface whitespace-nowrap px-2 py-0.5 bg-background/90 border border-outline-variant/30 rounded-full shadow-sm">${guest}</p>
+    <section class="py-20 md:py-[120px] bg-surface-container-low" id="seating-chart">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Dinner Arrangement</span>
+                <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide mb-4">ご披露宴 席次表</h2>
+                <p class="font-body-md text-on-surface-variant max-w-xl mx-auto">
+                    受付でお渡ししたお名前、または下記よりご自身のお席をご確認ください。<br>カードをタップするとテーブルごとの詳細をご覧いただけます。
+                </p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                <div class="table-card bg-white p-5 md:p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="1">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                        <span class="font-display-lg text-primary text-base">A</span>
                     </div>
-                `;
-                guestCircleContainer.appendChild(guestEl);
+                    <h3 class="font-body-md font-semibold text-on-surface mb-2 border-b border-primary/10 pb-2 w-full text-sm md:text-base">Table A</h3>
+                    <p class="text-xs text-outline tracking-wider">タップして表示</p>
+                    <ul class="hidden">
+                        <li>織田 信長 様</li>
+                        <li>豊臣 秀吉 様</li>
+                        <li>徳川 家康 様</li>
+                        <li>明智 光秀 様</li>
+                        <li>真田 幸村 様</li>
+                        <li>伊達 政宗 様</li>
+                    </ul>
+                </div>
+                <div class="table-card bg-white p-5 md:p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="2">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                        <span class="font-display-lg text-primary text-base">B</span>
+                    </div>
+                    <h3 class="font-body-md font-semibold text-on-surface mb-2 border-b border-primary/10 pb-2 w-full text-sm md:text-base">Table B</h3>
+                    <p class="text-xs text-outline tracking-wider">タップして表示</p>
+                    <ul class="hidden">
+                        <li>紫式部 様</li>
+                        <li>清少納言 様</li>
+                        <li>小野小町 様</li>
+                        <li>和泉式部 様</li>
+                        <li>額田王 様</li>
+                        <li>北条 政子 様</li>
+                    </ul>
+                </div>
+                <div class="table-card bg-white p-5 md:p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                        <span class="font-display-lg text-primary text-base">C</span>
+                    </div>
+                    <h3 class="font-body-md font-semibold text-on-surface mb-2 border-b border-primary/10 pb-2 w-full text-sm md:text-base">Table C</h3>
+                    <p class="text-xs text-outline tracking-wider">タップして表示</p>
+                    <ul class="hidden">
+                        <li>夏目 漱石 様</li>
+                        <li>太宰 治 様</li>
+                        <li>芥川 龍之介 様</li>
+                        <li>川端 康成 様</li>
+                        <li>三島 由紀夫 様</li>
+                        <li>宮沢 賢治 様</li>
+                    </ul>
+                </div>
+                <div class="table-card bg-white p-5 md:p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="4">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                        <span class="font-display-lg text-primary text-base">D</span>
+                    </div>
+                    <h3 class="font-body-md font-semibold text-on-surface mb-2 border-b border-primary/10 pb-2 w-full text-sm md:text-base">Table D</h3>
+                    <p class="text-xs text-outline tracking-wider">タップして表示</p>
+                    <ul class="hidden">
+                        <li>坂本 龍馬 様</li>
+                        <li>西郷 隆盛 様</li>
+                        <li>桂 小五郎 様</li>
+                        <li>高杉 晋作 様</li>
+                        <li>勝 海舟 様</li>
+                        <li>土方 歳三 様</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                // Sidebar List Item
-                const li = document.createElement('li');
-                li.className = 'flex items-center gap-3 py-2 border-b border-outline-variant/20 fade-in';
-                li.style.animationDelay = `${index * 0.05}s`;
-                li.innerHTML = `
-                    <span class="w-1 h-1 rounded-full bg-primary"></span>
-                    <span>${guest}</span>
-                `;
-                modalGuestList.appendChild(li);
-            });
+    <div class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 hidden" id="seating-modal">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" id="modal-backdrop"></div>
+        <div class="relative bg-background w-full max-w-4xl h-[85vh] md:h-[650px] rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+            <button class="absolute top-4 right-4 p-2 rounded-full hover:bg-surface-container-high transition-colors group z-50 bg-white/80 backdrop-blur-sm shadow-sm" id="close-modal">
+                <span class="material-symbols-outlined text-outline group-hover:text-on-surface">close</span>
+            </button>
+            
+            <div class="flex-1 flex items-center justify-center p-4 relative bg-surface-container-lowest min-h-[50%] md:min-h-full">
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+                    <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs><pattern height="30" id="grid" patternunits="userSpaceOnUse" width="30"><path d="M 30 0 L 0 0 0 30" fill="none" stroke="currentColor" stroke-width="0.5"></path></pattern></defs>
+                        <rect fill="url(#grid)" height="100%" width="100%"></rect>
+                    </svg>
+                </div>
+                
+                <div class="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px]" id="table-wrapper">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 md:w-44 md:h-44 rounded-full border border-primary/20 bg-white shadow-md flex items-center justify-center z-10">
+                        <div class="text-center">
+                            <span class="font-label-caps text-[9px] md:text-[11px] text-primary tracking-widest block mb-0.5">TABLE</span>
+                            <span class="font-display-lg text-2xl md:text-4xl text-on-surface" id="modal-table-number">A</span>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0" id="guest-circle-container">
+                        </div>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-72 bg-surface-container-low p-6 md:p-8 border-t md:border-t-0 md:border-l border-outline-variant/30 flex flex-col h-[50%] md:h-full justify-between shrink-0">
+                <div class="overflow-y-auto pr-1 flex-1">
+                    <h4 class="font-body-md font-semibold text-lg text-primary mb-4">ゲスト一覧</h4>
+                    <ul class="space-y-2.5 text-sm font-body-md text-on-surface-variant" id="modal-guest-list">
+                        </ul>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/20 shrink-0">
+                    <p class="font-label-caps text-[10px] text-outline uppercase tracking-widest">開宴時間：18:30</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            // Show Modal
-            modal.classList.remove('hidden');
-            document.body.classList.add('modal-open');
-            setTimeout(() => modal.style.opacity = '1', 10);
+    <section class="py-20 md:py-[120px] bg-surface-container" id="timeline">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-16">
+                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Day's Flow</span>
+                <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide">当日のスケジュール</h2>
+            </div>
+            <div class="relative max-w-xl mx-auto">
+                <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-outline-variant"></div>
+                
+                <div class="relative mb-12 md:mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 -top-1 w-8 h-8 bg-background rounded-full border border-primary flex items-center justify-center z-10">
+                        <span class="material-symbols-outlined text-primary text-xs">celebration</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-16 pl-12 md:pl-0">
+                        <div class="text-left md:text-right hidden md:block pt-0.5">
+                            <span class="font-label-caps text-primary text-sm">15:00 / 受付開始</span>
+                        </div>
+                        <div class="pt-0.5">
+                            <span class="md:hidden font-label-caps text-primary text-xs mb-1 block">15:00 / 受付開始</span>
+                            <h3 class="font-body-md font-semibold text-on-surface mb-1 text-base">挙式（セレモニー）</h3>
+                            <p class="text-sm text-on-surface-variant">セントメアリー礼拝堂。開式15分前までにお越しください。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative mb-12 md:mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 -top-1 w-8 h-8 bg-background rounded-full border border-primary flex items-center justify-center z-10">
+                        <span class="material-symbols-outlined text-primary text-xs">local_bar</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-16 pl-12 md:pl-0">
+                        <div class="text-left md:text-right pt-0.5 md:order-1 order-2">
+                            <span class="md:hidden font-label-caps text-primary text-xs mb-1 block">16:00</span>
+                            <h3 class="font-body-md font-semibold text-on-surface mb-1 text-base">ウェルカムパーティ</h3>
+                            <p class="text-sm text-on-surface-variant">テラスガーデンにて。生演奏と共に、カクテルや軽食をお楽しみください。</p>
+                        </div>
+                        <div class="text-left hidden md:block md:order-2 pt-0.5">
+                            <span class="font-label-caps text-primary text-sm">16:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 -top-1 w-8 h-8 bg-primary rounded-full border border-primary flex items-center justify-center z-10">
+                        <span class="material-symbols-outlined text-on-primary text-xs">restaurant</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-16 pl-12 md:pl-0">
+                        <div class="text-left md:text-right hidden md:block pt-0.5">
+                            <span class="font-label-caps text-primary text-sm">16:30</span>
+                        </div>
+                        <div class="pt-0.5">
+                            <span class="md:hidden font-label-caps text-primary text-xs mb-1 block">16:30</span>
+                            <h3 class="font-body-md font-semibold text-on-surface mb-1 text-base">ご披露宴</h3>
+                            <p class="text-sm text-on-surface-variant">グランドボールルームにて。ささやかな宴をご用意しております。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative overflow-hidden text-center">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover filter opacity-15" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJxmphNI0Q94EyZCIgm4rngLSf5F84YOVGeUe_Raij_Sg_Lw6V9Hu9wVNFm98Jw2ByvAHmITfuRTth_JWeZZJ7q7eCHAl_lYEwjLgRGC0bJUQh3KOswYR73u0QAXZmKuSoSnmuF_qjyom3YtqzEM7Qa1abHT-SCzYwG9RH2KlwWuoODAafx7YSSxqoz1pJXEU1aC6GtIbJEM1mA4FJOQwdf8wkcJgbNUg8_4wXAFPqS7wy9Pj_t_Mz-dWLVrv3lc_U08tSo4W-XG0t" alt="Mist beach"/>
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto px-gutter">
+            <div class="max-w-xl mx-auto space-y-6">
+                <h2 class="font-display-lg text-2xl text-primary italic tracking-wide">Thank You</h2>
+                <p class="font-body-md text-on-surface leading-loose">
+                    皆様の温かいお気持ちに、心より感謝申し上げます。<br>
+                    当日は皆様にお会いできることを、ふたりで楽しみにしております。
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="w-full py-12 px-gutter flex flex-col md:flex-row justify-between items-center gap-6 max-w-container-max mx-auto text-center md:text-left border-t border-outline-variant/20 text-sm">
+    <div class="space-y-2">
+        <div class="font-display-lg text-lg text-primary">Evelyn & Julian</div>
+        <p class="font-body-md text-xs text-on-surface-variant">© 2026 Evelyn & Julian. Handcrafted with love.</p>
+    </div>
+    <div class="flex gap-6">
+        <a class="text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Contact</a>
+    </div>
+</footer>
+
+<script>
+    // シンプルなスクロール時のヘッダー制御
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (header) {
+            if (window.scrollY > 30) {
+                header.classList.add('py-3', 'shadow-sm', 'bg-surface/95');
+                header.classList.remove('py-5');
+            } else {
+                header.classList.remove('py-3', 'shadow-sm', 'bg-surface/95');
+                header.classList.add('py-5');
+            }
         }
+    });
 
-        function closeModal() {
-            modal.style.opacity = '0';
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.classList.remove('modal-open');
-            }, 300);
-        }
+    // 席次表のモーダルロジック
+    const modal = document.getElementById('seating-modal');
+    const modalTableNumber = document.getElementById('modal-table-number');
+    const guestCircleContainer = document.getElementById('guest-circle-container');
+    const modalGuestList = document.getElementById('modal-guest-list');
+    const closeModalBtn = document.getElementById('close-modal');
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const tableWrapper = document.getElementById('table-wrapper');
 
-        document.querySelectorAll('.table-card').forEach(card => {
-            card.addEventListener('click', () => openModal(card));
+    let currentActiveCard = null;
+
+    function openModal(tableCard) {
+        currentActiveCard = tableCard;
+        const tableNum = tableCard.getAttribute('data-table');
+        const guests = Array.from(tableCard.querySelectorAll('ul li')).map(li => li.innerText);
+        
+        // テーブル番号を設定（A, B, C... など）
+        modalTableNumber.innerText = isNaN(tableNum) ? tableNum : tableNum.padStart(2, '0');
+        
+        // 既存の要素をクリア
+        guestCircleContainer.innerHTML = '';
+        modalGuestList.innerHTML = '';
+        
+        // ラッパーの実際の描画サイズを基準に半径を算出（はみ出しを完全に防止）
+        const wrapperWidth = tableWrapper.offsetWidth;
+        const radius = wrapperWidth * 0.38; // 外枠に対して程よい余白を持たせる係数
+        
+        guests.forEach((guest, index) => {
+            // 円周上の角度を計算
+            const angle = (index / guests.length) * 2 * Math.PI - Math.PI / 2;
+            
+            // 中央（50%, 50%）からの移動距離（px）を計算
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+            
+            // ビジュアル用（円形配置）
+            const guestEl = document.createElement('div');
+            guestEl.className = 'guest-item fade-in';
+            // CSSの left:50%; top:50%; transform:translate(-50%, -50%) と組み合わせることで、完全にズレを防止
+            guestEl.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+            guestEl.style.animationDelay = `${index * 0.05}s`;
+            
+            guestEl.innerHTML = `
+                <div class="flex flex-col items-center">
+                    <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-primary/30 bg-white flex items-center justify-center mb-0.5 shadow-sm">
+                        <span class="material-symbols-outlined text-[10px] sm:text-xs text-primary">person</span>
+                    </div>
+                    <p class="font-body-md text-[9px] sm:text-[11px] md:text-[12px] text-on-surface whitespace-nowrap px-1.5 py-0.5 bg-white/95 border border-outline-variant/30 rounded-full shadow-sm max-w-[95px] sm:max-w-none overflow-hidden text-ellipsis">${guest}</p>
+                </div>
+            `;
+            guestCircleContainer.appendChild(guestEl);
+
+            // サイドバー（リスト表示）用
+            const li = document.createElement('li');
+            li.className = 'flex items-center gap-2.5 py-1.5 border-b border-outline-variant/10 fade-in';
+            li.style.animationDelay = `${index * 0.03}s`;
+            li.innerHTML = `
+                <span class="w-1 h-1 rounded-full bg-primary/60 shrink-0"></span>
+                <span class="truncate">${guest}</span>
+            `;
+            modalGuestList.appendChild(li);
         });
 
-        closeModalBtn.addEventListener('click', closeModal);
-        modalBackdrop.addEventListener('click', closeModal);
+        // モーダルを表示
+        modal.classList.remove('hidden');
+        document.body.classList.add('modal-open');
+        setTimeout(() => modal.style.opacity = '1', 10);
+    }
 
-        // Escape key to close
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
+    function closeModal() {
+        modal.style.opacity = '0';
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }, 300);
+    }
 
-        // Ensure circle positions update on window resize
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                if (!modal.classList.contains('hidden')) {
-                    const currentTableNum = modalTableNumber.innerText.replace(/^0+/, '');
-                    const activeCard = document.querySelector(`.table-card[data-table="${currentTableNum}"]`);
-                    if (activeCard) openModal(activeCard);
-                }
-            }, 100);
-        });
-    </script>
-</body></html>
+    document.querySelectorAll('.table-card').forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+    });
+
+    closeModalBtn.addEventListener('click', closeModal);
+    modalBackdrop.addEventListener('click', closeModal);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    // リサイズ時に円形配置の座標を再計算（スマホの画面回転やPCのウィンドウ伸縮に対応）
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (!modal.classList.contains('hidden') && currentActiveCard) {
+                openModal(currentActiveCard);
+            }
+        }, 150);
+    });
+</script>
+</body>
+</html>
