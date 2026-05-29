@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head></head><body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">```html
 
-<html class="scroll-smooth" lang="en"><head>
+
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Evelyn &amp; Julian - Wedding Welcome</title>
@@ -190,8 +191,10 @@
         .guest-item {
             position: absolute;
             transform: translate(-50%, -50%);
-            width: 120px;
+            width: max-content;
+            max-width: 110px;
             text-align: center;
+            z-index: 20;
         }
         .decorative-leaf {
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0C60 20 80 40 100 50C80 60 60 80 50 100C40 80 20 60 0 50C20 40 40 20 50 0Z' fill='%23d4b483' fill-opacity='0.05'/%3E%3C/svg%3E");
@@ -199,8 +202,6 @@
             background-position: center;
         }
     </style>
-</head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <!-- TopNavBar -->
 <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-24 py-6 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500 shadow-sm">
 <div class="font-display-lg text-3xl md:text-4xl text-primary tracking-tighter">Evelyn &amp; Julian</div>
@@ -581,147 +582,4 @@
 <footer class="w-full py-20 px-gutter flex flex-col md:flex-row justify-between items-center gap-10 max-w-container-max mx-auto text-center md:text-left border-t border-outline-variant/30 bg-surface">
 <div class="space-y-4">
 <div class="font-display-lg text-3xl text-primary tracking-tighter">Evelyn &amp; Julian</div>
-<p class="font-body-md text-sm text-on-surface-variant max-w-xs uppercase tracking-widest">© 2024 Evelyn &amp; Julian. Handcrafted with love.</p>
-</div>
-<div class="flex flex-wrap justify-center md:justify-end gap-8 md:gap-16">
-<a class="font-label-caps text-xs text-on-surface-variant hover:text-primary hover:tracking-widest transition-all duration-300" href="#">Privacy Policy</a>
-<a class="font-label-caps text-xs text-on-surface-variant hover:text-primary hover:tracking-widest transition-all duration-300" href="#">Registry</a>
-<a class="font-label-caps text-xs text-on-surface-variant hover:text-primary hover:tracking-widest transition-all duration-300" href="#">Contact</a>
-</div>
-</footer>
-<script>
-        // Simple scroll behavior for header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-4', 'shadow-md', 'bg-surface/95');
-                header.classList.remove('py-6', 'shadow-sm', 'bg-surface/90');
-            } else {
-                header.classList.remove('py-4', 'shadow-md', 'bg-surface/95');
-                header.classList.add('py-6', 'shadow-sm', 'bg-surface/90');
-            }
-        });
-
-        // Basic intersection observer for fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section > div:not(.absolute)').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
-        });
-
-        // Seating Chart Modal Logic
-        const modal = document.getElementById('seating-modal');
-        const modalTableNumber = document.getElementById('modal-table-number');
-        const guestCircleContainer = document.getElementById('guest-circle-container');
-        const guestCircleWrapper = document.getElementById('guest-circle-wrapper');
-        const modalGuestList = document.getElementById('modal-guest-list');
-        const closeModalBtn = document.getElementById('close-modal');
-        const modalBackdrop = document.getElementById('modal-backdrop');
-
-        function openModal(tableCard) {
-            const tableNum = tableCard.getAttribute('data-table');
-            const tableName = tableCard.querySelector('h3').innerText;
-            const guests = Array.from(tableCard.querySelectorAll('ul li')).map(li => li.innerText);
-            
-            // Set Table Number
-            modalTableNumber.innerText = tableNum.padStart(2, '0');
-            
-            // Clear existing
-            guestCircleContainer.innerHTML = '';
-            modalGuestList.innerHTML = '';
-            
-            // Calculate responsive radius based on container width
-            const wrapperWidth = guestCircleWrapper.offsetWidth;
-            const radius = (wrapperWidth / 2) * 0.85; // Distance from center
-            const centerX = wrapperWidth / 2;
-            const centerY = guestCircleWrapper.offsetHeight / 2;
-            
-            guests.forEach((guest, index) => {
-                const angle = (index / guests.length) * 2 * Math.PI - Math.PI / 2;
-                const x = centerX + radius * Math.cos(angle);
-                const y = centerY + radius * Math.sin(angle);
-                
-                // Visual Circle Representation
-                const guestEl = document.createElement('div');
-                guestEl.className = 'guest-item fade-in absolute';
-                guestEl.style.left = `${x}px`;
-                guestEl.style.top = `${y}px`;
-                guestEl.style.animationDelay = `${index * 0.1}s`;
-                
-                guestEl.innerHTML = `
-                    <div class="flex flex-col items-center">
-                        <div class="w-8 h-8 md:w-12 md:h-12 rounded-full border-2 border-primary/30 bg-white flex items-center justify-center mb-2 shadow-md">
-                            <span class="material-symbols-outlined text-[16px] md:text-[20px] text-primary">person</span>
-                        </div>
-                        <p class="font-body-md text-[10px] md:text-[14px] text-on-surface whitespace-nowrap px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full shadow-sm border border-outline-variant/10">${guest}</p>
-                    </div>
-                `;
-                guestCircleContainer.appendChild(guestEl);
-
-                // Sidebar List Item
-                const li = document.createElement('li');
-                li.className = 'flex items-center gap-4 py-3 border-b border-outline-variant/10 fade-in';
-                li.style.animationDelay = `${index * 0.05}s`;
-                li.innerHTML = `
-                    <span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span>
-                    <span class="font-headline-sm text-xl text-on-surface">${guest}</span>
-                `;
-                modalGuestList.appendChild(li);
-            });
-
-            // Show Modal
-            modal.classList.remove('hidden');
-            document.body.classList.add('modal-open');
-            // Small delay to allow display:block to apply before opacity transition
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    modal.style.opacity = '1';
-                });
-            });
-        }
-
-        function closeModal() {
-            modal.style.opacity = '0';
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.classList.remove('modal-open');
-            }, 300);
-        }
-
-        document.querySelectorAll('.table-card').forEach(card => {
-            card.addEventListener('click', () => {
-                // Ensure wrapper is sized before opening (helps with first load calculations)
-                modal.classList.remove('hidden');
-                modal.style.opacity = '0';
-                setTimeout(() => openModal(card), 10);
-            });
-        });
-
-        closeModalBtn.addEventListener('click', closeModal);
-        modalBackdrop.addEventListener('click', closeModal);
-
-        // Escape key to close
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
-
-        // Ensure circle positions update on window resize
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                if (!modal.classList.contains('hidden') && modal.style.opacity === '1') {
-                    const activeCard = document.querySelector('.table-card[data-table="' + modalTableNumber.innerText.replace(/^0+/, '') + '"]');
-                    if (activeCard) openModal(activeCard);
-                }
-            }, 200);
-        });
-    </script>
-</body></html>
+</div></footer></body></html>
