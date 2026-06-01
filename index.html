@@ -187,7 +187,7 @@
                 <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">The Journey</span>
                 <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide">ふたりの歩み</h2>
                 <p class="font-body-md text-on-surface-variant leading-loose">
-                    ロンドンの静かな本屋での偶然の出会いから、私たちの物語は始まりました。異なる環境で育ったふたりですが、ジュリアンの穏やかな強さと、エヴリンのひたむきな明るさは、いつしかお換えにとってかけがえのない安らぎとなっていきました。
+                    ロンドンの静かな本屋での偶然の出会いから、私たちの物語は始まりました。異なる環境で育ったふたりですが、ジュリアンの穏やかな強さと、エヴリンのひたむきな明るさは、いつしかお互いにとってかけがえのない安らぎとなっていきました。
                 </p>
                 <p class="font-body-md text-on-surface-variant leading-loose">
                     雨のセーヌ川沿いを歩いた日々、トスカーナの星空の下で語り明かした夜。何気ない日常の積み重ねの中で、愛と信頼を育んできました。今日、大切な皆様に見守られながら、新しい章の一歩を踏み出します。
@@ -438,10 +438,41 @@
 </footer>
 
 <script>
+    // 【新仕様】ローマ字パラメータと日本語名をマッピングする辞書
+    const guestMap = {
+        'oda_nobunaga': '織田 信長',
+        'toyotomi_hideyoshi': '豊臣 秀吉',
+        'tokugawa_ieyasu': '徳川 家康',
+        'akechi_mitsuhide': '明智 光秀',
+        'sanada_yukimura': '真田 幸村',
+        'date_masamune': '伊達 政宗',
+        'murasaki_shikibu': '紫式部',
+        'sei_shonagon': '清少納言',
+        'ono_no_komachi': '小野小町',
+        'izumi_shikibu': '和泉式部',
+        'nukata_no_okimi': '額田王',
+        'hojo_masako': '北条 政子',
+        'natsume_soseki': '夏目 漱石',
+        'dazai_osamu': '太宰 治',
+        'akutagawa_ryunosuke': '芥川 龍之介',
+        'kawabata_yasunari': '川端 康成',
+        'mishima_yukio': '三島 由紀夫',
+        'miyazawa_kenji': '宮沢 賢治',
+        'sakamoto_ryoma': '坂本 龍馬',
+        'saigo_takamori': '西郷 隆盛',
+        'katsura_kogoro': '桂 小五郎',
+        'takasugi_shinsaku': '高杉 晋作',
+        'katsu_kaishu': '勝 海舟',
+        'hijikata_toshizo': '土方 歳三'
+    };
+
     // URLパラメータの取得
     const urlParams = new URLSearchParams(window.location.search);
-    const guestName = urlParams.get('guest'); 
+    const guestParam = urlParams.get('guest'); // ローマ字（例: oda_nobunaga）
     const afterPartyFlag = urlParams.get('after_party'); 
+
+    // ローマ字から日本語名に変換して保持
+    const guestName = guestMap[guestParam] || null;
 
     // 二次会参加フラグの判定制御 ＆ パラメータ引き継ぎ
     if (afterPartyFlag !== 'true') {
@@ -503,6 +534,7 @@
             const x = radius * Math.cos(angle);
             const y = radius * Math.sin(angle);
             
+            // 辞書から変換された日本語氏名と完全一致するか判定
             const isCurrentGuest = guestName && (guest.replace(' 様', '').trim() === guestName.trim());
             const guestEl = document.createElement('div');
             guestEl.className = 'guest-item'; 
@@ -564,7 +596,7 @@
         }, 150);
     });
 
-    // 【仕様変更】ページロード時、該当ゲストのテーブルカードのみを強調（自動スクロールを削除）
+    // ページロード時、マッピングされた日本語名を元に対象のテーブルカードのみを強調
     if (guestName) {
         document.querySelectorAll('.table-card').forEach(card => {
             const hasTargetGuest = Array.from(card.querySelectorAll('ul li')).some(li => {
