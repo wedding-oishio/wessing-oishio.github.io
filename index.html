@@ -137,16 +137,16 @@
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed antialiased">
 
 <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-24 py-5 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 transition-all duration-500">
-    <div class="font-display-lg text-xl md:text-2xl text-primary tracking-wider">Evelyn & Julian</div>
+    <a href="#" class="font-display-lg text-xl md:text-2xl text-primary tracking-wider">Evelyn & Julian</a>
     <nav class="hidden md:flex gap-8">
-        <a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">Our Story</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#story">Our Story</a>
         <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#gallery">Gallery</a>
         <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#seating-chart">Seating Chart</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#timeline">Timeline</a>
+        <a id="nav-after-party" class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="after-party.html">After Party</a>
     </nav>
-    <button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity active:scale-95 duration-200 shadow-sm">
-        RSVP
-    </button>
+    <a id="btn-after-party" href="after-party.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-full hover:opacity-90 transition-all active:scale-95 duration-200 shadow-sm block text-center">
+        AFTER PARTY
+    </a>
 </header>
 
 <main class="overflow-x-hidden">
@@ -163,7 +163,7 @@
         </div>
     </section>
 
-    <section class="py-20 md:py-[120px] px-gutter max-w-container-max mx-auto text-center">
+    <section class="py-20 md:py-[120px] px-gutter max-w-container-max mx-auto text-center scroll-mt-24" id="greeting">
         <div class="max-w-2xl mx-auto space-y-8">
             <span class="material-symbols-outlined text-secondary opacity-80" style="font-size: 2rem;">favorite</span>
             <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide leading-relaxed">親愛なる皆様へ</h2>
@@ -177,7 +177,7 @@
         </div>
     </section>
 
-    <section class="py-20 md:py-[120px] bg-surface-container-low">
+    <section class="py-20 md:py-[120px] bg-surface-container-low scroll-mt-24" id="story">
         <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div class="relative p-3 bg-white shadow-[20px_20px_50px_-10px_rgba(140,108,63,0.1)] rounded-lg">
                 <img class="w-full aspect-[4/5] object-cover rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnIihI-pbaPPeqIqwW2k2YmRPsWEmyL5KbO1f3m3osUVy0oIa9uv3m5zVe9mFLJugCCQ394VWUPKJEXlDPQ27ikVeFaewBi_qAFBIRVkLuQwZDwtP37NYKKxGL4stBvXQdNAxU4dk6hAd31-siLb39IYAeG5dPfSORkH6cRm1QN55FChNscZPq3xqlfa72MNXjUB8nt5VmsyKv7KvJcXoXdkLGMSZJmdd06-rLh2c04FZ0RAHjUrHM4LIiggfnqBR_7HsJSdLxACAi" alt="Our Story"/>
@@ -187,7 +187,7 @@
                 <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">The Journey</span>
                 <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide">ふたりの歩み</h2>
                 <p class="font-body-md text-on-surface-variant leading-loose">
-                    ロンドンの静かな本屋での偶然の出会いから、私たちの物語は始まりました。異なる環境で育ったふたりですが、ジュリアンの穏やかな強さと、エヴリンのひたむきな明るさは、いつしかお互いにとってかけがえのない安らぎとなっていきました。
+                    ロンドンの静かな本屋での偶然の出会いから、私たちの物語は始まりました。異なる環境で育ったふたりですが、ジュリアンの穏やかな強さと、エヴリンのひたむきな明るさは、いつしかお換えにとってかけがえのない安らぎとなっていきました。
                 </p>
                 <p class="font-body-md text-on-surface-variant leading-loose">
                     雨のセーヌ川沿いを歩いた日々、トスカーナの星空の下で語り明かした夜。何気ない日常の積み重ねの中で、愛と信頼を育んできました。今日、大切な皆様に見守られながら、新しい章の一歩を踏み出します。
@@ -200,7 +200,7 @@
         </div>
     </section>
 
-    <section class="py-20 md:py-[120px] px-gutter" id="gallery">
+    <section class="py-20 md:py-[120px] px-gutter scroll-mt-24" id="gallery">
         <div class="max-w-container-max mx-auto text-center mb-12 md:mb-16">
             <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide mb-3">心に刻まれた記憶</h2>
             <div class="w-12 h-px bg-secondary/50 mx-auto"></div>
@@ -227,7 +227,81 @@
         </div>
     </section>
 
-    <section class="py-20 md:py-[120px] bg-surface-container-low" id="seating-chart">
+    <section class="py-20 md:py-[120px] bg-surface-container scroll-mt-24" id="timeline">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-20">
+                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Day's Flow</span>
+                <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide">当日のスケジュール</h2>
+                <div class="w-12 h-px bg-secondary/50 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="relative max-w-3xl mx-auto">
+                <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-outline-variant/40"></div>
+                
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">door_open</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:text-right pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">15:00</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">受付開始</h3>
+                        </div>
+                        <div class="pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">ロビーにてお待ちしております。挙式までごゆっくりお過ごしください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">celebration</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:order-2 pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">15:30</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">挙式（セレモニー）</h3>
+                        </div>
+                        <div class="md:text-right pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">セントメアリー礼拝堂にて。おふたりの新しい門出を見守っていただければ幸いです。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-16 group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-primary rounded-full border border-primary flex items-center justify-center z-10 shadow-md">
+                        <span class="material-symbols-outlined text-on-primary text-lg">restaurant</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:text-right pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">17:30</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">ご披露宴開宴</h3>
+                        </div>
+                        <div class="pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">メインホールにて。皆様をお迎えしての祝宴が始まります。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">volunteer_activism</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
+                        <div class="md:order-2 pt-1.5">
+                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">20:00</span>
+                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">披露宴 閉宴</h3>
+                        </div>
+                        <div class="md:text-right pt-1.5">
+                            <p class="text-on-surface-variant text-sm leading-relaxed">お見送りの際、ささやかなギフトをご用意しております。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-[120px] bg-surface-container-low scroll-mt-24" id="seating-chart">
         <div class="max-w-container-max mx-auto px-gutter">
             <div class="text-center mb-12 md:mb-16">
                 <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Dinner Arrangement</span>
@@ -336,126 +410,7 @@
         </div>
     </div>
 
-    <section class="py-20 md:py-[120px] bg-surface-container" id="timeline">
-        <div class="max-w-container-max mx-auto px-gutter">
-            <div class="text-center mb-20">
-                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">The Day's Flow</span>
-                <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide">当日のスケジュール</h2>
-                <div class="w-12 h-px bg-secondary/50 mx-auto mt-4"></div>
-            </div>
-            
-            <div class="relative max-w-3xl mx-auto">
-                <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-outline-variant/40"></div>
-                
-                <div class="relative mb-16 group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-lg">door_open</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
-                        <div class="md:text-right pt-1.5">
-                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">15:00</span>
-                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">受付開始</h3>
-                        </div>
-                        <div class="pt-1.5">
-                            <p class="text-on-surface-variant text-sm leading-relaxed">ロビーにてお待ちしております。ウェルカムドリンクをご用意しておりますので、挙式までごゆっくりお過ごしください。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative mb-16 group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-lg">celebration</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
-                        <div class="md:order-2 pt-1.5">
-                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">15:30</span>
-                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">挙式（セレモニー）</h3>
-                        </div>
-                        <div class="md:text-right pt-1.5">
-                            <p class="text-on-surface-variant text-sm leading-relaxed">セントメアリー礼拝堂にて。おふたりの新しい門出を見守っていただければ幸いです。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative mb-16 group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-lg">photo_camera</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
-                        <div class="md:text-right pt-1.5">
-                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">16:15</span>
-                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">アフターセレモニー</h3>
-                        </div>
-                        <div class="pt-1.5">
-                            <p class="text-on-surface-variant text-sm leading-relaxed">大階段にて。皆様と一緒に集合写真の撮影や、祝福のひとときを過ごします。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative mb-16 group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-lg">local_bar</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
-                        <div class="md:order-2 pt-1.5">
-                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">16:45</span>
-                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">ウェルカムパーティ</h3>
-                        </div>
-                        <div class="md:text-right pt-1.5">
-                            <p class="text-on-surface-variant text-sm leading-relaxed">ガーデンテラスにて。生演奏と共に、アペリティフをお楽しみください。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative mb-16 group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-primary rounded-full border border-primary flex items-center justify-center z-10 shadow-md">
-                        <span class="material-symbols-outlined text-on-primary text-lg">restaurant</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
-                        <div class="md:text-right pt-1.5">
-                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">17:30</span>
-                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">ご披露宴開宴</h3>
-                        </div>
-                        <div class="pt-1.5">
-                            <p class="text-on-surface-variant text-sm leading-relaxed">メインホールにて。皆様をお迎えしての祝宴が始まります。シェフ特製の料理をお楽しみください。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative mb-16 group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-lg">styler</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
-                        <div class="md:order-2 pt-1.5">
-                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">18:45</span>
-                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">お色直し入場</h3>
-                        </div>
-                        <div class="md:text-right pt-1.5">
-                            <p class="text-on-surface-variant text-sm leading-relaxed">新たな装いでの再入場です。皆様との語らいの時間を楽しみにしています。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative group">
-                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 bg-background rounded-full border border-primary/40 flex items-center justify-center z-10 shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-lg">volunteer_activism</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 pl-16 md:pl-0">
-                        <div class="md:text-right pt-1.5">
-                            <span class="font-label-caps text-primary text-sm font-semibold tracking-widest">20:00</span>
-                            <h3 class="font-body-md font-bold text-on-surface text-lg mt-1">閉宴 / お見送り</h3>
-                        </div>
-                        <div class="pt-1.5">
-                            <p class="text-on-surface-variant text-sm leading-relaxed">お見送りの際、ささやかなギフトをご用意しております。気をつけてお帰りください。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 relative overflow-hidden text-center">
+    <section class="py-24 relative overflow-hidden text-center scroll-mt-24">
         <div class="absolute inset-0 z-0">
             <img class="w-full h-full object-cover filter opacity-15" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJxmphNI0Q94EyZCIgm4rngLSf5F84YOVGeUe_Raij_Sg_Lw6V9Hu9wVNFm98Jw2ByvAHmITfuRTth_JWeZZJ7q7eCHAl_lYEwjLgRGC0bJUQh3KOswYR73u0QAXZmKuSoSnmuF_qjyom3YtqzEM7Qa1abHT-SCzYwG9RH2KlwWuoODAafx7YSSxqoz1pJXEU1aC6GtIbJEM1mA4FJOQwdf8wkcJgbNUg8_4wXAFPqS7wy9Pj_t_Mz-dWLVrv3lc_U08tSo4W-XG0t" alt="Mist beach"/>
         </div>
@@ -483,6 +438,26 @@
 </footer>
 
 <script>
+    // URLパラメータの取得
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestName = urlParams.get('guest'); 
+    const afterPartyFlag = urlParams.get('after_party'); 
+
+    // 二次会参加フラグの判定制御 ＆ パラメータ引き継ぎ
+    if (afterPartyFlag !== 'true') {
+        const navAfterParty = document.getElementById('nav-after-party');
+        const btnAfterParty = document.getElementById('btn-after-party');
+        if (navAfterParty) navAfterParty.classList.add('hidden');
+        if (btnAfterParty) btnAfterParty.classList.add('hidden');
+    } else {
+        const currentQuery = window.location.search;
+        if (currentQuery) {
+            document.querySelectorAll('a[href="after-party.html"]').forEach(link => {
+                link.href = 'after-party.html' + currentQuery;
+            });
+        }
+    }
+
     // ヘッダー制御
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
@@ -527,22 +502,28 @@
             const angle = (index / guests.length) * 2 * Math.PI - Math.PI / 2;
             const x = radius * Math.cos(angle);
             const y = radius * Math.sin(angle);
+            
+            const isCurrentGuest = guestName && (guest.replace(' 様', '').trim() === guestName.trim());
             const guestEl = document.createElement('div');
             guestEl.className = 'guest-item'; 
             guestEl.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
             
+            const bgStyle = isCurrentGuest ? 'bg-primary text-on-primary font-bold ring-4 ring-primary/30' : 'bg-white/95 text-on-surface border-outline-variant/30';
+            const iconStyle = isCurrentGuest ? 'bg-white text-primary border-white' : 'border-primary/30 bg-white text-primary';
+
             guestEl.innerHTML = `
                 <div class="flex flex-col items-center justify-center w-full fade-in" style="animation-delay: ${index * 0.04}s;">
-                    <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-primary/30 bg-white flex items-center justify-center mb-1 shadow-sm">
-                        <span class="material-symbols-outlined text-[10px] sm:text-xs text-primary">person</span>
+                    <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border ${iconStyle} flex items-center justify-center mb-1 shadow-sm">
+                        <span class="material-symbols-outlined text-[10px] sm:text-xs">person</span>
                     </div>
-                    <p class="font-body-md text-[9px] sm:text-[11px] md:text-[12px] text-on-surface whitespace-nowrap px-2 py-0.5 bg-white/95 border border-outline-variant/30 rounded-full shadow-sm max-w-[90px] sm:max-w-none truncate">${guest}</p>
+                    <p class="font-body-md text-[9px] sm:text-[11px] md:text-[12px] whitespace-nowrap px-2 py-0.5 border rounded-full shadow-sm max-w-[90px] sm:max-w-none truncate ${bgStyle}">${guest}</p>
                 </div>
             `;
             guestCircleContainer.appendChild(guestEl);
 
             const li = document.createElement('li');
-            li.className = 'flex items-center gap-2.5 py-1.5 border-b border-outline-variant/10 fade-in';
+            const liHighlightStyle = isCurrentGuest ? 'font-bold text-primary bg-primary/10 px-2 rounded-sm' : '';
+            li.className = `flex items-center gap-2.5 py-1.5 border-b border-outline-variant/10 fade-in ${liHighlightStyle}`;
             li.style.animationDelay = `${index * 0.02}s`;
             li.innerHTML = `
                 <span class="w-1 h-1 rounded-full bg-primary/60 shrink-0"></span>
@@ -582,6 +563,18 @@
             }
         }, 150);
     });
+
+    // 【仕様変更】ページロード時、該当ゲストのテーブルカードのみを強調（自動スクロールを削除）
+    if (guestName) {
+        document.querySelectorAll('.table-card').forEach(card => {
+            const hasTargetGuest = Array.from(card.querySelectorAll('ul li')).some(li => {
+                return li.innerText.replace(' 様', '').trim() === guestName.trim();
+            });
+            if (hasTargetGuest) {
+                card.classList.add('border-primary', 'border-2', 'shadow-xl', 'ring-4', 'ring-primary/20');
+            }
+        });
+    }
 </script>
 </body>
 </html>
