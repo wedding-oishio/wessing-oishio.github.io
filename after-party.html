@@ -117,7 +117,7 @@
     <nav class="hidden md:flex gap-8">
         <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#story">Our Story</a>
         <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#gallery">Gallery</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#seating-chart">Seating Chart</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#seating">Seating Chart</a>
         <a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">After Party</a>
     </nav>
     <a href="index.html" class="bg-surface border border-outline-variant/50 text-primary font-label-caps text-label-caps px-6 py-2.5 rounded-full hover:bg-surface-container transition-all active:scale-95 duration-200 shadow-sm block text-center">
@@ -157,8 +157,8 @@
                             <p class="font-label-caps text-outline text-xs uppercase tracking-widest mb-1">Venue</p>
                             <p class="text-on-surface font-semibold text-lg">Wine Dining YOSHIHAMA 𠮷濵</p>
                             <p class="text-on-surface-variant text-sm">神奈川県横浜市港北区新横浜２丁目５−１０ 第2楓ビルB1F<br>新横浜駅より徒歩5分</p>
-                            <a href="#" class="inline-flex items-center text-primary text-xs font-semibold mt-3 hover:underline">
-                                Google Mapで見る <span class="material-symbols-outlined text-sm ml-1">https://www.bing.com/search?q=よしはま+新横浜&qs=SC&pq=yoshihama　sinyokoha&sc=6-19&cvid=713ADD99D62F4B30865C0ACCFBEADE68&form=EX0050&sp=1&lq=0&ajaxnorecss=1&sid=1B845A3C063A6EFF14084D4607716FA4&format=snrjson&jsoncbid=0&ajaxsydconv=1&filters=local_ypid:"YND33C88E300B70284"&shtp=GetUrl&shid=03b73699-e559-442b-87f3-4973e70293da&shtk=V2luZSBEaW5pbmcgWU9TSElIQU1BIO2hgu2%2Bt%2Ba%2FtQ%3D%3D&shdk=V0lORSBESU5JTkcg44Oo44K344OP44OeIOaWsOaoqua1nOW6l%2B%2B8iOWxhemFkuWxi%2B%2B8ieelnuWliOW3neecjOaoqua1nOW4gua4r%2BWMl%2BWMuuaWsOaoqua1nO%2B8ku%2B8je%2B8le%2B8je%2B8ke%2B8kCDvvKLvvJHvvIjmkLrluK%2FvvK%2FvvKvvvIHvvIkg4oCm&shhk=3Xb7q%2FWh%2FXQqym2TJUZwfQHSlGxQSVT8oQa2AG%2FCQQ0%3D</span>
+                            <a href="https://maps.google.com/?q=Wine+Dining+YOSHIHAMA+𠮷濵+神奈川県横浜市港北区新横浜2-5-10" target="_blank" class="inline-flex items-center text-primary text-xs font-semibold mt-3 hover:underline">
+                                Google Mapで見る <span class="material-symbols-outlined text-sm ml-1">open_in_new</span>
                             </a>
                         </div>
                     </div>
@@ -194,13 +194,18 @@
 </footer>
 
 <script>
-    // 【修正仕様】メインページに戻るすべてのリンクに現在のパラメータを付与して引き継ぐ
+    // 【仕様調整】メインページに戻るすべてのリンクに現在のパラメータを付与して引き継ぐ
     const currentQuery = window.location.search;
     if (currentQuery) {
         document.querySelectorAll('a[href^="index.html"]').forEach(link => {
-            const baseHref = link.getAttribute('href');
+            let baseHref = link.getAttribute('href');
+            
+            // 旧コードのハッシュマップ名と新コードの互換性を担保してリンクをマッピング
+            if (baseHref.includes('#seating-chart')) {
+                baseHref = baseHref.replace('#seating-chart', '#seating');
+            }
+            
             if (baseHref.includes('#')) {
-                // ハッシュ（#seating-chartなど）がある場合はパラメータを前に挟む (例: index.html?params#hash)
                 const parts = baseHref.split('#');
                 link.href = parts[0] + currentQuery + '#' + parts[1];
             } else {
