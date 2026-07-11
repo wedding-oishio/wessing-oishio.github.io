@@ -127,6 +127,39 @@
             text-align: center;
             z-index: 20;
         }
+        .bg-paper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #FCFBF9;
+            /* SVGで作った微細なノイズテクスチャ */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            z-index: -10;
+            pointer-events: none;
+        }
+        /* 2. 水彩花柄をフワッとぼかして重ねるためのクラス */
+        .watercolor-floral {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            mix-blend-mode: multiply;
+            /* 周りをふわっと消すマスク */
+            mask-image: radial-gradient(circle, black 0%, transparent 60%);
+            -webkit-mask-image: radial-gradient(circle, black 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* アニメーション */
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         @media (min-width: 768px) {
             .guest-item {
                 width: 130px;
@@ -136,6 +169,9 @@
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed antialiased">
 
+    <!-- 全体背景の紙テクスチャ -->
+    <div class="bg-paper"></div>
+    
 <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-24 py-5 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 transition-all duration-500">
     <a href="#" class="font-display-lg text-xl md:text-2xl text-primary tracking-wider">Takaki & Mayu</a>
     <nav class="hidden md:flex gap-8">
@@ -145,87 +181,151 @@
         <a id="nav-after-party" class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="after-party.html">After Party</a>
     </nav>
     <a id="btn-after-party" href="after-party.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-full hover:opacity-90 transition-all active:scale-95 duration-200 shadow-sm block text-center">
-        AFTER PARTY
+        二次会のご案内
     </a>
 </header>
 
 <main class="overflow-x-hidden">
-    <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img class="w-full h-full object-cover filter brightness-[0.85] transition-transform duration-[10s] hover:scale-105" src="/topPic.jpg" alt="Wedding Portrait"/>
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background"></div>
-        </div>
-        <div class="relative z-10 text-center px-gutter fade-in">
-            <span class="font-label-caps text-label-caps tracking-[0.3em] text-primary mb-6 block uppercase">We Are Getting Married</span>
-            <h1 class="font-display-lg text-4xl md:text-display-lg text-on-surface mb-3 tracking-wide">Takaki & Mayu</h1>
-            <p class="font-headline-sm text-lg md:text-headline-sm text-primary italic mb-12">2026.09.24</p>
-            <div class="w-px h-24 bg-primary/30 mx-auto"></div>
-        </div>
-    </section>
-
-    <section class="py-20 md:py-[120px] px-gutter max-w-container-max mx-auto text-center scroll-mt-24" id="greeting">
-        <div class="max-w-2xl mx-auto space-y-8">
-            <span class="material-symbols-outlined text-secondary opacity-80" style="font-size: 2rem;">favorite</span>
-            <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide leading-relaxed">親愛なる皆様へ</h2>
-            <p class="font-body-md text-body-lg text-on-surface-variant leading-loose">
-                私たちは本日、結婚式を迎えることができました。<br>
-                今日という日を迎えられたのは、いつも温かく支えてくださる皆様のおかげです。<br>
-                ささやかではございますが、日頃の感謝を込めて席をご用意いたしました。<br>
-                笑顔と優しさに満ちた心地よいひとときを、共にお過ごしいただければ幸いです。
-            </p>
-            <p class="font-display-lg text-xl text-primary italic tracking-widest pt-4">With Love, E & J</p>
-        </div>
-    </section>
-
-    <section class="py-20 md:py-[120px] bg-surface-container-low scroll-mt-24" id="story">
-        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div class="relative p-3 bg-white shadow-[20px_20px_50px_-10px_rgba(140,108,63,0.1)] rounded-lg">
-                <img class="w-full aspect-[4/5] object-cover rounded-sm" src="/ourStory.jpg" alt="Our Story"/>
-                <div class="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-32 h-32 md:w-48 md:h-48 bg-primary-fixed opacity-20 -z-10 rounded-full"></div>
+    <section class="relative h-[100dvh] flex flex-col items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" alt="Wedding Hero" class="w-full h-full object-cover filter brightness-[0.80] sepia-[0.15] opacity-90 scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"></div>
             </div>
-            <div class="space-y-6">
-                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">The Journey</span>
-                <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide">ふたりの歩み</h2>
-                <p class="font-body-md text-on-surface-variant leading-loose">
-                    ロンドンの静かな本屋での偶然の出会いから、私たちの物語は始まりました。異なる環境で育ったふたりですが、ジュリアンの穏やかな強さと、エヴリンのひたむきな明るさは、いつしかお互いにとってかけがえのない安らぎとなっていきました。
-                </p>
-                <p class="font-body-md text-on-surface-variant leading-loose">
-                    雨のセーヌ川沿いを歩いた日々、トスカーナの星空の下で語り明かした夜。何気ない日常の積み重ねの中で、愛と信頼を育んできました。今日、大切な皆様に見守られながら、新しい章の一歩を踏み出します。
-                </p>
-                <div class="pt-6 border-t border-outline-variant/30 flex items-center gap-4">
-                    <span class="material-symbols-outlined text-primary">auto_awesome</span>
-                    <p class="font-label-caps text-label-caps text-primary italic">Est. 2018</p>
+            
+            <div class="relative z-10 text-center px-4 fade-in mt-16">
+                <p class="font-en text-secondary tracking-[0.3em] text-sm md:text-base uppercase mb-6 drop-shadow-sm font-medium">Welcome to our wedding</p>
+                <h1 class="font-handwriting text-7xl md:text-8xl text-white mb-4 drop-shadow-lg">Takuya & Misaki</h1>
+                <p class="font-en text-white tracking-[0.2em] text-lg mt-6 bg-black/25 inline-block px-8 py-2.5 rounded-full backdrop-blur-sm shadow-sm border border-white/20">2026.11.22</p>
+            </div>
+            
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center animate-bounce">
+                <span class="font-en text-xs tracking-widest text-white mb-2 drop-shadow-md">SCROLL</span>
+                <span class="material-symbols-outlined text-white drop-shadow-md">keyboard_arrow_down</span>
+            </div>
+        </section>
+
+    <!-- 2. ご挨拶 (水彩花柄を配置) -->
+        <section id="greeting" class="py-32 px-6 relative overflow-hidden scroll-mt-20">
+            <!-- 水彩花柄 (左上) -->
+            <div class="watercolor-floral w-[400px] h-[400px] -left-20 -top-20 opacity-30" style="background-image: url('https://images.unsplash.com/photo-1490750967868-88cb4aca8fba?q=80&w=800&auto=format&fit=crop');"></div>
+            <!-- 水彩花柄 (右下) -->
+            <div class="watercolor-floral w-[500px] h-[500px] -right-32 -bottom-20 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1456086272160-b22364c6efa1?q=80&w=800&auto=format&fit=crop');"></div>
+
+            <div class="max-w-3xl mx-auto text-center relative z-10">
+                <div class="w-16 h-16 mx-auto bg-secondary/10 rounded-full flex items-center justify-center mb-8">
+                    <span class="material-symbols-outlined text-secondary text-3xl">favorite</span>
+                </div>
+                <h2 class="font-serif text-3xl font-medium tracking-widest mb-12 text-primary">ご挨拶</h2>
+                <div class="space-y-7 text-sm md:text-base leading-loose text-text-main tracking-widest">
+                    <p>本日はご多用の中 私たちの結婚式に<br class="md:hidden">お越しいただき 誠にありがとうございます</p>
+                    <p>今日という日を迎えられたのは<br>いつも温かく見守り 支えてくださる<br class="md:hidden">皆様のおかげです</p>
+                    <p>ささやかではございますが<br>感謝の気持ちを込めて おもてなしの席を<br class="md:hidden">ご用意いたしました</p>
+                    <p>美味しいお食事とお飲み物とともに<br>どうぞごゆっくりとおくつろぎください</p>
+                </div>
+                <p class="font-handwriting text-3xl text-secondary mt-12">T & M</p>
+            </div>
+        </section>
+
+     <!-- 3. プロフィール (アーチ状のレイアウトで変化をつける) -->
+        <section id="profile" class="py-28 relative scroll-mt-20">
+            <div class="max-w-4xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-20">
+                    <p class="font-en text-secondary tracking-widest text-sm mb-2">PROFILE</p>
+                    <h2 class="text-3xl font-medium tracking-widest text-primary">新郎新婦の紹介</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <!-- 新郎 -->
+                    <div class="bg-white/80 backdrop-blur-md p-8 pt-12 rounded-t-full rounded-b-3xl shadow-xl border border-primary/10 relative mt-16 md:mt-0">
+                        <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full overflow-hidden border-4 border-surface shadow-md">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop" alt="Groom" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-en text-2xl text-center text-primary mt-6 mb-1">Takuya</h3>
+                        <p class="text-center text-sm text-text-muted mb-8 tracking-widest">山田 拓也</p>
+                        <div class="space-y-6 text-sm">
+                            <div class="text-center">
+                                <p class="text-xs text-secondary font-bold mb-2 tracking-wider">趣味・休日の過ごし方は？</p>
+                                <p class="text-text-main">キャンプ、コーヒー巡り</p>
+                            </div>
+                            <div class="w-10 h-px bg-primary/20 mx-auto"></div>
+                            <div class="text-center">
+                                <p class="text-xs text-secondary font-bold mb-2 tracking-wider">相手の第一印象は？</p>
+                                <p class="text-text-main">よく笑う明るい人</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 新婦 -->
+                    <div class="bg-white/80 backdrop-blur-md p-8 pt-12 rounded-t-full rounded-b-3xl shadow-xl border border-primary/10 relative mt-16 md:mt-12">
+                        <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full overflow-hidden border-4 border-surface shadow-md">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" alt="Bride" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-en text-2xl text-center text-primary mt-6 mb-1">Misaki</h3>
+                        <p class="text-center text-sm text-text-muted mb-8 tracking-widest">佐藤 美咲</p>
+                        <div class="space-y-6 text-sm">
+                            <div class="text-center">
+                                <p class="text-xs text-secondary font-bold mb-2 tracking-wider">趣味・休日の過ごし方は？</p>
+                                <p class="text-text-main">映画鑑賞、美味しいパン屋探し</p>
+                            </div>
+                            <div class="w-10 h-px bg-primary/20 mx-auto"></div>
+                            <div class="text-center">
+                                <p class="text-xs text-secondary font-bold mb-2 tracking-wider">相手の第一印象は？</p>
+                                <p class="text-text-main">真面目で優しそうな人</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="py-20 md:py-[120px] px-gutter scroll-mt-24" id="gallery">
-        <div class="max-w-container-max mx-auto text-center mb-12 md:mb-16">
-            <h2 class="font-headline-md text-xl md:text-headline-md text-on-surface tracking-wide mb-3">心に刻まれた記憶</h2>
-            <div class="w-12 h-px bg-secondary/50 mx-auto"></div>
-        </div>
-        <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
-            <div class="md:col-span-8 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV8EWjss9KFXKkqb-uK-9vHOLUnd9NaBOHG5DGIQNlhogVK9yxVRG9O4JEJOflo5tCc97_LWsIC9bp5W509Y8mAj2RwFNewQ_wgeevlJBy1GNoIDtmZm_hI_6WcQgZjtvVYcdGf6aW-YPXPw_5ZntIKKOiKf_OJ3jw7rGIiiKgO7mNNu38CjZz88EJl3V42hDEfCrKadNRReeeSTJLDxyA9fiN-VvRe-u30KVa3yW7nfuHtTniEM482o7kW2rXP9SmI_hyB5ZDmrll" alt="Gallery 1"/>
+        <!-- 4. メニュー (高級感のある枠線) -->
+        <section id="menu" class="py-28 px-6 relative overflow-hidden scroll-mt-20">
+            <!-- 水彩花柄 (右中央) -->
+            <div class="watercolor-floral w-[600px] h-[600px] -right-40 top-1/2 -translate-y-1/2 opacity-25" style="background-image: url('https://images.unsplash.com/photo-1508610048659-a06b669e3321?q=80&w=800&auto=format&fit=crop');"></div>
+
+            <div class="max-w-3xl mx-auto text-center relative z-10">
+                <p class="font-en text-secondary tracking-widest text-sm mb-2">MENU</p>
+                <h2 class="text-3xl font-medium tracking-widest mb-12 text-primary">本日のお食事</h2>
+                
+                <div class="bg-surface/95 backdrop-blur-md p-2 rounded-2xl shadow-xl">
+                    <div class="border-[1.5px] border-secondary/40 p-8 md:p-14 rounded-xl relative">
+                        <!-- 四隅の装飾 -->
+                        <div class="absolute top-2 left-2 w-4 h-4 border-t border-l border-secondary"></div>
+                        <div class="absolute top-2 right-2 w-4 h-4 border-t border-r border-secondary"></div>
+                        <div class="absolute bottom-2 left-2 w-4 h-4 border-b border-l border-secondary"></div>
+                        <div class="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-secondary"></div>
+
+                        <h3 class="font-en text-2xl tracking-[0.2em] text-primary mb-12 inline-block relative">
+                            Le Menu
+                            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-px bg-secondary"></span>
+                        </h3>
+                        
+                        <ul class="space-y-8 text-sm md:text-base tracking-wider text-text-main">
+                            <li>
+                                <span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Amuse</span>
+                                真鯛のマリネと彩り野菜のアンサンブル<br>キャビアを添えて
+                            </li>
+                            <li>
+                                <span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Soup</span>
+                                季節のポタージュ トリュフの香り
+                            </li>
+                            <li>
+                                <span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Poisson</span>
+                                オマール海老のポワレ<br>濃厚なアメリケーヌソース
+                            </li>
+                            <li>
+                                <span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Viande</span>
+                                特選牛フィレ肉のロティ<br>旬の温野菜と赤ワインソース
+                            </li>
+                            <li>
+                                <span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Dessert</span>
+                                パティシエ特製 ウエディングケーキ
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl border-4 md:border-8 border-surface-container">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3PaqOGgcDsPVKIo3XMxMOqGRgQS4-swyLbthbu27Eoxb3I0kM1WHIZKXuDpiwcPuHAYalqgBdLm4NyY8oUVWEyv9Ao3CYBrxKsnFQWFhwv8gKEEU0K-9USoRgbh9AwlgpGwwP-nV1gw9gZ_q1kI1-lqa40suNRh_V5SymOe6Syj7gYwDPCUR724OcyOXCf1kCS19wA_bG-0kdxDOA-LwBQFWqn21YF8bS2I1jb8QQNJUprQckJVLWnlZeElpJeHTv8CpClbvEtlm" alt="Gallery 2"/>
-            </div>
-            <div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl shadow-sm">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkycw7OZvpF3N5IjgiI1mAxkz0-pVInVQV0MJcQJlGIMcDeL5eDREo_mJc-gpCrjcCqBxXVVe5zF3OzzHbzOyyTmOLWF3LD9JcR7-UDP0tg24thnqX82SOogTXgszEQdO9RABfwgtcFG051R6Pucn6dpjvzf8eFLMQefve5O3J8W_d0yTFjsxa3mXgnkYA9LxSgbJD9UTW06T8MXatJSdYJcLLVUqD1DySFrdLkABh042EFR0lYxF_aigsaSaeqKQx3kNGDzeHvZJm" alt="Gallery 3"/>
-            </div>
-            <div class="md:col-span-4 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVG9oQ9RTvZvEUjk2LocdUQxiGyf-XP8VhPqjs9s5k7Yc_7WD7igSIStaPRMvfbHPxFMYCYU8Wp20daRJpklk-GWfSh29yRwv1EB6iuu4GBpDNv6A-LamwtvH9ZeZGSbxsjFfsK2AoepNty4m3_szde67PY5_Q7T8RXjGWbEUoC-HfQGr8_gExc6BR0o9caIj1Dr5EEFj7zCukgz6cUfJW6rSjl0hKNxiIcU9CaS9HP0S6ysSSX-jHI9qmVEcLoIFMWWkoktOUkg_f" alt="Gallery 4"/>
-            </div>
-            <div class="md:col-span-4 md:row-span-2 group overflow-hidden relative rounded-xl shadow-sm">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADgMtjvBcU_GgN1bemcbJNNbnBCLk9eFeax2GF8Vqa1EsXmRHgi7kTL_akTtfZm8TQ8iYiZo4i84oSuAPA1CtAFBPCR78Jf0wp4xP-nqri63pHjz1Hfw34xaIPzwf0evx18o0uj4eKfvNEoCZbgYVz9MPcd91czwIASoqP_uCc8wWiUOsosUHOvffql7H7HXdaHw7XSJpzoptamltnrjcJgil5LM2TXF0YepY5COrm2Y3rWXHy5bNRIhBAdiVM9yROV1z2L3tOvKdc" alt="Gallery 5"/>
-            </div>
-            <div class="md:col-span-4 md:row-span-1 group overflow-hidden relative rounded-xl border-4 md:border-8 border-surface-container">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlWlcwkokydOrTOCcOCkCvNUzVPB7OuFhJ7uG0C9ivbej4OcKZF6Yuux8JP2qDxtdYUTkZ-ZI06JtKvHDZMxpNZ-TGPyx8skWUpT4Ot67ilYEmhwIMnv0q4oz_l4tbMLowrya19c8piv41zT2_JLF9o5QV3qpGfKoILvls2UvzWJMst-AOhBhwBsplMmARe_CsOB21WUQwR5rFl7z-oJWU-E4Pj1WJbImDhMI4mmyM9OXPP-8qj12V32o2PtDCWflarKK7-6f8bLae" alt="Gallery 6"/>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <section class="py-20 md:py-[120px] bg-surface-container scroll-mt-24" id="timeline">
         <div class="max-w-container-max mx-auto px-gutter">
@@ -301,6 +401,7 @@
         </div>
     </section>
 
+    <!-- 席次表のみ index.html のデータに置き換え -->
     <section class="py-20 md:py-[120px] bg-surface-container-low scroll-mt-24" id="seating-chart">
         <div class="max-w-container-max mx-auto px-gutter">
             <div class="text-center mb-12 md:mb-16">
@@ -318,12 +419,12 @@
                     <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table A</h3>
                     <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
                         <li>潮平 直人 様</li>
-                        <li>潮平 節子 様</li>
                         <li>潮平 紗優 様</li>
+                        <li>潮平 節子 様</li>
                         <li>加賀美 貴子 様</li>
                         <li>加賀美 徳子 様</li>
                         <li>加賀美 蓮 様</li>
-                        <li>加賀美 ユーピン 様</li>
+                        <li>加賀美 玉冰 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -336,8 +437,10 @@
                         <li>大井 健太郎 様</li>
                         <li>大井 知恵 様</li>
                         <li>大井 澄人 様</li>
-                        <li>村山 武 様</li>
+                        <li>太田 翔 様</li>
+                        <li>太田 凪音 様</li>
                         <li>村山 明美 様</li>
+                        <li>村山 武 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -363,12 +466,11 @@
                     <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
                         <li>太田 章人 様</li>
                         <li>太田 まき 様</li>
-                        <li>太田 翔 様</li>
-                        <li>太田 凪音 様</li>
                         <li>太田 羽音 様</li>
                         <li>澤井 美和 様</li>
                         <li>澤井 美喜 様</li>
                         <li>澤井 和史 様</li>
+                        <li>澤井 考史 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -381,9 +483,9 @@
                         <li>大平 和茂 様</li>
                         <li>大平 悦子 様</li>
                         <li>大平 和樹 様</li>
-                        <li>大平 沙織 様</li>
                         <li>大平 悠飛 様</li>
                         <li>大平 來望 様</li>
+                        <li>大平 沙織 様</li>
                         <li>中村 進 様</li>
                         <li>中村 典子 様</li>
                     </ul>
@@ -395,12 +497,15 @@
                     </div>
                     <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table G</h3>
                     <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
-                        <li>小笠原 遼 様</li>
                         <li>小笠原 美彩 様</li>
+                        <li>小笠原 遼 様</li>
                         <li>宝利 直哉 様</li>
+                        <li>天田 香輝 様</li>
                         <li>歸山 茉大 様</li>
                         <li>小師 大輔 様</li>
-                        <li>天田 香輝 様</li>
+                        <li>塚本 凌也 様</li>
+                        <li>山田 涼太 様</li>
+                        <li>木村 駿平 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -410,14 +515,12 @@
                     </div>
                     <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table H</h3>
                     <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
-                        <li>山越 正太郎 様</li>
                         <li>水嶋 奈津希 様</li>
+                        <li>山越 正太郎 様</li>
                         <li>安在 皓一 様</li>
                         <li>佐藤 翔悦 様</li>
-                        <li>神藤 香 様</li>
                         <li>砂田 朋宏 様</li>
                         <li>渡邉 哲哉 様</li>
-                        <li>伊藤 真衣 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -427,13 +530,14 @@
                     </div>
                     <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table I</h3>
                     <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
-                        <li>高野 礼華 様</li>
-                        <li>萬井 佳音 様</li>
-                        <li>横山 優子 様</li>
-                        <li>宮澤 秀昭 様</li>
-                        <li>島 理沙 様</li>
-                        <li>石橋 愛夏 様</li>
-                        <li>石橋 信之介 様</li>
+                        <li>新井 健太郎 様</li>
+                        <li>新井 那菜 様</li>
+                        <li>神山 竜輔 様</li>
+                        <li>東 花音 様</li>
+                        <li>益永 純真 様</li>
+                        <li>神谷 勇汰 様</li>
+                        <li>伊藤 真衣 様</li>
+                        <li>中村 大助 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -443,14 +547,14 @@
                     </div>
                     <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table J</h3>
                     <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
-                        <li>小島 愛花 様</li>
-                        <li>山崎 陽奈 様</li>
-                        <li>小澤 雛子 様</li>
-                        <li>小池 紗矢 様</li>
-                        <li>平野 真美 様</li>
-                        <li>中村 絢音 様</li>
-                        <li>山崎 ひとみ 様</li>
-                        <li>山本 郁乃 様</li>
+                        <li>高野 礼華 様</li>
+                        <li>神藤 香 様</li>
+                        <li>横山 優子 様</li>
+                        <li>石橋 愛夏 様</li>
+                        <li>石橋 信之介 様</li>
+                        <li>宮澤 秀昭 様</li>
+                        <li>島 理沙 様</li>
+                        <li>萬井 佳音 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -460,11 +564,14 @@
                     </div>
                     <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table K</h3>
                     <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
-                        <li>黒崎 晃世 様</li>
-                        <li>鈴木 陽茉梨 様</li>
-                        <li>加藤 百合子 様</li>
-                        <li>鈴木 みゆ 様</li>
-                        <li>角田 望 様</li>
+                        <li>小島 愛花 様</li>
+                        <li>平野 真美 様</li>
+                        <li>中村 絢音 様</li>
+                        <li>小澤 雛子 様</li>
+                        <li>小池 紗矢 様</li>
+                        <li>山崎 ひとみ 様</li>
+                        <li>山﨑 陽奈 様</li>
+                        <li>山本 郁乃 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -474,10 +581,15 @@
                     </div>
                     <h3 class="font-body-md font-semibold text-on-surface mb-3 border-b border-primary/10 pb-1.5 w-full text-center text-sm md:text-base">Table L</h3>
                     <ul class="space-y-1.5 text-xs md:text-sm text-on-surface-variant w-full text-center">
-                        <li>山上 純 様</li>
-                        <li>林 龍平 様</li>
+                        <li>黒崎 晃世 様</li>
+                        <li>角田 望 様</li>
+                        <li>鈴木 みゆ 様</li>
+                        <li>鈴木 陽茉梨 様</li>
+                        <li>加藤 百合子 様</li>
                         <li>立石 実莉 様</li>
                         <li>内田 匠哉 様</li>
+                        <li>林 龍平 様</li>
+                        <li>山上 純 様</li>
                         <li>大川 凌太朗 様</li>
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
@@ -569,7 +681,7 @@
 </footer>
 
 <script>
-    // ローマ字パラメータと日本語名をマッピングする辞書
+    // index.html のゲストマップに置き換え
     const guestMap = {
         'shiohira_setuko':'潮平 節子',
 'shiohira_naoto':'潮平 直人',
@@ -654,6 +766,7 @@
 'yamada_ryouta':'山田 涼太',
     };
 
+
     // URLパラメータの取得
     const urlParams = new URLSearchParams(window.location.search);
     const guestParam = urlParams.get('guest'); 
@@ -672,7 +785,8 @@
         const currentQuery = window.location.search;
         if (currentQuery) {
             document.querySelectorAll('a[href="after-party.html"]').forEach(link => {
-                link.href = 'after-party.html' + currentQuery;
+                const baseUrl = window.location.origin + window.location.pathname.replace('index.html', '');
+                link.href = baseUrl + 'after-party.html' + currentQuery;
             });
         }
     }
