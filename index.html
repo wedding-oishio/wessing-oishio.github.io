@@ -1,3 +1,6 @@
+お気に入りのアプリの中から AI を直接お試しください。 … Gemini を使用して下書きを生成したり、コンテンツの質を高めたりすることができます。さらに、Gemini Pro では Google の次世代 AI にアクセスできます。3 か月間、￥2,900 ￥720
+1
+100%
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="ja">
 <head>
@@ -134,31 +137,19 @@
             width: 100vw;
             height: 100vh;
             background-color: #FCFBF9;
-            /* SVGで作った微細なノイズテクスチャ */
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
             z-index: -10;
             pointer-events: none;
         }
-        /* 2. 水彩花柄をフワッとぼかして重ねるためのクラス */
         .watercolor-floral {
             position: absolute;
             background-size: cover;
             background-position: center;
             mix-blend-mode: multiply;
-            /* 周りをふわっと消すマスク */
             mask-image: radial-gradient(circle, black 0%, transparent 60%);
             -webkit-mask-image: radial-gradient(circle, black 0%, transparent 60%);
             pointer-events: none;
             z-index: 0;
-        }
-
-        /* アニメーション */
-        .fade-in {
-            animation: fadeIn 1.2s ease-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         @media (min-width: 768px) {
             .guest-item {
@@ -168,47 +159,42 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed antialiased">
-
-    <!-- 全体背景の紙テクスチャ -->
     <div class="bg-paper"></div>
     
-<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-24 py-5 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 transition-all duration-500">
-    <a href="#" class="font-display-lg text-xl md:text-2xl text-primary tracking-wider">Takaki & Mayu</a>
-    <nav class="hidden md:flex gap-8">
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#story">Our Story</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#gallery">Gallery</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#seating-chart">Seating Chart</a>
-        <a id="nav-after-party" class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="after-party.html">After Party</a>
-    </nav>
-    <a id="btn-after-party" href="after-party.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-full hover:opacity-90 transition-all active:scale-95 duration-200 shadow-sm block text-center">
-        二次会のご案内
-    </a>
-</header>
+    <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-24 py-5 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 transition-all duration-500">
+        <a href="#" class="font-display-lg text-xl md:text-2xl text-primary tracking-wider">Takaki & Mayu</a>
+        <nav class="hidden md:flex gap-8">
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#story">Our Story</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#gallery">Gallery</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#seating-chart">Seating Chart</a>
+            <a id="nav-after-party" class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="after-party.html">After Party</a>
+        </nav>
+        <a id="btn-after-party" href="after-party.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-full hover:opacity-90 transition-all active:scale-95 duration-200 shadow-sm block text-center">
+            二次会のご案内
+        </a>
+    </header>
 
-<main class="overflow-x-hidden">
-    <section class="relative h-[100dvh] flex flex-col items-center justify-center overflow-hidden">
+    <main class="overflow-x-hidden">
+        <section class="relative h-[100dvh] flex flex-col items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" alt="Wedding Hero" class="w-full h-full object-cover filter brightness-[0.80] sepia-[0.15] opacity-90 scale-105" />
                 <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"></div>
             </div>
-            
+
             <div class="relative z-10 text-center px-4 fade-in mt-16">
                 <p class="font-en text-secondary tracking-[0.3em] text-sm md:text-base uppercase mb-6 drop-shadow-sm font-medium">Welcome to our wedding</p>
                 <h1 class="font-handwriting text-7xl md:text-8xl text-white mb-4 drop-shadow-lg">Takuya & Misaki</h1>
                 <p class="font-en text-white tracking-[0.2em] text-lg mt-6 bg-black/25 inline-block px-8 py-2.5 rounded-full backdrop-blur-sm shadow-sm border border-white/20">2026.11.22</p>
             </div>
-            
+
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center animate-bounce">
                 <span class="font-en text-xs tracking-widest text-white mb-2 drop-shadow-md">SCROLL</span>
                 <span class="material-symbols-outlined text-white drop-shadow-md">keyboard_arrow_down</span>
             </div>
         </section>
 
-    <!-- 2. ご挨拶 (水彩花柄を配置) -->
         <section id="greeting" class="py-32 px-6 relative overflow-hidden scroll-mt-20">
-            <!-- 水彩花柄 (左上) -->
             <div class="watercolor-floral w-[400px] h-[400px] -left-20 -top-20 opacity-30" style="background-image: url('https://images.unsplash.com/photo-1490750967868-88cb4aca8fba?q=80&w=800&auto=format&fit=crop');"></div>
-            <!-- 水彩花柄 (右下) -->
             <div class="watercolor-floral w-[500px] h-[500px] -right-32 -bottom-20 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1456086272160-b22364c6efa1?q=80&w=800&auto=format&fit=crop');"></div>
 
             <div class="max-w-3xl mx-auto text-center relative z-10">
@@ -226,7 +212,6 @@
             </div>
         </section>
 
-     <!-- 3. プロフィール (アーチ状のレイアウトで変化をつける) -->
         <section id="profile" class="py-28 relative scroll-mt-20">
             <div class="max-w-4xl mx-auto px-6 relative z-10">
                 <div class="text-center mb-20">
@@ -235,13 +220,12 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-12 items-start">
-                    <!-- 新郎 -->
                     <div class="bg-white/80 backdrop-blur-md p-8 pt-12 rounded-t-full rounded-b-3xl shadow-xl border border-primary/10 relative mt-16 md:mt-0">
                         <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full overflow-hidden border-4 border-surface shadow-md">
                             <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop" alt="Groom" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="font-en text-2xl text-center text-primary mt-6 mb-1">Takuya</h3>
-                        <p class="text-center text-sm text-text-muted mb-8 tracking-widest">山田 拓也</p>
+                        <h3 class="font-en text-2xl text-center text-primary mt-6 mb-1">takaki</h3>
+                        <p class="text-center text-sm text-text-muted mb-8 tracking-widest">貴希</p>
                         <div class="space-y-6 text-sm">
                             <div class="text-center">
                                 <p class="text-xs text-secondary font-bold mb-2 tracking-wider">趣味・休日の過ごし方は？</p>
@@ -255,13 +239,12 @@
                         </div>
                     </div>
 
-                    <!-- 新婦 -->
                     <div class="bg-white/80 backdrop-blur-md p-8 pt-12 rounded-t-full rounded-b-3xl shadow-xl border border-primary/10 relative mt-16 md:mt-12">
                         <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full overflow-hidden border-4 border-surface shadow-md">
                             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" alt="Bride" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="font-en text-2xl text-center text-primary mt-6 mb-1">Misaki</h3>
-                        <p class="text-center text-sm text-text-muted mb-8 tracking-widest">佐藤 美咲</p>
+                        <h3 class="font-en text-2xl text-center text-primary mt-6 mb-1">mayu</h3>
+                        <p class="text-center text-sm text-text-muted mb-8 tracking-widest">真優</p>
                         <div class="space-y-6 text-sm">
                             <div class="text-center">
                                 <p class="text-xs text-secondary font-bold mb-2 tracking-wider">趣味・休日の過ごし方は？</p>
@@ -278,9 +261,7 @@
             </div>
         </section>
 
-        <!-- 4. メニュー (高級感のある枠線) -->
         <section id="menu" class="py-28 px-6 relative overflow-hidden scroll-mt-20">
-            <!-- 水彩花柄 (右中央) -->
             <div class="watercolor-floral w-[600px] h-[600px] -right-40 top-1/2 -translate-y-1/2 opacity-25" style="background-image: url('https://images.unsplash.com/photo-1508610048659-a06b669e3321?q=80&w=800&auto=format&fit=crop');"></div>
 
             <div class="max-w-3xl mx-auto text-center relative z-10">
@@ -289,7 +270,6 @@
                 
                 <div class="bg-surface/95 backdrop-blur-md p-2 rounded-2xl shadow-xl">
                     <div class="border-[1.5px] border-secondary/40 p-8 md:p-14 rounded-xl relative">
-                        <!-- 四隅の装飾 -->
                         <div class="absolute top-2 left-2 w-4 h-4 border-t border-l border-secondary"></div>
                         <div class="absolute top-2 right-2 w-4 h-4 border-t border-r border-secondary"></div>
                         <div class="absolute bottom-2 left-2 w-4 h-4 border-b border-l border-secondary"></div>
@@ -300,7 +280,7 @@
                             <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-px bg-secondary"></span>
                         </h3>
                         
-                        <ul class="space-y-8 text-sm md:text-base tracking-wider text-text-main">
+                        <ul id="menu-list" class="space-y-8 text-sm md:text-base tracking-wider text-text-main">
                             <li>
                                 <span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Amuse</span>
                                 真鯛のマリネと彩り野菜のアンサンブル<br>キャビアを添えて
@@ -401,7 +381,6 @@
         </div>
     </section>
 
-    <!-- 席次表のみ index.html のデータに置き換え -->
     <section class="py-20 md:py-[120px] bg-surface-container-low scroll-mt-24" id="seating-chart">
         <div class="max-w-container-max mx-auto px-gutter">
             <div class="text-center mb-12 md:mb-16">
@@ -411,6 +390,97 @@
                     タップするとテーブルごとの詳細な配置をご覧いただけます。
                 </p>
             </div>
+<!-- ▼ 新規追加：席図（フロアマップ）クリック＆ハイライト対応版 -->
+            <div class="max-w-4xl mx-auto mb-16 relative overflow-visible px-2 sm:px-6">
+                
+                <!-- 見出し部分の華やかなあしらい -->
+                <div class="flex items-center justify-center gap-4 mb-10 md:mb-12">
+                    <div class="h-[1px] w-12 sm:w-20 bg-secondary/40"></div>
+                    <span class="material-symbols-outlined text-secondary/60 text-sm">local_florist</span>
+                    <p class="font-label-caps text-secondary tracking-[0.2em] text-[10px] md:text-xs font-bold">FLOOR MAP</p>
+                    <span class="material-symbols-outlined text-secondary/60 text-sm">local_florist</span>
+                    <div class="h-[1px] w-12 sm:w-20 bg-secondary/40"></div>
+                </div>
+                
+                <!-- マップ本体 -->
+                <div class="relative z-10 max-w-3xl mx-auto bg-white/70 p-6 sm:p-10 md:p-14 rounded-[2.5rem] border-2 border-white shadow-[0_10px_40px_-10px_rgba(124,141,123,0.2)] backdrop-blur-md">
+                    
+                    <!-- 背景の華やかな水彩ボタニカル装飾 -->
+                    <div class="absolute -top-12 -left-12 w-48 h-48 bg-[url('https://images.unsplash.com/photo-1490750967868-88cb4aca8fba?q=80&w=400&auto=format&fit=crop')] bg-cover bg-center rounded-full opacity-20 mix-blend-multiply blur-sm pointer-events-none"></div>
+                    <div class="absolute -bottom-16 -left-8 w-56 h-56 bg-[url('https://images.unsplash.com/photo-1456086272160-b22364c6efa1?q=80&w=400&auto=format&fit=crop')] bg-cover bg-center rounded-full opacity-15 mix-blend-multiply blur-sm pointer-events-none"></div>
+
+                    <!-- エントランス -->
+                    <div class="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-secondary/90 z-20">
+                        <div class="bg-white/80 backdrop-blur-sm px-2.5 py-5 rounded-full border border-white shadow-md flex flex-col items-center gap-3">
+                            <span class="font-label-caps text-[9px] md:text-[10px] tracking-widest uppercase font-bold text-secondary" style="writing-mode: vertical-rl; text-orientation: mixed;">Entrance</span>
+                            <span class="material-symbols-outlined text-base text-secondary animate-pulse">west</span>
+                        </div>
+                    </div>
+
+                    <div class="pr-8 sm:pr-12 md:pr-16 relative z-10">
+                        
+                        <!-- 高砂 (Main Table) -->
+                        <div class="relative w-full max-w-[260px] md:max-w-[320px] mx-auto h-14 md:h-16 flex items-center justify-center rounded-full border border-secondary/30 bg-gradient-to-r from-white via-surface-container-low to-white shadow-md mb-14 md:mb-16">
+                            <div class="absolute -top-4 bg-white px-5 py-1 text-[9px] md:text-[10px] text-secondary font-label-caps tracking-widest uppercase rounded-full border border-secondary/20 shadow-sm flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-[12px] text-secondary">favorite</span> Main Table
+                            </div>
+                            <div class="w-[85%] flex items-center justify-around px-2">
+                                <span class="text-[9px] md:text-[11px] text-on-surface/80 font-en tracking-[0.15em] font-bold">GROOM</span>
+                                <span class="material-symbols-outlined text-primary/40 text-sm">spa</span>
+                                <span class="text-[9px] md:text-[11px] text-on-surface/80 font-en tracking-[0.15em] font-bold">BRIDE</span>
+                            </div>
+                        </div>
+
+                        <!-- 1列目 (3卓: A, B, C) -->
+                        <div class="flex justify-center gap-4 sm:gap-10 md:gap-16 mb-8 md:mb-12">
+                            <div class="map-table-circle relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="1">
+                                <div class="inner-circle w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-white to-surface-container rounded-full shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-lg md:text-2xl transition-colors duration-300">A</div>
+                            </div>
+                            <div class="map-table-circle relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="2">
+                                <div class="inner-circle w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-white to-surface-container rounded-full shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-lg md:text-2xl transition-colors duration-300">B</div>
+                            </div>
+                            <div class="map-table-circle relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="3">
+                                <div class="inner-circle w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-white to-surface-container rounded-full shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-lg md:text-2xl transition-colors duration-300">C</div>
+                            </div>
+                        </div>
+
+                        <!-- 2列目 (3卓: D, F, G) -->
+                        <div class="flex justify-center gap-4 sm:gap-10 md:gap-16 mb-8 md:mb-12">
+                            <div class="map-table-circle relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="4">
+                                <div class="inner-circle w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-white to-surface-container rounded-full shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-lg md:text-2xl transition-colors duration-300">D</div>
+                            </div>
+                            <div class="map-table-circle relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="6">
+                                <div class="inner-circle w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-white to-surface-container rounded-full shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-lg md:text-2xl transition-colors duration-300">F</div>
+                            </div>
+                            <div class="map-table-circle relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="7">
+                                <div class="inner-circle w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-white to-surface-container rounded-full shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-lg md:text-2xl transition-colors duration-300">G</div>
+                            </div>
+                        </div>
+
+                        <!-- 3列目 (5卓: H, I, J, K, L) -->
+                        <div class="flex justify-center gap-1.5 sm:gap-4 md:gap-7">
+                            <div class="map-table-circle relative w-10 h-10 sm:w-14 sm:h-14 md:w-[72px] md:h-[72px] flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="8">
+                                <div class="inner-circle w-7 h-7 sm:w-10 sm:h-10 md:w-[50px] md:h-[50px] bg-gradient-to-br from-white to-surface-container rounded-full shadow-sm md:shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-base md:text-xl transition-colors duration-300">H</div>
+                            </div>
+                            <div class="map-table-circle relative w-10 h-10 sm:w-14 sm:h-14 md:w-[72px] md:h-[72px] flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="9">
+                                <div class="inner-circle w-7 h-7 sm:w-10 sm:h-10 md:w-[50px] md:h-[50px] bg-gradient-to-br from-white to-surface-container rounded-full shadow-sm md:shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-base md:text-xl transition-colors duration-300">I</div>
+                            </div>
+                            <div class="map-table-circle relative w-10 h-10 sm:w-14 sm:h-14 md:w-[72px] md:h-[72px] flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="10">
+                                <div class="inner-circle w-7 h-7 sm:w-10 sm:h-10 md:w-[50px] md:h-[50px] bg-gradient-to-br from-white to-surface-container rounded-full shadow-sm md:shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-base md:text-xl transition-colors duration-300">J</div>
+                            </div>
+                            <div class="map-table-circle relative w-10 h-10 sm:w-14 sm:h-14 md:w-[72px] md:h-[72px] flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="11">
+                                <div class="inner-circle w-7 h-7 sm:w-10 sm:h-10 md:w-[50px] md:h-[50px] bg-gradient-to-br from-white to-surface-container rounded-full shadow-sm md:shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-base md:text-xl transition-colors duration-300">K</div>
+                            </div>
+                            <div class="map-table-circle relative w-10 h-10 sm:w-14 sm:h-14 md:w-[72px] md:h-[72px] flex items-center justify-center rounded-full border-2 border-primary/20 border-dashed bg-white/40 shadow-[inset_0_2px_10px_rgba(124,141,123,0.1)] hover:scale-105 transition-all duration-300 cursor-pointer" data-table="12">
+                                <div class="inner-circle w-7 h-7 sm:w-10 sm:h-10 md:w-[50px] md:h-[50px] bg-gradient-to-br from-white to-surface-container rounded-full shadow-sm md:shadow-md flex items-center justify-center border border-white text-primary font-display-lg text-base md:text-xl transition-colors duration-300">L</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ▲ 新規追加ここまで -->
+
             <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
                 <div class="table-card bg-white p-4 md:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" data-table="1">
                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
@@ -443,17 +513,6 @@
                         <li>神藤 香 様</li>
                         <li>横山 優子 様</li>
                         <li>石橋 愛夏 様</li>
-                        
-                        
-                        
-                        
-                        
-                        
-
-
-                        
-                        
-                        
                     </ul>
                     <span class="text-[10px] text-primary/60 tracking-wider mt-4 block text-center">配置を確認 ➔</span>
                 </div>
@@ -678,115 +737,254 @@
             </div>
         </div>
     </section>
-</main>
+    </main>
 
-<footer class="w-full py-12 px-gutter flex flex-col md:flex-row justify-between items-center gap-6 max-w-container-max mx-auto text-center md:text-left border-t border-outline-variant/20 text-sm">
-    <div class="space-y-2">
-        <div class="font-display-lg text-lg text-primary">Takaki & Mayu</div>
-        <p class="font-body-md text-xs text-on-surface-variant">© 2026 Takaki & Mayu. Handcrafted with love.</p>
-    </div>
-    <div class="flex gap-6">
-        <a class="text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Privacy Policy</a>
-        <a class="text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Contact</a>
-    </div>
-</footer>
+    <footer class="w-full py-12 px-gutter flex flex-col md:flex-row justify-between items-center gap-6 max-w-container-max mx-auto text-center md:text-left border-t border-outline-variant/20 text-sm">
+        <div class="space-y-2">
+            <div class="font-display-lg text-lg text-primary">Takaki & Mayu</div>
+            <p class="font-body-md text-xs text-on-surface-variant">© 2026 Takaki & Mayu. Handcrafted with love.</p>
+        </div>
+        <div class="flex gap-6">
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Privacy Policy</a>
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Contact</a>
+        </div>
+    </footer>
 
-<script>
-    // index.html のゲストマップに置き換え
+    <script>
     const guestMap = {
         'shiohira_setuko':'潮平 節子',
-'shiohira_naoto':'潮平 直人',
-'shiohira_sayu':'潮平 紗優',
-'kagami_ren':'加賀美 蓮',
-'kagami_takako':'加賀美 貴子',
-'kagami_tokuko':'加賀美 徳子',
-'ooi_kentarou':'大井 賢太郎',
-'ooi_thie':'大井 知恵',
-'ooi_sumito':'大井 澄人',
-'murayama_takeshi':'村山 武',
-'murayama_akemi':'村山 明美',
-'ooi_takehiko':'大井 武彦',
-'ooi_takuto':'大井 拓人',
-'miyawaki_kaori':'宮脇 かおり',
-'miyawaki_yuukka':'宮脇 悠花',
-'miyawaki_ayaka':'宮脇 彩花',
-'oota_akihito':'太田 章仁',
-'oota_maki':'太田 真紀',
-'oota_kakeru':'太田 翔',
-'oota_nagine':'太田 凪音',
-'oota_une':'太田 羽音',
-'sawai_kazufumi':'澤井 和史',
-'sawai_miki':'澤井 美喜',
-'sawai_miwa':'澤井 美和',
-'oohira_kazushige':'大平 和茂',
-'oohira_etuko':'大平 悦子',
-'oohira_kazuki':'大平 和樹',
-'oohira_saori':'大平 沙織',
-'oohira_yuuhi':'大平 悠飛',
-'oohira_kurumi':'大平 來望',
-'nakamura_susumu':'中村 進',
-'nakamura_noriko':'中村 典子',
-'komoro_daisuke':'小師 大輔',
-'ogasawara_ryou':'小笠原 遼',
-'ogasawara_misa':'小笠原 美彩',
-'houri_naoya':'宝利 直哉',
-'kiyama_mahiro':'歸山 茉大',
-'amada_kouki':'天田 香輝',
-'yamakosi_shotaro':'山越 正太郎',
-'mizusima_natuki':'水嶋 奈津希',
-'anzai_kouithi':'安在 皓一',
-'satou_shyouetu':'佐藤 翔悦',
-'shindou_kaori':'神藤 香',
-'sunada_tomohiro':'砂田 朋宏',
-'watanabe_tetuya':'渡邉 哲哉',
-'arai_yasuna':'新井 那菜',
-'arai_kentarou':'新井 健太郎',
-'masunaga_zyunma':'益永 純真',
-'kamiyama_ryusuke':'神山 竜輔',
-'higashi_kanon':'東 花音',
-'kamiya_yuuta':'神谷 勇汰',
-'nakamura_daisuke':'中村 大助',
-'itou_mai':'伊藤真衣 ',
-'takano_ayaka':'高野 礼華',
-'yorozui_kanon':'萬井 佳音',
-'yokoyama_yuuko':'横山 優子',
-'miyazawa_hideaki':'宮澤 秀昭',
-'sima_risa':'島 理沙',
-'ishibashi_aika':'石橋 愛夏',
-'isibasi_sinnosuke':'石橋 信之介',
-'kozima_aika':'小島 愛花',
-'yamazaki_hina':'山崎 陽奈',
-'ozawa_hinako':'小澤 雛子',
-'koike_saya':'小池 紗矢',
-'hirano_mami':'平野 真美',
-'nakamura_ayane':'中村 絢音',
-'yamazaki_hitomi':'山崎 ひとみ',
-'yamamoto_ikuno':'山本 郁乃',
-'kurosaki_kousei':'黒崎 晃世',
-'suzuki_himari':'鈴木 陽茉梨',
-'katou_yuriko':'加藤 百合子',
-'suzuki_miyu':'鈴木 みゆ',
-'kadota_nozomu':'角田 望',
-'yamagami_zyun':'山上 純',
-'hayasi_ryuuhei':'林 龍平',
-'tateisi_minori':'立石 実莉',
-'utida_takuya':'内田 匠哉',
-'ookawa_ryoutarou':'大川 凌太朗',
-'kimura_syunpei':'木村 駿平',
-'tukamoto_ryouya':'塚本 凌也',
-'yamada_ryouta':'山田 涼太',
+        'shiohira_naoto':'潮平 直人',
+        'shiohira_sayu':'潮平 紗優',
+        'kagami_ren':'加賀美 蓮',
+        'kagami_takako':'加賀美 貴子',
+        'kagami_tokuko':'加賀美 徳子',
+        'ooi_kentarou':'大井 賢太郎',
+        'ooi_thie':'大井 知恵',
+        'ooi_sumito':'大井 澄人',
+        'murayama_takeshi':'村山 武',
+        'murayama_akemi':'村山 明美',
+        'ooi_takehiko':'大井 武彦',
+        'ooi_takuto':'大井 拓人',
+        'miyawaki_kaori':'宮脇 かおり',
+        'miyawaki_yuukka':'宮脇 悠花',
+        'miyawaki_ayaka':'宮脇 彩花',
+        'oota_akihito':'太田 章仁',
+        'oota_maki':'太田 真紀',
+        'oota_kakeru':'太田 翔',
+        'oota_nagine':'太田 凪音',
+        'oota_une':'太田 羽音',
+        'sawai_kazufumi':'澤井 和史',
+        'sawai_miki':'澤井 美喜',
+        'sawai_miwa':'澤井 美和',
+        'oohira_kazushige':'大平 和茂',
+        'oohira_etuko':'大平 悦子',
+        'oohira_kazuki':'大平 和樹',
+        'oohira_saori':'大平 沙織',
+        'oohira_yuuhi':'大平 悠飛',
+        'oohira_kurumi':'大平 來望',
+        'nakamura_susumu':'中村 進',
+        'nakamura_noriko':'中村 典子',
+        'komoro_daisuke':'小師 大輔',
+        'ogasawara_ryou':'小笠原 遼',
+        'ogasawara_misa':'小笠原 美彩',
+        'houri_naoya':'宝利 直哉',
+        'kiyama_mahiro':'歸山 茉大',
+        'amada_kouki':'天田 香輝',
+        'yamakosi_shotaro':'山越 正太郎',
+        'mizusima_natuki':'水嶋 奈津希',
+        'anzai_kouithi':'安在 皓一',
+        'satou_shyouetu':'佐藤 翔悦',
+        'shindou_kaori':'神藤 香',
+        'sunada_tomohiro':'砂田 朋宏',
+        'watanabe_tetuya':'渡邉 哲哉',
+        'arai_yasuna':'新井 那菜',
+        'arai_kentarou':'新井 健太郎',
+        'masunaga_zyunma':'益永 純真',
+        'kamiyama_ryusuke':'神山 竜輔',
+        'higashi_kanon':'東 花音',
+        'kamiya_yuuta':'神谷 勇汰',
+        'nakamura_daisuke':'中村 大助',
+        'itou_mai':'伊藤真衣 ',
+        'takano_ayaka':'高野 礼華',
+        'yorozui_kanon':'萬井 佳音',
+        'yokoyama_yuuko':'横山 優子',
+        'miyazawa_hideaki':'宮澤 秀昭',
+        'sima_risa':'島 理沙',
+        'ishibashi_aika':'石橋 愛夏',
+        'isibasi_sinnosuke':'石橋 信之介',
+        'kozima_aika':'小島 愛花',
+        'yamazaki_hina':'山崎 陽奈',
+        'ozawa_hinako':'小澤 雛子',
+        'koike_saya':'小池 紗矢',
+        'hirano_mami':'平野 真美',
+        'nakamura_ayane':'中村 絢音',
+        'yamazaki_hitomi':'山崎 ひとみ',
+        'yamamoto_ikuno':'山本 郁乃',
+        'kurosaki_kousei':'黒崎 晃世',
+        'suzuki_himari':'鈴木 陽茉梨',
+        'katou_yuriko':'加藤 百合子',
+        'suzuki_miyu':'鈴木 みゆ',
+        'kadota_nozomu':'角田 望',
+        'yamagami_zyun':'山上 純',
+        'hayasi_ryuuhei':'林 龍平',
+        'tateisi_minori':'立石 実莉',
+        'utida_takuya':'内田 匠哉',
+        'ookawa_ryoutarou':'大川 凌太朗',
+        'kimura_syunpei':'木村 駿平',
+        'tukamoto_ryouya':'塚本 凌也',
+        'yamada_ryouta':'山田 涼太',
     };
 
+    // ▼ 関係性用データ
+    // ※ ここにゲストのお名前（「様」を抜いた状態）と関係性を登録します。
+    // ※ 登録されていないゲストは、今まで通り名前のみが表示されます。
+    const guestRelationMap = {
+       '潮平 節子':'新婦母',
+'潮平 直人':'新婦父',
+'潮平 紗優':'新婦妹',
+'加賀美 蓮':'新婦従兄',
+'加賀美 玉冰':'新婦従姉',
+'加賀美 貴子':'新婦伯母',
+'加賀美 徳子':'新婦祖母',
+'大井 賢太郎':'新郎父',
+'大井 知恵':'新郎母',
+'大井 澄人':'新郎弟',
+'村山 武':'新郎祖父',
+'村山 明美':'新郎祖母',
+'大井 武彦':'新郎祖父',
+'大井 拓人':'新郎叔父',
+'宮脇 かおり':'新郎叔母',
+'宮脇 悠花':'新郎従妹',
+'宮脇 彩花':'新郎従妹',
+'太田 章仁':'新郎伯父',
+'太田 真紀':'新郎伯母',
+'太田 翔':'新郎従弟',
+'太田 凪音':'新郎従妹',
+'太田 羽音':'新郎従妹',
+'澤井 和史':'新郎従伯父',
+'澤井 美喜':'新郎従伯母',
+'澤井 美和':'新郎再従妹',
+'大平 和茂':'新郎大叔父',
+'大平 悦子':'新郎大叔母',
+'大平 和樹':'新郎従叔父',
+'大平 沙織':'新郎従叔母',
+'大平 悠飛':'新郎再従弟',
+'大平 來望':'新郎再従妹',
+'中村 進':'新郎大伯父',
+'中村 典子':'新郎大伯母',
+'小師 大輔':'新郎友人',
+'小笠原 遼':'新郎友人',
+'小笠原 美彩':'新郎友人',
+'宝利 直哉':'新郎友人',
+'歸山 茉大':'新郎友人',
+'天田 香輝':'新郎友人',
+'山越 正太郎':'新郎新婦友人',
+'水嶋 奈津希':'新郎友人',
+'安在 皓一':'新郎新婦友人',
+'佐藤 翔悦':'新郎新婦友人',
+'神藤 香':'新郎新婦友人',
+'砂田 朋宏':'新郎新婦友人',
+'渡邉 哲哉':'新郎新婦友人',
+'新井 那菜':'新郎新婦友人',
+'新井 健太郎':'新郎新婦友人',
+'益永 純真':'新郎新婦友人',
+'神山 竜輔':'新郎新婦友人',
+'東 花音':'新郎新婦友人',
+'神谷 勇汰':'新郎新婦友人',
+'中村 大助':'新郎新婦友人',
+'伊藤真衣 ':'新郎新婦友人',
+'高野 礼華':'新郎新婦友人',
+'萬井 佳音':'新郎新婦友人',
+'横山 優子':'新郎新婦友人',
+'宮澤 秀昭':'新郎新婦友人',
+'島 理沙':'新郎新婦友人',
+'石橋 愛夏':'新郎新婦友人',
+'石橋 信之介':'新郎新婦友人',
+'小島 愛花':'新婦友人',
+'山崎 陽奈':'新婦友人',
+'小澤 雛子':'新婦友人',
+'小池 紗矢':'新婦友人',
+'平野 真美':'新婦友人',
+'中村 絢音':'新婦友人',
+'山崎 ひとみ':'新婦友人',
+'山本 郁乃':'新婦友人',
+'黒崎 晃世':'新婦友人',
+'鈴木 陽茉梨':'新婦友人',
+'加藤 百合子':'新婦友人',
+'鈴木 みゆ':'新婦友人',
+'角田 望':'新婦友人',
+'山上 純':'新婦友人',
+'林 龍平':'新婦友人',
+'立石 実莉':'新婦友人',
+'内田 匠哉':'新婦友人',
+'大川 凌太朗':'新婦友人',
+'木村 駿平':'新郎友人',
+'塚本 凌也':'新郎友人',
+'山田 涼太':'新郎友人'
+       
+    };
 
-    // URLパラメータの取得
+    // パラメータ設定
     const urlParams = new URLSearchParams(window.location.search);
     const guestParam = urlParams.get('guest'); 
     const afterPartyFlag = urlParams.get('after_party'); 
 
-    // ローマ字から日本語名に変換して保持
     const guestName = guestMap[guestParam] || null;
 
-    // 二次会参加フラグの判定制御 ＆ パラメータ引き継ぎ
+
+    //-----------------------------------------------------
+    //▼メニュー切り替え機能
+    //-----------------------------------------------------
+
+    // 1. ゲストのパラメータ名と、メニューを紐づけ
+    const guestMenuType={
+        'oohira_kurumi':'kids',
+        'ogasawara_misa':'inunekonasi'
+    }
+
+    // 2. メニュー切り替え用
+    const menuVariations = {
+        default: `
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Amuse</span>真鯛のマリネと彩り野菜のアンサンブル<br>キャビアを添えて</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Soup</span>季節のポタージュ トリュフの香り</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Poisson</span>オマール海老のポワレ<br>濃厚なアメリケーヌソース</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Viande</span>特選牛フィレ肉のロティ<br>旬の温野菜と赤ワインソース</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Dessert</span>パティシエ特製 ウエディングケーキ</li>
+        `,
+        kids: `
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">main</span>オムライス</li>
+        `,
+        junior: `
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Soup</span>本日のスープ</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Poisson</span>シーフードプレート</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Viande</span>ミートプレート</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Dessert</span>プリンアラモード</li>
+        `,
+
+        inunekonasi: `
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Amuse</span>真鯛のマリネと彩り野菜のアンサンブル<br>キャビアを添えて</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Soup</span>季節のポタージュ トリュフの香り</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Poisson</span>オマール海老のポワレ<br>濃厚なアメリケーヌソース</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Viande</span>特選牛フィレ肉のロティ<br>旬の温野菜と赤ワインソース</li>
+            <li><span class="block text-[11px] text-secondary font-en tracking-widest mb-1">Dessert</span>パティシエ特製 ウエディングケーキ</li>
+            <li class="text-right pt-6 mt-4 border-t border-outline-variant/30">
+                <span class="text-[10px] md:text-[11px] text-secondary tracking-widest font-bold">※犬、猫アレルギー対応済み</span>
+            </li>
+        `
+    }
+
+    // 3. 通常メニューの人はdefault
+    const currentMenuType = guestMenuType[guestParam] || 'default';
+
+    //4. HTML書き換え
+    const menuListElement = document.getElementById('menu-list');
+    if (menuListElement) {
+        menuListElement.innerHTML = menuVariations[currentMenuType];
+    }
+
+    //-----------------------------------------------------
+    //▼二次会リンクの表示制御
+    //-----------------------------------------------------
     if (afterPartyFlag !== 'true') {
         const navAfterParty = document.getElementById('nav-after-party');
         const btnAfterParty = document.getElementById('btn-after-party');
@@ -802,7 +1000,9 @@
         }
     }
 
-    // ヘッダー制御
+    //-----------------------------------------------------
+    //▼スクロール時のヘッダー変化
+    //-----------------------------------------------------
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
         if (header) {
@@ -816,7 +1016,9 @@
         }
     });
 
-    // 席次表ロジック
+    //-----------------------------------------------------
+    //▼モーダル表示処理
+    //-----------------------------------------------------
     const modal = document.getElementById('seating-modal');
     const modalTableNumber = document.getElementById('modal-table-number');
     const guestCircleContainer = document.getElementById('guest-circle-container');
@@ -829,9 +1031,14 @@
 
     function openModal(tableCard) {
         currentActiveCard = tableCard;
-        const tableNum = tableCard.getAttribute('data-table');
-        const guests = Array.from(tableCard.querySelectorAll('ul li')).map(li => li.innerText);
         
+        // ★変更: 「カードを開く前」に関係性の文字が追加されていても、純粋な「名前」だけを取得する
+        const guests = Array.from(tableCard.querySelectorAll('ul li')).map(li => {
+            const nameSpan = li.querySelector('.guest-name-text');
+            return nameSpan ? nameSpan.innerText : li.innerText;
+        });
+        
+        const tableNum = tableCard.getAttribute('data-table');
         modalTableNumber.innerText = isNaN(tableNum) ? tableNum : tableNum.padStart(2, '0');
         guestCircleContainer.innerHTML = '';
         modalGuestList.innerHTML = '';
@@ -847,7 +1054,10 @@
             const x = radius * Math.cos(angle);
             const y = radius * Math.sin(angle);
             
-            const isCurrentGuest = guestName && (guest.replace(' 様', '').trim() === guestName.trim());
+            const rawName = guest.replace(' 様', '').trim();
+            const isCurrentGuest = guestName && (rawName === guestName.trim());
+            const relation = guestRelationMap[rawName] || '';
+            
             const guestEl = document.createElement('div');
             guestEl.className = 'guest-item'; 
             guestEl.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
@@ -867,11 +1077,16 @@
 
             const li = document.createElement('li');
             const liHighlightStyle = isCurrentGuest ? 'font-bold text-primary bg-primary/10 px-2 rounded-sm' : '';
-            li.className = `flex items-center gap-2.5 py-1.5 border-b border-outline-variant/10 fade-in ${liHighlightStyle}`;
+            li.className = `flex items-center gap-2.5 py-2 border-b border-outline-variant/10 fade-in ${liHighlightStyle}`;
             li.style.animationDelay = `${index * 0.02}s`;
+            
+            // 右側のリスト表示には関係性を入れる
             li.innerHTML = `
                 <span class="w-1 h-1 rounded-full bg-primary/60 shrink-0"></span>
-                <span class="truncate">${guest}</span>
+                <div class="flex flex-col">
+                    ${relation ? `<span class="text-[9px] text-primary/70 font-bold tracking-widest leading-none mb-1">${relation}</span>` : ''}
+                    <span class="truncate">${guest}</span>
+                </div>
             `;
             modalGuestList.appendChild(li);
         });
@@ -908,17 +1123,77 @@
         }, 150);
     });
 
-    // ページロード時、マッピングされた日本語名を元に対象のテーブルカードのみを強調
+    //-----------------------------------------------------
+    //▼テーブルカードの「名前リスト」に関係性を表示する処理
+    //-----------------------------------------------------
+    document.querySelectorAll('.table-card ul').forEach(ul => {
+        // ★ HTMLを書き換えずに、ここで自動的に「左寄せ」かつ「カードの中央配置」に調整します
+        ul.classList.remove('text-center', 'w-full');
+        ul.classList.add('text-left', 'w-fit', 'mx-auto');
+        
+        ul.querySelectorAll('li').forEach(li => {
+            const originalText = li.innerText;
+            const rawName = originalText.replace(' 様', '').trim();
+            const relation = guestRelationMap[rawName];
+            
+            if (relation) {
+                // 関係性がある場合は、名前の上に小さく関係性を表示
+                li.innerHTML = `<span class="block text-[9px] text-primary/70 font-bold leading-none mb-0.5 mt-1.5">${relation}</span><span class="guest-name-text">${originalText}</span>`;
+            } else {
+                // 関係性がない場合も、後で名前を判定できるように目印(guest-name-text)をつける
+                li.innerHTML = `<span class="guest-name-text block mt-1.5">${originalText}</span>`;
+            }
+        });
+    });
+
+
+    //-----------------------------------------------------
+    //▼URLパラメータに応じて、該当ゲストのテーブルカードをハイライト表示
+    //----------------------------------------------------- 
+    // ▼ 【新規追加】マップ上のテーブルをタップしたときにモーダルを開く処理
+    document.querySelectorAll('.map-table-circle').forEach(mapTable => {
+        mapTable.addEventListener('click', () => {
+            const tableNum = mapTable.getAttribute('data-table');
+            const targetCard = document.querySelector(`.table-card[data-table="${tableNum}"]`);
+            if (targetCard) {
+                openModal(targetCard);
+            }
+        });
+    });
+
+    // -----------------------------------------------------------------
+    // ▼ 既存のハイライト機能（マップのハイライトも追加！）
+    //------------------------------------------------------------------
     if (guestName) {
         document.querySelectorAll('.table-card').forEach(card => {
             const hasTargetGuest = Array.from(card.querySelectorAll('ul li')).some(li => {
-                return li.innerText.replace(' 様', '').trim() === guestName.trim();
+                const nameSpan = li.querySelector('.guest-name-text');
+                const textToProcess = nameSpan ? nameSpan.innerText : li.innerText;
+                return textToProcess.replace(' 様', '').trim() === guestName.trim();
             });
+            
             if (hasTargetGuest) {
+                // 1. 下の席次表カードを強調
                 card.classList.add('border-primary', 'border-2', 'shadow-xl', 'ring-4', 'ring-primary/20');
+                
+                // 2. マップ上のテーブルも強調する
+                const tableNum = card.getAttribute('data-table');
+                const mapTable = document.querySelector(`.map-table-circle[data-table="${tableNum}"]`);
+                if (mapTable) {
+                    // 外側の点線を実線にして光らせる
+                    mapTable.classList.remove('border-primary/20', 'border-dashed');
+                    mapTable.classList.add('border-primary', 'border-solid', 'ring-4', 'ring-primary/30', 'bg-primary/10');
+                    
+                    // 内側の丸の色をテーマカラーで塗りつぶす
+                    const innerCircle = mapTable.querySelector('.inner-circle');
+                    if (innerCircle) {
+                        innerCircle.classList.remove('bg-gradient-to-br', 'from-white', 'to-surface-container', 'text-primary');
+                        innerCircle.classList.add('bg-primary', 'text-white');
+                    }
+                }
             }
         });
     }
-</script>
+    </script>
 </body>
 </html>
