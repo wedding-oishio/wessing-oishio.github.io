@@ -766,7 +766,7 @@
         // URLパラメータからのIDと本名のマッピング
         const guestMap = {
             'shiohira_setuko': '潮平 節子', 'shiohira_naoto': '潮平 直人', 'shiohira_sayu': '潮平 紗優',
-            'kagami_ren': '加賀美 蓮', 'kagami_takako': '加賀美 貴子', 'kagami_tokuko': '加賀美 徳子',
+            'kagami_ren': '加賀美 蓮', 'kagami_takako': '加賀美 貴子', 'kagami_tokuko': '加賀美 徳子', 'kagami_yupin': '加賀美 玉冰',
             'ooi_kentarou': '大井 健太郎', 'ooi_thie': '大井 知恵', 'ooi_sumito': '大井 澄人',
             'murayama_takeshi': '村山 武', 'murayama_akemi': '村山 明美', 'ooi_takehiko': '大井 武彦',
             'ooi_takuto': '大井 拓人', 'miyawaki_kaori': '宮脇 かおり', 'miyawaki_yuukka': '宮脇 悠花',
@@ -896,10 +896,12 @@
             if (currentGuest.menuType !== 'default') {
                 const noticeEl = document.getElementById('menu-personalized-notice');
                 noticeEl.classList.remove('hidden');
-                if (currentGuest.menuType === 'allergy-wheat') {
-                    noticeEl.innerHTML = `${currentGuest.name}様<br><span class="text-xs">小麦アレルギーに配慮したメニューをご用意しております。</span>`;
+                if (currentGuest.menuType === 'komuginuki') {
+                    noticeEl.innerHTML = `<span class="text-xs">小麦アレルギーに配慮したメニューをご用意しております。</span>`;
                 } else if (currentGuest.menuType === 'kids') {
-                    noticeEl.innerHTML = `${currentGuest.name}様<br><span class="text-xs">お子様用メニューをご用意しております。</span>`;
+                    noticeEl.innerHTML = `${currentGuest.name}さま<br><span class="text-xs">とくべつメニューをごよういしております。</span>`;
+                } else if (currentGuest.menuType === 'inunekonasi') {
+                    noticeEl.innerHTML = `<span class="text-xs">犬・猫アレルギーに配慮したメニューをご用意しております。</span>`;
                 }
             }
 
