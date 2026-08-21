@@ -308,7 +308,7 @@
     </section>
 
     <!-- 5. メニュー (Menu & Drink) -->
-    <section id="menu" class="py-24 px-6 max-w-3xl mx-auto fade-in-up">
+    <section id="menu" class="py-24 px-6 max-w-4xl mx-auto fade-in-up">
         <div class="text-center mb-16">
             <h2 class="font-cursive text-4xl md:text-5xl text-accent mb-2">Menu & Drink</h2>
             <h3 class="font-serif text-xs tracking-[0.2em] text-ink/60 uppercase">お食事</h3>
@@ -495,7 +495,7 @@
                         <ul class="guest-names flex-1 flex flex-col justify-center gap-1.5 text-left w-fit mx-auto">
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎新婦友人</span><span class="guest-name-text">神山 竜輔</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎新婦友人</span><span class="guest-name-text">新井 那菜</span></li>
-                            <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎新婦友人</span><span class="guest-name-text">新井 健太郎</span></li>
+                            <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎新婦友人</span><span class="guest-name-text">新井 賢太郎</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎新婦友人</span><span class="guest-name-text">中村 大助</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎新婦友人</span><span class="guest-name-text">伊藤 真衣</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎新婦友人</span><span class="guest-name-text">神谷 勇汰</span></li>
@@ -581,7 +581,7 @@
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎従妹</span><span class="guest-name-text">太田 凪音</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎祖母</span><span class="guest-name-text">村山 明美</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎祖父</span><span class="guest-name-text">村山 武</span></li>
-                            <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎父</span><span class="guest-name-text">大井 健太郎</span></li>
+                            <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎父</span><span class="guest-name-text">大井 賢太郎</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎母</span><span class="guest-name-text">大井 知恵</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎弟</span><span class="guest-name-text">大井 澄人</span></li>
                             <li><span class="guest-relation-text block text-[9px] text-accent/80 font-bold leading-none mb-0.5 mt-1">新郎従弟</span><span class="guest-name-text">太田 翔</span></li>
@@ -765,14 +765,14 @@
 
         // URLパラメータからのIDと本名のマッピング
         const guestMap = {
-            'shiohira_setuko': '潮平 節子', 'shiohira_naoto': '潮平 直人', 'shiohira_sayu': '潮平 紗優',
+            'shiohira_setuko2': '潮平 節子', 'shiohira_naoto': '潮平 直人', 'shiohira_sayu': '潮平 紗優',
             'kagami_ren': '加賀美 蓮', 'kagami_takako': '加賀美 貴子', 'kagami_tokuko': '加賀美 徳子', 'kagami_yupin': '加賀美 玉冰',
-            'ooi_kentarou': '大井 健太郎', 'ooi_thie': '大井 知恵', 'ooi_sumito': '大井 澄人',
+            'ooi_kentarou': '大井 賢太郎', 'ooi_thie': '大井 知恵', 'ooi_sumito': '大井 澄人',
             'murayama_takeshi': '村山 武', 'murayama_akemi': '村山 明美', 'ooi_takehiko': '大井 武彦',
             'ooi_takuto': '大井 拓人', 'miyawaki_kaori': '宮脇 かおり', 'miyawaki_yuukka': '宮脇 悠花',
             'miyawaki_ayaka': '宮脇 彩花', 'oota_akihito': '太田 章仁', 'oota_maki': '太田 真紀',
             'oota_kakeru': '太田 翔', 'oota_nagine': '太田 凪音', 'oota_une': '太田 羽音',
-            'sawai_kazufumi': '澤井 和史', 'sawai_miki': '澤井 美喜', 'sawai_miwa': '澤井 美和',
+            'sawai_kazufumi': '澤井 和史', 'sawai_miki': '澤井 美喜', 'sawai_miwa': '澤井 美和', 'shiohira_setuko': '澤井 孝史',
             'oohira_kazushige': '大平 和茂', 'oohira_etuko': '大平 悦子', 'oohira_kazuki': '大平 和樹',
             'oohira_saori': '大平 沙織', 'oohira_yuuhi': '大平 悠飛', 'oohira_kurumi': '大平 來望',
             'nakamura_susumu': '中村 進', 'nakamura_noriko': '中村 典子', 'komoro_daisuke': '小師 大輔',
@@ -780,7 +780,7 @@
             'kiyama_mahiro': '歸山 茉大', 'amada_kouki': '天田 香輝', 'yamakosi_shotaro': '山越 正太郎',
             'mizusima_natuki': '水嶋 奈津希', 'anzai_kouithi': '安在 皓一', 'satou_shyouetu': '佐藤 翔悦',
             'shindou_kaori': '神藤 香', 'sunada_tomohiro': '砂田 朋宏', 'watanabe_tetuya': '渡邉 哲哉',
-            'arai_yasuna': '新井 那菜', 'arai_kentarou': '新井 健太郎', 'masunaga_zyunma': '益永 純真',
+            'arai_yasuna': '新井 那菜', 'arai_kentarou': '新井 賢太郎', 'masunaga_zyunma': '益永 純真',
             'kamiyama_ryusuke': '神山 竜輔', 'higashi_kanon': '東 花音', 'kamiya_yuuta': '神谷 勇汰',
             'nakamura_daisuke': '中村 大助', 'itou_mai': '伊藤 真衣', 'takano_ayaka': '高野 礼華',
             'yorozui_kanon': '萬井 佳音', 'yokoyama_yuuko': '横山 優子', 'miyazawa_hideaki': '宮澤 秀昭',
@@ -864,8 +864,7 @@
             }
 
             // after_party パラメータのチェック (デフォルトtrueにしてプレビューで確認可能に)
-            isAfterPartyEnabled = urlParams.get('after_party') === 'true' || urlParams.get('after_party') === null; 
-            
+            isAfterPartyEnabled = urlParams.get('after_party') === 'true' || urlParams.get('after_party') === null || urlParams.get('name') === 'yamazaki_ikuno'; 
             console.log("Current Guest:", currentGuest);
         }
 
