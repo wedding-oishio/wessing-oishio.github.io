@@ -796,11 +796,12 @@
 
         const guestMenuType = {
             'oohira_kurumi':'kids',
-        'ogasawara_misa':'inunekonasi',
-        'kurosaki_kousei':'ebinuki',
-        'itou_mai':'painnuki',
-        'nakamura_noriko':'komuginuki',
-        'shiohira_sayu':'ringonuki'
+            'ogasawara_misa':'inunekonasi',
+            'kurosaki_kousei':'ebinuki',
+            'itou_mai':'painnuki',
+            'nakamura_noriko':'komuginuki',
+            'shiohira_sayu':'ringonuki',
+            'miyazawa_hideaki':'allergy'
         };
 
         const smokerList = [
@@ -827,10 +828,6 @@
             const urlParams = new URLSearchParams(window.location.search);
             
             currentGuestId = urlParams.get('guest');
-            // デモ用のフォールバック設定 (プレビューで確認できるように適当なゲストを割り当て)
-            if (!currentGuestId || currentGuestId.startsWith('demo_g')) {
-                currentGuestId = 'ogasawara_ryou'; 
-            }
 
             const guestName = guestMap[currentGuestId];
 
@@ -898,9 +895,19 @@
                 if (currentGuest.menuType === 'komuginuki') {
                     noticeEl.innerHTML = `<span class="text-xs">小麦アレルギーに配慮したメニューをご用意しております。</span>`;
                 } else if (currentGuest.menuType === 'kids') {
-                    noticeEl.innerHTML = `${currentGuest.name}さま<br><span class="text-xs">とくべつメニューをごよういしております。</span>`;
+                    noticeEl.innerHTML = `${currentGuest.name}ちゃん<br><span class="text-xs">とくべつメニューをごよういしております。</span>`;
                 } else if (currentGuest.menuType === 'inunekonasi') {
                     noticeEl.innerHTML = `<span class="text-xs">犬・猫アレルギーに配慮したメニューをご用意しております。</span>`;
+                } else if (currentGuest.menuType === 'ringonuki') {
+                    noticeEl.innerHTML = `<span class="text-xs">りんごアレルギーに配慮したメニューをご用意しております。</span>`;
+                } else if (currentGuest.menuType === 'ebinuki') {
+                    noticeEl.innerHTML = `<span class="text-xs">えびアレルギーに配慮したメニューをご用意しております。</span>`;
+                } else if (currentGuest.menuType === 'painnuki') {
+                    noticeEl.innerHTML = `<span class="text-xs">アレルギーに配慮したメニューをご用意しております。</span>`;
+                } else if (currentGuest.menuType === 'junior') {
+                    noticeEl.innerHTML = `${currentGuest.name}くん<br><span class="text-xs">特別メニューをご用意しております。</span>`;
+                } else if (currentGuest.menuType === 'allergy') {
+                    noticeEl.innerHTML = `<span class="text-xs">アレルギーに配慮したメニューをご用意しております。</span>`;
                 }
             }
 
